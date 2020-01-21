@@ -113,6 +113,9 @@
     <title>String Function</title>
 </head>
 <body>
+    <br>
+    <hr>
+    <br>
     <form action="#" method="post">
     <br>
         <input type="text" name="typeOfUser" id="typeOfUser" placeholder='Admin / User'><br>
