@@ -40,4 +40,11 @@
         }
     }
 
+
+    $person = array('firstName' => 'Nikhil', 'age' => 22);
+
+    foreach($person as $key => $value){
+        echo '<br> Key : '.$key.' Value : '.$value;
+    }
+
 ?>
