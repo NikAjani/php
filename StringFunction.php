@@ -73,13 +73,14 @@
         do{
             
             $isFound = true;
+
             $wordPosition = strpos($upperCaseMainString,$findWord,$startPosition);
 
             echo '<b>'.$findWord.'</b> is Found At Position : <b>'.$wordPosition.'</b><br>';
 
             $startPosition = $wordPosition+strlen($findWord);
 
-        }while($wordPosition = strpos($upperCaseMainString,$findWord,$startPosition));
+        }while($wordPosition);
 
         if($isFound)
             echo '<br><b>Ready To Replace.. :)</b><br>';
