@@ -17,7 +17,7 @@
 
                 $unsortedArray[$j] = $unsortedArray[$j] + $unsortedArray[$j+1];
                 $unsortedArray[$j+1] = $unsortedArray[$j] - $unsortedArray[$j+1];
-                $unsortedArray[j] = $unsortedArray[$j] - $unsortedArray[$j+1];
+                $unsortedArray[$j] = $unsortedArray[$j] - $unsortedArray[$j+1];
             }
 
         }
