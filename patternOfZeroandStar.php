@@ -1,7 +1,8 @@
 <?php
 
     $k = 0;
-    for($i = 1; $i <= 5; $i++){
+    $limit = 5;
+    for($i = 1; $i <= $limit; $i++){
 
         for($j = 1; $j <= $k+$i; $j++){
             echo '*';

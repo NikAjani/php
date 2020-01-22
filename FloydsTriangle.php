@@ -1,7 +1,8 @@
 <?php
 
     $k=1;
-    for($i = 0; $i < 5; $i++){
+    $limit = 5;
+    for($i = 0; $i < $limit; $i++){
 
         for($j = 0; $j <= $i; $j++){
             

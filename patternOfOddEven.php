@@ -1,8 +1,10 @@
 <?php
 
-    for($i = 1; $i <= 4; $i++){
+    $row = 4;
+    $col = 3;
+    for($i = 1; $i <= $row; $i++){
         $k = $i;
-        for($j = 1; $j <= 3; $j++){
+        for($j = 1; $j <= $col; $j++){
             echo ($k).' ';
             $k += 4;
         }
