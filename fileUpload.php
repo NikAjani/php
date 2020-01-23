@@ -6,18 +6,25 @@
         $uploadFileName = $_FILES['file']['name'];
         $tempFileLocation = $_FILES['file']['tmp_name'];
 
-        echo $fileType = $_FILES['file']['type'];
+        $extension = strtolower(substr($uploadFileName, strpos($uploadFileName, '.')+1));
+
+        $fileType = $_FILES['file']['type'];
 
         if(!empty($uploadFileName)){
 
-            $location = 'uploads/';
+            if(($extension == 'jpeg' || $extension == 'jpg' || $extension == 'png') && ($fileType == 'image/jpeg' || $fileType == 'image/png')){
 
-            if(move_uploaded_file($tempFileLocation, $location.$uploadFileName)){
-                echo 'File Uploaded';
+                $location = 'uploads/';
+
+                if(move_uploaded_file($tempFileLocation, $location.$uploadFileName)){
+                    echo 'File Uploaded';
+                } else{
+                    echo 'Eroor in File Upload';
+                }
+
             } else{
-                echo 'Eroor in File Upload';
+                echo 'File Should be jpeg/jpg/png';
             }
-
 
         } else{
             echo 'Please choose File';
