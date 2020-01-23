@@ -8,7 +8,7 @@
 
             $fileHandler = fopen($fileName,'a');
 
-            $dataForWrite = $_POST['name'].' | '.$_POST['age']."\n";
+            $dataForWrite = $_POST['name'].'|'.$_POST['age'].",\n";
 
             fwrite($fileHandler, $dataForWrite);
             

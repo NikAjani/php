@@ -1,3 +1,2 @@
-Nikhil | 22
-Ajani | 26
-Raj | 15
+Nikhil|22,
+Raj|15,
