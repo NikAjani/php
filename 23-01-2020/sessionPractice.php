@@ -1,5 +1,6 @@
 <?php
-    require_once 'setSession.php';
+    session_start();
+    //require_once 'setSession.php';
 
     if(isset($_SESSION['user'])){
 

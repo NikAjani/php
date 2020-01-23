@@ -9,5 +9,7 @@
     echo 'Date And Time Befor a Week : '.date('d-M-Y @ H:i:s',strtotime('-1 week')).'<br>';
 
     echo 'Date And Time After a Week : '.date('d-M-Y @ H:i:s',strtotime('+1 week')).'<br>';
+    
+    echo 'date_default_timezone_set: ' . date_default_timezone_get() . '<br />';
 
 ?>
