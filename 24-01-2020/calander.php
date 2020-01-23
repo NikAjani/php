@@ -1,5 +1,17 @@
 <?php
 
+    if(isset($_POST['month']) && isset($_POST['year'])){
+
+        $month = $_POST['month'];
+        $year = $_POST['year'];
+
+        echo $year;
+
+        $date = $year.'-'.$month.'-01';
+        echo $date;
+        echo date('D', strtotime($date));
+
+    }
 
 ?>
 
