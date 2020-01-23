@@ -4,12 +4,13 @@
 
     if(isset($_GET['readData'])){
 
-        $fileHandler = fopen($fileName,'r');
+        if(file_exists($fileName)){
 
-        $dataFromFile = fread($fileHandler, filesize($fileName));
+            $fileHandler = fopen($fileName,'r');
+            
+            $dataFromFile = fread($fileHandler, filesize($fileName));
 
-        $dataFromFile = explode(',', $dataFromFile);
-
+            $dataFromFile = explode(',', $dataFromFile);
 
 ?>
 
@@ -30,24 +31,28 @@
         </tr>
         <?php  
             
-            foreach($dataFromFile as $singleRow){
-                echo '<tr>';
+                foreach($dataFromFile as $singleRow){
+                    echo '<tr>';
 
-                $rowData = explode('|',$singleRow);
+                    $rowData = explode('|',$singleRow);
 
-                if($rowData[0] == "\n")
-                    break;
-                for($i = 0; $i < sizeof($rowData); $i++){
-                    
-                    if($i == 0)
-                        echo '<td>'.$rowData[$i].'</td>';
-                    else    
-                        echo '<td>'.$rowData[$i].'</td>';
+                    if($rowData[0] == "\n")
+                        break;
+                    for($i = 0; $i < sizeof($rowData); $i++){
+                        
+                        if($i == 0)
+                            echo '<td>'.$rowData[$i].'</td>';
+                        else    
+                            echo '<td>'.$rowData[$i].'</td>';
+                    }
+
+                    echo '</tr>';
                 }
-
-                echo '</tr>';
+                fclose($fileHandler);
+            }else{
+               
+                die('File is Not Found Or File is Empty');
             }
-            fclose($fileHandler);
         }
         ?>
     </table>
