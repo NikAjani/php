@@ -9,7 +9,6 @@
             $month = $_POST['month'];
             $year = $_POST['year'];
             $imgName = $_FILES['calanderImg']['name'];
-            $_SESSION['imgName'] = $imgName;
             $imgTempLocation = $_FILES['calanderImg']['tmp_name'];
             $extension = strtolower(substr($imgName, strpos($imgName, '.')+1));
             $fileType = $_FILES['calanderImg']['type'];
@@ -18,20 +17,21 @@
                 if(($extension == 'jpeg' || $extension == 'jpg' || $extension == 'png') && ($fileType == 'image/jpeg' || $fileType == 'image/png')){
 
                     $location = 'uploads/';
-                    $_SESSION['location'] = $location;
 
                     if(move_uploaded_file($imgTempLocation, $location.$imgName)){
-                        echo 'File Uploaded';
+                        //echo 'File Uploaded';
+                        $_SESSION['imgName'] = $imgName;
+                        $_SESSION['location'] = $location;
                     } else{
                         echo 'Eroor in File Upload';
                     }
 
                 } else{
-                    //echo 'File Should be jpeg/jpg/png';
+                    echo 'File Should be jpeg/jpg/png';
                    exit();
                 }
             } else{
-                //echo 'Please choose File';      
+                echo 'Please choose File';      
                 exit();
             }
 
@@ -50,6 +50,8 @@
             $date = $year.'-'.$month.'-01';
             
             $day =  strtolower(date('D', strtotime($date)));
+
+            $tempMonth = strtoupper(date('M',strtotime($date)));
 
             $day = array_search($day, $days);
 
@@ -79,6 +81,8 @@
 <body>
 
     <table border="1">
+        
+        <caption><h2><?php echo $tempMonth; ?></h2></caption>
 
         <tr>
             <th>Monday</th>
