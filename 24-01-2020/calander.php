@@ -35,7 +35,6 @@
                 exit();
             }
 
-
         } else{
 
             $month = $_SESSION['month'];
