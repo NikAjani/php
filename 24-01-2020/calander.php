@@ -4,6 +4,12 @@
     $days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
     if((isset($_SESSION['month'])) || isset($_POST['month']) && isset($_POST['year']) && isset($_FILES['calanderImg'])){
 
+        
+        // $to = 'ajaninikhil23@gmail.com';
+        // $subject = 'Test';
+        // $body = 'This is From Localhost';
+        // $headers .= 'From: <webmaster@example.com>' . "\r\n";
+
         if(isset($_POST['month']) && isset($_POST['year'])){
             
             $month = $_POST['month'];
@@ -96,7 +102,7 @@
                 $k = 2;
                 $_SESSION['month'] = $month;
                 $_SESSION['year'] = $year;
-                for($i=0; $i <= 5; $i++){
+                for($i=0; $i <= 6; $i++){
                     echo '<tr>';
 
                     if($i == 0){
@@ -122,6 +128,8 @@
                 }
 
                 echo '<img src="'.$location.$imgName.'"><br>';
+
+                //mail($to, $subject, $body, $headers);
         
         } else{
             echo 'Please Enter Valid Year or Month';

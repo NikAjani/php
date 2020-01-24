@@ -34,22 +34,51 @@
 
         $monthFrom = $_POST['monthFrom'];
         $yearFrom = $_POST['yearFrom'];
-        $monthTo = $_POST['monthTo'];
+        $monthTo = $_POST['monthTo']+1;
         $yearTo = $_POST['yearTo'];
 
-        $dateFrom = '01-'.$monthFrom.'-'.$yearFrom;
-        $dateTo = '01-'.$monthTo.'-'.$yearTo;
+        $dateFrom = $yearFrom.'-'.$monthFrom.'-01';
+        $dateTo = $yearTo.'-'.$monthTo.'-01';;
 
-        echo $dateFrom.'<br>'.$dateTo;
+
+        $dateFrom = new DateTime($dateFrom);
+        $dateTo = new DateTime($dateTo);
 
         if(validMonthAndYear($monthFrom,$yearFrom,$monthTo,$yearTo)){
-            echo 'all Valid';
+
+            $interval = DateInterval::createFromDateString('1 month');
+            $period   = new DatePeriod($dateFrom, $interval, $dateTo);
+            foreach ($period as $dt) {
+                //echo $dt->format("Y-m-t") . "<br>\n";
+                $lastDate = $dt->format("t");
+                printMonth($lastDate);
+                
+            }
         } else{
             echo '<Br><br><b>Please Enter Valid Month And Year</b>';
         }
 
     }
 
+    function printMonth($lastDate){
+        $k = 1;
+
+        for($i = 0; $i <= 6; $i++){
+            for($j = 0; $j <= 6; $j++){
+                echo $k;
+                $k++;
+                if($lastDate == $k){
+                    echo '<br>';
+                    break;
+                }
+            }
+            if($k == $lastDate){
+                echo '<br>';
+                break;
+            }
+            echo '<br>';
+        }
+    }
     
 
 ?>
