@@ -1,10 +1,15 @@
 <?php
+
+    session_start();
+
     if(isset($_POST['submit'])){
         
 
         $formValue = [
+            $_POST['prefix'],
             $_POST['firstName'],
             $_POST['lastName'],
+            $_POST['dateOfBirth'],
             $_POST['phoneNo'],
             $_POST['emailId'],
             $_POST['address1'],
@@ -19,7 +24,7 @@
 
         for($i = 0; $i < sizeof($formValue); $i++){
             if(isset($formValue[$i]) && !empty($formValue[$i])){
-                if($i == 3){
+                if($i == 5){
                     if(!filter_var($formValue[$i],FILTER_VALIDATE_EMAIL)){
                         echo $email.' <b>Enter Valid Email</b><br>';
                         $valid = false;
@@ -32,10 +37,12 @@
                 break;
             }
         }
-        if($valid)
-            print_r($formValue);
-        else    
+        if($valid){
+            echo '<b>Your Data has been Submitted</b><br>';
+            $_SESSION['formValue'] = $formValue;
+        }else    
             echo 'Please Enter Valid Detail';
+
 
     }
 ?>
@@ -66,8 +73,8 @@
                         <option value="Dr">Dr.</option>
                     </select>
 
-                    <input type="text" name="firstName" id="firstName" placeholder="Enter First Name">
-                    <input type="text" name="lastName" id="lastName" placeholder="Enter Last Name">
+                    <input type="text" name="firstName" id="firstName" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue'][0]; ?>" placeholder="Enter First Name">
+                    <input type="text" name="lastName" id="lastName" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue'][1]; ?>" placeholder="Enter Last Name">
                 </div>
 
                 <div>
@@ -77,12 +84,12 @@
 
                 <div>
                     <label for="phoneNo">Phone No : </label>
-                    <input type="number" name="phoneNo" id="phoneNo" placeholder="Enter Phone No">
+                    <input type="number" name="phoneNo" id="phoneNo" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue'][2]; ?>" placeholder="Enter Phone No">
                 </div>
 
                 <div>
                     <label for="emailId">Email : </label>
-                    <input type="email" name="emailId" id="emailId" placeholder="Enter Email Id">
+                    <input type="email" name="emailId" id="emailId" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue'][3]; ?>" placeholder="Enter Email Id">
                 </div>
 
                 <div>
@@ -102,12 +109,12 @@
 
                 <div>
                     <label for="address1">Address Line 1 : </label>                    
-                    <input type="text" name="address1" id="address1" placeholder="Enter Address Line 1">
+                    <input type="text" name="address1" id="address1" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue'][4]; ?>" placeholder="Enter Address Line 1">
                 </div>
 
                 <div>
                     <label for="address2">Address Line 2 : </label>
-                    <input type="text" name="address2" id="address2" placeholder="Enter Address line 2">
+                    <input type="text" name="address2" id="address2" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue'][5]; ?>" placeholder="Enter Address line 2">
                 </div>
 
                 <div>
@@ -136,7 +143,7 @@
 
                 <div>
                     <label for="postalCode">Postal Code : </label>
-                    <input type="number" name="postalCode" id="postalCode" placeholder="Enter Postal Code">
+                    <input type="number" name="postalCode" id="postalCode" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue'][7]; ?>" placeholder="Enter Postal Code">
                 </div>
 
             </div>
@@ -147,7 +154,7 @@
 
                 <div>
                     <label for="descYourSelf">Describe YourSelf : </label>
-                    <textarea name="descYourSelf" id="descYourSelf" cols="22" rows="2"></textarea>
+                    <textarea name="descYourSelf" id="descYourSelf"  cols="22" rows="2"></textarea>
                 </div>
 
                 <div>
@@ -161,7 +168,7 @@
                 </div>
 
                 <div>
-                    <label for="experience">Experience : </label>
+                    <span>Experience : </span>
                     <input type="radio" name="experience" id="under1Year"> Under 1 Year
                     <input type="radio" name="experience" id="1-2Year"> 1-2 Year
                     <input type="radio" name="experience" id="2-5Year"> 2-5 year
@@ -180,7 +187,7 @@
                 </div>
 
                 <div>
-                    <label for="getInTouch">Get In Touch Via : </label>
+                    <span>Get In Touch Via : </span>
                     <input type="checkbox" name="getInTouch[]" id="post" value="Post"> Post 
                     <input type="checkbox" name="getInTouch[]" id="Inemail" value='Email'> Email
                     <input type="checkbox" name="getInTouch[]" id="sms" value="SMS"> SMS
