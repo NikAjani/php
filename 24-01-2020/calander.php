@@ -1,11 +1,50 @@
 <?php
+    session_start();
 
     $days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
-    if(isset($_POST['month']) && isset($_POST['year'])){
+    if((isset($_SESSION['month'])) || isset($_POST['month']) && isset($_POST['year']) && isset($_FILES['calanderImg'])){
 
-        $month = $_POST['month'];
-        $year = $_POST['year'];
+        if(isset($_POST['month']) && isset($_POST['year'])){
+            
+            $month = $_POST['month'];
+            $year = $_POST['year'];
+            $imgName = $_FILES['calanderImg']['name'];
+            $_SESSION['imgName'] = $imgName;
+            $imgTempLocation = $_FILES['calanderImg']['tmp_name'];
+            $extension = strtolower(substr($imgName, strpos($imgName, '.')+1));
+            $fileType = $_FILES['calanderImg']['type'];
+            if(!empty($imgName)){
 
+                if(($extension == 'jpeg' || $extension == 'jpg' || $extension == 'png') && ($fileType == 'image/jpeg' || $fileType == 'image/png')){
+
+                    $location = 'uploads/';
+                    $_SESSION['location'] = $location;
+
+                    if(move_uploaded_file($imgTempLocation, $location.$imgName)){
+                        echo 'File Uploaded';
+                    } else{
+                        echo 'Eroor in File Upload';
+                    }
+
+                } else{
+                    //echo 'File Should be jpeg/jpg/png';
+                   exit();
+                }
+            } else{
+                //echo 'Please choose File';      
+                exit();
+            }
+
+
+        } else{
+
+            $month = $_SESSION['month'];
+            $year = $_SESSION['year'];
+            $imgName = $_SESSION['imgName'];
+            $location = $_SESSION['location'];
+        }
+
+           
         if((strlen($year) == 4 || strlen($year) == 2) && (strlen($month) == 2 || strlen($month) == 1)){
             
             $date = $year.'-'.$month.'-01';
@@ -31,6 +70,10 @@
         table{
             text-align: right;
         }
+        img{
+            height: 250;
+            width: 460px;
+        }
     </style>
 </head>
 <body>
@@ -48,6 +91,8 @@
         </tr>
         <?php    
                 $k = 2;
+                $_SESSION['month'] = $month;
+                $_SESSION['year'] = $year;
                 for($i=0; $i <= 5; $i++){
                     echo '<tr>';
 
@@ -72,6 +117,8 @@
                             break;
                     echo '</tr>';
                 }
+
+                echo '<img src="'.$location.$imgName.'"><br>';
         
         } else{
             echo 'Please Enter Valid Year or Month';
@@ -84,9 +131,10 @@
 
     <br><hr><hr><br>
 
-    <form action="calander.php" method="post">
+    <form action="calander.php" method="post" enctype="multipart/form-data">
         <input type="number" name="month" id="month" placeholder="Enter Month (MM)"><br>
         <input type="number" name="year" id="year" placeholder="Enter Year (YYYY)"><br>
+        <input type="file" name="calanderImg" id="calanderImg"><br>
         <input type="submit" value="Print Calander">
     </form>
 </body>
