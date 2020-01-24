@@ -1,3 +1,44 @@
+<?php
+    if(isset($_POST['submit'])){
+        
+
+        $formValue = [
+            $_POST['firstName'],
+            $_POST['lastName'],
+            $_POST['phoneNo'],
+            $_POST['emailId'],
+            $_POST['address1'],
+            $_POST['address2'],
+            $_POST['country'],
+            $_POST['postalCode'],
+            $_POST['descYourSelf'],
+            $_POST['getInTouch']
+        ];
+
+        $valid = false;
+
+        for($i = 0; $i < sizeof($formValue); $i++){
+            if(isset($formValue[$i]) && !empty($formValue[$i])){
+                if($i == 3){
+                    if(!filter_var($formValue[$i],FILTER_VALIDATE_EMAIL)){
+                        echo $email.' <b>Enter Valid Email</b><br>';
+                        $valid = false;
+                        break;
+                    } 
+                }
+                $valid = true;
+            } else{
+                $valid = false;
+                break;
+            }
+        }
+        if($valid)
+            print_r($formValue);
+        else    
+            echo 'Please Enter Valid Detail';
+
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +52,7 @@
 <body>
 <br><hr><hr>
     <div>
-        <form action="registrationFormPhp.php" method="post">
+        <form action="registrationForm.php" method="post">
             <div id="accountDetail">
                 <h3>Your Account Detail</h3>
                 
