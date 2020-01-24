@@ -1,48 +1,26 @@
 <?php
 
     session_start();
+    
+    extract($_POST);
+    
 
     if(isset($_POST['submit'])){
-        
+        $formValue = $_POST;
 
-        $formValue = [
-            $_POST['prefix'],
-            $_POST['firstName'],
-            $_POST['lastName'],
-            $_POST['dateOfBirth'],
-            $_POST['phoneNo'],
-            $_POST['emailId'],
-            $_POST['address1'],
-            $_POST['address2'],
-            $_POST['country'],
-            $_POST['postalCode'],
-            $_POST['descYourSelf'],
-            $_POST['getInTouch']
-        ];
+        $_SESSION['formValue'] = $formValue;
 
         $valid = false;
 
-        for($i = 0; $i < sizeof($formValue); $i++){
-            if(isset($formValue[$i]) && !empty($formValue[$i])){
-                if($i == 5){
-                    if(!filter_var($formValue[$i],FILTER_VALIDATE_EMAIL)){
-                        echo $email.' <b>Enter Valid Email</b><br>';
-                        $valid = false;
-                        break;
-                    } 
-                }
+        foreach($formValue as $singleValue => $value){
+            if($value != null){
                 $valid = true;
-            } else{
-                $valid = false;
+            }else{ 
+                $valid = false;  
+                echo '<br><b>Please Enter valid Detail</b><br>'; 
                 break;
             }
         }
-        if($valid){
-            echo '<b>Your Data has been Submitted</b><br>';
-            $_SESSION['formValue'] = $formValue;
-        }else    
-            echo 'Please Enter Valid Detail';
-
 
     }
 ?>
@@ -73,33 +51,33 @@
                         <option value="Dr">Dr.</option>
                     </select>
 
-                    <input type="text" name="firstName" id="firstName" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue'][0]; ?>" placeholder="Enter First Name">
-                    <input type="text" name="lastName" id="lastName" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue'][1]; ?>" placeholder="Enter Last Name">
+                    <input type="text" name="firstName" id="firstName" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['firstName']; ?>" placeholder="Enter First Name">
+                    <input type="text" name="lastName" id="lastName" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['lastName']; ?>" placeholder="Enter Last Name">
                 </div>
 
                 <div>
                     <label for="dateOfBirth">Date Of Birth : </label>
-                    <input type="date" name="dateOfBirth" id="dateOfBirth">
+                    <input type="date" name="dateOfBirth" id="dateOfBirth" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['dateOfBirth']; ?>">
                 </div>
 
                 <div>
                     <label for="phoneNo">Phone No : </label>
-                    <input type="number" name="phoneNo" id="phoneNo" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue'][2]; ?>" placeholder="Enter Phone No">
+                    <input type="number" name="phoneNo" id="phoneNo" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['phoneNo']; ?>" placeholder="Enter Phone No">
                 </div>
 
                 <div>
                     <label for="emailId">Email : </label>
-                    <input type="email" name="emailId" id="emailId" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue'][3]; ?>" placeholder="Enter Email Id">
+                    <input type="email" name="emailId" id="emailId" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['emailId']; ?>" placeholder="Enter Email Id">
                 </div>
 
                 <div>
                     <label for="password">Password : </label>
-                    <input type="password" name="password" id="password" placeholder="Enter Password">
+                    <input type="password" name="password" id="password" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['password']; ?>" placeholder="Enter Password">
                 </div>
 
                 <div>
                     <label for="confirmPassword">Confirm Password : </label>
-                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter Password Again">
+                    <input type="password" name="confirmPassword" id="confirmPassword" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['confirmPassword']; ?>" placeholder="Enter Password Again">
                 </div>
 
             </div>
@@ -109,27 +87,27 @@
 
                 <div>
                     <label for="address1">Address Line 1 : </label>                    
-                    <input type="text" name="address1" id="address1" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue'][4]; ?>" placeholder="Enter Address Line 1">
+                    <input type="text" name="address1" id="address1" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['address1']; ?>" placeholder="Enter Address Line 1">
                 </div>
 
                 <div>
                     <label for="address2">Address Line 2 : </label>
-                    <input type="text" name="address2" id="address2" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue'][5]; ?>" placeholder="Enter Address line 2">
+                    <input type="text" name="address2" id="address2" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['address2']; ?>" placeholder="Enter Address line 2">
                 </div>
 
                 <div>
                     <label for="company">Company : </label>
-                    <input type="text" name="company" id="company" placeholder="Enter Company Name">
+                    <input type="text" name="company" id="company" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['company']; ?>" placeholder="Enter Company Name">
                 </div>
 
                 <div>
                     <label for="city">City : </label>
-                    <input type="text" name="city" id="city" placeholder="Enter City Name">
+                    <input type="text" name="city" id="city" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['city']; ?>" placeholder="Enter City Name">
                 </div>
 
                 <div>
                     <label for="state">State : </label>
-                    <input type="text" name="state" id="state" placeholder="Enter State Name">
+                    <input type="text" name="state" id="state" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['state']; ?>" placeholder="Enter State Name">
                 </div>
 
                 <div>
@@ -143,7 +121,7 @@
 
                 <div>
                     <label for="postalCode">Postal Code : </label>
-                    <input type="number" name="postalCode" id="postalCode" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue'][7]; ?>" placeholder="Enter Postal Code">
+                    <input type="number" name="postalCode" id="postalCode" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['postalCode']; ?>" placeholder="Enter Postal Code">
                 </div>
 
             </div>
@@ -169,11 +147,11 @@
 
                 <div>
                     <span>Experience : </span>
-                    <input type="radio" name="experience" id="under1Year"> Under 1 Year
-                    <input type="radio" name="experience" id="1-2Year"> 1-2 Year
-                    <input type="radio" name="experience" id="2-5Year"> 2-5 year
-                    <input type="radio" name="experience" id="5-10Year"> 5-10 year
-                    <input type="radio" name="experience" id="over10Year"> Over 10 year
+                    <input type="radio" name="experience" id="under1Year" value="under 1 year"> Under 1 Year
+                    <input type="radio" name="experience" id="1-2Year" value="1-2 year"> 1-2 Year
+                    <input type="radio" name="experience" id="2-5Year" value="2-5 year"> 2-5 year
+                    <input type="radio" name="experience" id="5-10Year" value="5-10 year"> 5-10 year
+                    <input type="radio" name="experience" id="over10Year" value="over 10 year"> Over 10 year
                 </div>
 
                 <div>
