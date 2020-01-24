@@ -62,7 +62,6 @@
 
             $lastDate = date('t', strtotime($date));
 
-            echo'<br>';
 
 ?>
 
@@ -78,12 +77,13 @@
             text-align: right;
         }
         img{
-            height: 250;
+            height: 250px;
             width: 460px;
         }
     </style>
 </head>
 <body>
+    <?php echo '<img src="'.$location.$imgName.'" alt="calander Image">'; ?>
 
     <table border="1">
         
@@ -127,8 +127,6 @@
                     echo '</tr>';
                 }
 
-                echo '<img src="'.$location.$imgName.'"><br>';
-
                 //mail($to, $subject, $body, $headers);
         
         } else{
@@ -139,6 +137,7 @@
     ?>
     
     </table>
+    
 
     <br><hr><hr><br>
 
