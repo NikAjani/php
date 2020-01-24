@@ -1,4 +1,5 @@
 <?php
+    $days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
     function validMonthAndYear($monthFrom,$yearFrom,$monthTo,$yearTo){
         $valid = false;
@@ -51,7 +52,10 @@
             foreach ($period as $dt) {
                 //echo $dt->format("Y-m-t") . "<br>\n";
                 $lastDate = $dt->format("t");
-                printMonth($lastDate);
+                $firstDate = strtolower($dt->format('D'));
+                $currentMonth = $dt->format('M');
+                $firstDate = array_search($firstDate, $days);
+                printMonth($firstDate, $lastDate, $currentMonth);
                 
             }
         } else{
@@ -60,24 +64,47 @@
 
     }
 
-    function printMonth($lastDate){
-        $k = 1;
+    function printMonth($firstDate,$lastDate, $currentMonth){
+        $k = 2;
+        echo '<table border="1">';
+        echo '<caption><h2>'.$currentMonth.'</h2></caption>';
+        echo '<tr>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thur</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        </tr>';
 
         for($i = 0; $i <= 6; $i++){
-            for($j = 0; $j <= 6; $j++){
-                echo $k;
-                $k++;
+            echo '<tr>';
+            if($i == 0){
+                if($firstDate >= 1)
+                    echo '<td colspan="'.($firstDate+1).'">1</td>';
+                else    
+                    echo '<td>1</td>';
+    
+                $j = $firstDate+1;
+            } else
+                $j = 0;
+
+            for(; $j <= 6; $j++){
+                echo '<td>'.$k.'</td>';
+                
                 if($lastDate == $k){
-                    echo '<br>';
                     break;
                 }
+                $k++;
             }
             if($k == $lastDate){
-                echo '<br>';
                 break;
             }
-            echo '<br>';
+            echo '</tr>';
         }
+        echo '</table>';
+        
     }
     
 
@@ -90,6 +117,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calander</title>
+    <style>
+        table{
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
     <br><hr><hr><br>
