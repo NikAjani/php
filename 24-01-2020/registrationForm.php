@@ -22,6 +22,74 @@
             }
         }
 
+        // Upload and check Profile Image.
+        if($valid){
+            $imgName = $_FILES['profileImage']['name'];
+            $imgTempLocation = $_FILES['profileImage']['tmp_name'];
+            $extension = strtolower(substr($imgName, strpos($imgName, '.')+1));
+            $fileType = $_FILES['profileImage']['type'];
+            if(!empty($imgName)){
+
+                if(($extension == 'jpeg' || $extension == 'jpg' || $extension == 'png') && ($fileType == 'image/jpeg' || $fileType == 'image/png')){
+
+                    $location = 'uploads/';
+
+                    if(move_uploaded_file($imgTempLocation, $location.$imgName)){
+                        $valid = true;
+                        
+                    } else{
+                        echo 'Eroor in File Upload';
+                        $valid = false;
+                    }
+
+                } else{
+                    echo 'File Should be jpeg/jpg/png';
+                    $valid = false;
+                    
+                }
+            } else{
+                echo 'Please choose File'; 
+                $valid = false;     
+                
+            }
+        }
+
+
+        // upload certificate File and valid
+        if($valid){
+            $pdfName = $_FILES['certificateFile']['name'];
+            $pdfTempLocation = $_FILES['certificateFile']['tmp_name'];
+            $extension = strtolower(substr($pdfName, strpos($pdfName, '.')+1));
+            $fileType = $_FILES['certificateFile']['type'];
+            if(!empty($pdfName)){
+
+                if(($extension == 'pdf' )){
+
+                    $location = 'uploads/';
+
+                    if(move_uploaded_file($pdfTempLocation, $location.$pdfName)){
+                        $valid = true;
+                    } else{
+                        echo 'Eroor in File Upload';
+                        $valid = false;
+                    }
+
+                } else{
+                    echo 'File Should be PDF';
+                    $valid = false;
+                    
+                }
+            } else{
+                echo 'Please choose PDF File';    
+                $valid = false;  
+                
+            }
+        }
+
+        if($valid){
+            echo ' Your Data is Uploaded Successfully...';
+        }
+
     }
 ?>
 
@@ -37,7 +105,7 @@
 <body>
 <br><hr><hr>
     <div>
-        <form action="registrationForm.php" method="post">
+        <form action="registrationForm.php" method="post" enctype="multipart/form-data">
             <div id="accountDetail">
                 <h3>Your Account Detail</h3>
                 
