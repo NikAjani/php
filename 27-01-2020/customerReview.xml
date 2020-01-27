@@ -2,25 +2,25 @@
     
     <customer>
         <name>Nikhil</name>
-        <reviewStart>4.5</reviewStart>
+        <reviewStar>4.5</reviewStar>
         <msg>Excellent</msg>
     </customer>
 
     <customer>
         <name>Raj</name>
-        <reviewStart>2.7</reviewStart>
+        <reviewStar>2.7</reviewStar>
         <msg>Average</msg>
     </customer>
 
     <customer>
         <name>Uday</name>
-        <reviewStart>1</reviewStart>
+        <reviewStar>1</reviewStar>
         <msg>Poor</msg>
     </customer>
 
     <customer>
         <name>Xyz</name>
-        <reviewStart>3.5</reviewStart>
+        <reviewStar>3.5</reviewStar>
         <msg>Good</msg>
     </customer>
 
