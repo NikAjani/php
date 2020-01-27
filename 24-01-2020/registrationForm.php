@@ -1,98 +1,3 @@
-<?php
-
-    session_start();
-    
-    extract($_POST);
-    
-
-    if(isset($_POST['submit'])){
-        $formValue = $_POST;
-
-        $_SESSION['formValue'] = $formValue;
-
-        $valid = false;
-
-        foreach($formValue as $singleValue => $value){
-            if($value != null){
-                $valid = true;
-            }else{ 
-                $valid = false;  
-                echo '<br><b>Please Enter valid Detail</b><br>'; 
-                break;
-            }
-        }
-
-        // Upload and check Profile Image.
-        if($valid){
-            $imgName = $_FILES['profileImage']['name'];
-            $imgTempLocation = $_FILES['profileImage']['tmp_name'];
-            $extension = strtolower(substr($imgName, strpos($imgName, '.')+1));
-            $fileType = $_FILES['profileImage']['type'];
-            if(!empty($imgName)){
-
-                if(($extension == 'jpeg' || $extension == 'jpg' || $extension == 'png') && ($fileType == 'image/jpeg' || $fileType == 'image/png')){
-
-                    $location = 'uploads/';
-
-                    if(move_uploaded_file($imgTempLocation, $location.$imgName)){
-                        $valid = true;
-                        
-                    } else{
-                        echo 'Eroor in File Upload';
-                        $valid = false;
-                    }
-
-                } else{
-                    echo 'File Should be jpeg/jpg/png';
-                    $valid = false;
-                    
-                }
-            } else{
-                echo 'Please choose File'; 
-                $valid = false;     
-                
-            }
-        }
-
-
-        // upload certificate File and valid
-        if($valid){
-            $pdfName = $_FILES['certificateFile']['name'];
-            $pdfTempLocation = $_FILES['certificateFile']['tmp_name'];
-            $extension = strtolower(substr($pdfName, strpos($pdfName, '.')+1));
-            $fileType = $_FILES['certificateFile']['type'];
-            if(!empty($pdfName)){
-
-                if(($extension == 'pdf' )){
-
-                    $location = 'uploads/';
-
-                    if(move_uploaded_file($pdfTempLocation, $location.$pdfName)){
-                        $valid = true;
-                    } else{
-                        echo 'Eroor in File Upload';
-                        $valid = false;
-                    }
-
-                } else{
-                    echo 'File Should be PDF';
-                    $valid = false;
-                    
-                }
-            } else{
-                echo 'Please choose PDF File';    
-                $valid = false;  
-                
-            }
-        }
-
-        if($valid){
-            echo ' Your Data is Uploaded Successfully...';
-        }
-
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,7 +8,115 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div>
+    <?php
+
+        session_start();
+
+        extract($_POST);
+
+
+        if(isset($_POST['submit'])){
+            $formValue = $_POST;
+
+            $_SESSION['formValue'] = $formValue;
+
+            $valid = false;
+
+            foreach($formValue as $singleValue => $value){
+                if($value != null){
+                    $valid = true;
+                }else{ 
+                    $valid = false;  
+                    echo '<br><b>Please Enter valid Detail</b><br>'; 
+                    break;
+                }
+            }
+
+            if(!filter_var($_POST['emailId'],FILTER_VALIDATE_EMAIL)){
+                echo 'Email is Not valid';
+                $valid = false;
+            }
+
+            if($_POST['password'] != $_POST['confirmPassword']){
+                echo 'Password and Confirm Password is not match';
+                $valid = false;
+            }
+
+            // Upload and check Profile Image.
+            if($valid){
+                $imgName = $_FILES['profileImage']['name'];
+                $imgTempLocation = $_FILES['profileImage']['tmp_name'];
+                $extension = strtolower(substr($imgName, strpos($imgName, '.')+1));
+                $fileType = $_FILES['profileImage']['type'];
+                if(!empty($imgName)){
+
+                    if(($extension == 'jpeg' || $extension == 'jpg' || $extension == 'png') && ($fileType == 'image/jpeg' || $fileType == 'image/png')){
+
+                        $location = 'uploads/';
+
+                        if(move_uploaded_file($imgTempLocation, $location.$imgName)){
+                            $valid = true;
+                            
+                        } else{
+                            echo 'Eroor in File Upload';
+                            $valid = false;
+                        }
+
+                    } else{
+                        echo 'File Should be jpeg/jpg/png';
+                        $valid = false;
+                        
+                    }
+                } else{
+                    echo 'Please choose File'; 
+                    $valid = false;     
+                    
+                }
+            }
+
+
+            // upload certificate File and valid
+            if($valid){
+                $pdfName = $_FILES['certificateFile']['name'];
+                $pdfTempLocation = $_FILES['certificateFile']['tmp_name'];
+                $extension = strtolower(substr($pdfName, strpos($pdfName, '.')+1));
+                $fileType = $_FILES['certificateFile']['type'];
+                if(!empty($pdfName)){
+
+                    if(($extension == 'pdf' )){
+
+                        $location = 'uploads/';
+
+                        if(move_uploaded_file($pdfTempLocation, $location.$pdfName)){
+                            $valid = true;
+                        } else{
+                            echo 'Eroor in File Upload';
+                            $valid = false;
+                        }
+
+                    } else{
+                        echo 'File Should be PDF';
+                        $valid = false;
+                        
+                    }
+                } else{
+                    echo 'Please choose PDF File';    
+                    $valid = false;  
+                    
+                }
+            }
+
+            if($valid){
+                echo ' Your Data is Uploaded Successfully...';
+            }
+
+        }
+    ?>
+    </div>
+
 <br><hr><hr>
+    
     <div>
         <form action="registrationForm.php" method="post" enctype="multipart/form-data">
             <div id="accountDetail">
@@ -112,11 +125,11 @@
                 <div>
                     <label for="prefix"> Name :</label>
                     <select name="prefix" id="prefix">
-                        <option value="Mr">Mr.</option>
-                        <option value="Miss">Miss.</option>
-                        <option value="Ms">Ms.</option>
-                        <option value="Mrs">Mrs.</option>
-                        <option value="Dr">Dr.</option>
+                        <option value="Mr" <?php isset($_SESSION['formValue']['prefix']) == 'Mr' ? ' selected = "selected"' : '';?> >Mr.</option>
+                        <option value="Miss" <?php isset($_SESSION['formValue']['prefix']) == 'Miss' ? ' selected = "selected"' : '';?>>Miss.</option>
+                        <option value="Ms" <?php isset($_SESSION['formValue']) == 'Ms' ? ' selected = "selected"' : '';?> >Ms.</option>
+                        <option value="Mrs" <?php isset($_SESSION['formValue']) == 'Mrs' ? ' selected = "selected"' : '';?>>Mrs.</option>
+                        <option value="Dr" <?php isset($_SESSION['formValue']) == 'Dr' ? ' selected = "selected"' : '';?>>Dr.</option>
                     </select>
 
                     <input type="text" name="firstName" id="firstName" value="<?php if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['firstName']; ?>" placeholder="Enter First Name">
@@ -181,9 +194,9 @@
                 <div>
                     <label for="country">Country : </label>
                     <select name="country" id="country">
-                        <option value="India">India</option>
-                        <option value="USA">USA</option>
-                        <option value="china">China</option>
+                        <option value="India" <?php isset($_SESSION['formValue']) == 'India' ? ' selected = "selected"' : '';?> >India</option>
+                        <option value="USA" <?php isset($_SESSION['formValue']) == 'USA' ? ' selected = "selected"' : '';?>>USA</option>
+                        <option value="china" <?php isset($_SESSION['formValue']) == 'china' ? ' selected = "selected"' : '';?>>China</option>
                     </select>
                 </div>
 
@@ -200,7 +213,11 @@
 
                 <div>
                     <label for="descYourSelf">Describe YourSelf : </label>
-                    <textarea name="descYourSelf" id="descYourSelf"  cols="22" rows="2"></textarea>
+                    <textarea name="descYourSelf" id="descYourSelf" cols="22" rows="2">
+                        <?php
+                            if(isset($_SESSION['formValue'])) echo $_SESSION['formValue']['descYourSelf'];
+                        ?>
+                    </textarea>
                 </div>
 
                 <div>
@@ -225,7 +242,7 @@
                 <div>
                     <label for="clientSee">unique clients you see each week ?</label>
                     <select name="clientSee" id="clientSee">
-                        <option value="1-5">1-5</option>
+                        <option value="1-5" <?php isset($_SESSION['formValue']) == 'India' ? ' selected = "selected"' : '';?>>1-5</option>
                         <option value="6-10">6-10</option>
                         <option value="11-15">11-15</option>
                         <option value="15+">15+</option>
