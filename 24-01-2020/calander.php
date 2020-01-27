@@ -2,6 +2,40 @@
     session_start();
 
     $days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+    function mailCalander(){
+        require 'emailConfig.php';
+        require 'PHPMailerAutoload.php';
+
+        $mail = new PHPMailer;
+
+        //$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = fromEmail;                 // SMTP username
+        $mail->Password = pass;                           // SMTP password
+        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;                                    // TCP port to connect to
+
+        $mail->setFrom(fromEmail, 'Calander');
+        $mail->addAddress(fromEmail);               // Name is optional
+        $mail->addReplyTo(fromEmail, 'Calander');   // Optional name
+        $mail->isHTML(true);                                  // Set email format to HTML
+
+        $mail->Subject = 'Calander';
+        $mail->Body    = 'Hiii';
+        $mail->AltBody = 'hii';
+        
+        if(!$mail->send()) {
+            echo 'Message could not be sent.';
+            echo 'Mailer Error: ' . $mail->ErrorInfo;
+        } else {
+            echo 'Message has been sent';
+        }
+    }
+
     if((isset($_SESSION['month'])) || isset($_POST['month']) && isset($_POST['year']) && isset($_FILES['calanderImg'])){
 
         
