@@ -1,0 +1,27 @@
+<customers>
+    
+    <customer>
+        <name>Nikhil</name>
+        <reviewStart>4.5</reviewStart>
+        <msg>Excellent</msg>
+    </customer>
+
+    <customer>
+        <name>Raj</name>
+        <reviewStart>2.7</reviewStart>
+        <msg>Average</msg>
+    </customer>
+
+    <customer>
+        <name>Uday</name>
+        <reviewStart>1</reviewStart>
+        <msg>Poor</msg>
+    </customer>
+
+    <customer>
+        <name>Xyz</name>
+        <reviewStart>3.5</reviewStart>
+        <msg>Good</msg>
+    </customer>
+
+</customers>
