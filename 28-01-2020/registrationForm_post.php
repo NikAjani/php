@@ -2,6 +2,7 @@
 
 session_start();
 
+
 // for select Option selected
 function isSelected($section, $fieldKey, $fieldValue){
     if(getValue($section, $fieldKey) == $fieldValue)
@@ -12,39 +13,41 @@ function isSelected($section, $fieldKey, $fieldValue){
 
 // for Multiple option selected like checkbox
 function isSelectedMulti($section, $fieldKey, $fieldValue){
-    $multiArray = getValue($section, $fieldKey);
+    $multiArray = getValue($section, $fieldKey,[]);
     if(in_array($fieldValue, $multiArray))
         return true;
     else 
         return false;
 }
 
-function getValue($section, $fieldName){
+function getValue($section, $fieldName, $returnType = ''){
 
     return (isset($_POST[$section]) ? $_POST[$section][$fieldName] : 
-        getSessionValue($section, $fieldName));
+        getSessionValue($section, $fieldName, $returnType));
 }
 
 function setSessionValue(){
     $_SESSION['userData'] = $_POST;
 }
 
-function getSessionValue($section, $fieldName, $returnType = ''){
+function getSessionValue($section, $fieldName, $returnType){
 
     return isset($_SESSION['userData'][$section][$fieldName]) ? 
         $_SESSION['userData'][$section][$fieldName] : $returnType;
 }
 
-$valid = false;
+$valid = true;
 
 function validField($sectionKey, $fieldKey){
     global $valid;
     
     if(isset($_POST[$sectionKey][$fieldKey]) && !empty($_POST[$sectionKey][$fieldKey])){
-        return $valid = true; 
+        $GLOBALS['valid'] = true; 
+        return true;
     }
     else{
-        return $valid = false;
+        $GLOBALS['valid'] = false;
+        return $valid;
     }
     
 }
@@ -56,64 +59,69 @@ function validAdditionFields($sectionKey, $fieldKey){
         
         case 'emailId':
         if(!filter_var($_POST['account']['emailId'],FILTER_VALIDATE_EMAIL)){
-                return $valid = false;
+                $GLOBALS['valid'] = false;
+                return false;
             } else
-                return $valid = true; 
+                $GLOBALS['valid'] = true;
+                return true; 
             
         case 'password':
            if($_POST['account']['password'] != $_POST['account']['confirmPassword']){
-                return $valid = false;
+                $GLOBALS['valid'] = false;
+                return false;
             } else
-                return $valid = true; 
+                $GLOBALS['valid'] = true; 
+                return true;
            
         case 'phoneNo':
             if(strlen($_POST['account']['phoneNo']) != 10){
-                return $valid = false;
+                $GLOBALS['valid'] = false;
+                return false;
             } else
-                return $valid = true; 
-            
-        case 'postalCode':
-            if(strlen($_POST['address']['postalCode']) != 6){
-                return $valid = false;
-            } else
-                return $valid = true;
+                $GLOBALS['valid'] = true; 
+                return true;
             
     }
 }
 
 
-function uploadFile($fileExtnsion,$nameOfFile){
-    $fileName = $_FILES[$nameOfFile]['name'];
-    $fileTempLocation = $_FILES[$nameOfFile]['tmp_name'];
-    $extension = strtolower(substr($fileName, strpos($fileName, '.')+1));
-    $fileType = $_FILES[$nameOfFile]['type'];
-    if(!empty($fileName)){
+function uploadFile($fileName, $FileExtension){
+    if(isset($_FILES[$fileName])){
+        $imgName = $_FILES[$fileName]['name'];
+        $imgTempLocation = $_FILES[$fileName]['tmp_name'];
+        $extension = strtolower(substr($imgName, strpos($imgName, '.')+1));
+        $fileType = $_FILES[$fileName]['type'];
+        if(!empty($imgName)){
 
-        if($extension == $fileExtnsion){
+            if(($extension == $FileExtension)){
 
-            $location = 'uploads/';
+                $location = 'uploads/';
 
-            if(move_uploaded_file($fileTempLocation, $location.$fileName)){
-                
+                if(move_uploaded_file($imgTempLocation, $location.$imgName)){
+                    
+                } else{
+                    echo 'Eroor in File Upload';
+                }
+
             } else{
-                echo 'Eroor in File Upload';
+                echo 'File Should be '.$FileExtension;
+                exit();
             }
-
         } else{
-            echo 'File Should be '.$fileExtnsion;
-            
+            echo 'Please choose File';      
+            exit();
         }
-    } else{
-        echo 'Please choose File';      
-        
     }
 }
 
 
 if($valid){
-    uploadFile('jpg','profileImage');
-    uploadFile('pdf','certificateFile');
+    echo 'All Done';
+    uploadFile('profileImage','jpg');
+    uploadFile('certificateFile','pdf');
     setSessionValue();
+}else {
+    echo 'Not Done';
 }
 
 ?>
