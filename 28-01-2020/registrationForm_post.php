@@ -29,10 +29,10 @@ function setSessionValue(){
     $_SESSION['userData'] = $_POST;
 }
 
-function getSessionValue($section, $fieldName){
+function getSessionValue($section, $fieldName, $returnType = ''){
 
     return isset($_SESSION['userData'][$section][$fieldName]) ? 
-        $_SESSION['userData'][$section][$fieldName] : '';
+        $_SESSION['userData'][$section][$fieldName] : $returnType;
 }
 
 $valid = false;

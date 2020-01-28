@@ -237,7 +237,7 @@
                 <span>Experience : </span>
                 <?php foreach($experienceData as $experienceValue): ?>
                     <input type="radio" name="other[experience]" id="<?php echo str_replace(' ','',$experienceValue); ?>" value="<?php echo $experienceValue; ?>"
-                    <?php if(@in_array(getValue('other','experience'), [$experienceValue])) echo 'checked'; ?>>
+                    <?php if(in_array(getValue('other','experience'), [$experienceValue])) echo 'checked'; ?>>
                     <?php echo $experienceValue; ?>
                 <?php endforeach; ?>
                 <span><?php
@@ -266,7 +266,7 @@
                 <span>Get In Touch Via : </span>
                 <?php foreach($getInTouchData as $getInTouchValue): ?>
                     <input type="checkbox" name="other[getInTouch][]" id="<?php echo $getInTouchValue; ?>" value="<?php echo $getInTouchValue ?>"
-                    <?php if(@isSelectedMulti('other','getInTouch',$getInTouchValue)) echo 'checked'; ?>>
+                    <?php if(isSelectedMulti('other','getInTouch',$getInTouchValue)) echo 'checked'; ?>>
                     <?php echo $getInTouchValue; ?> 
                 <?php endforeach; ?>
                 <span><?php
@@ -284,7 +284,7 @@
                 <select name="other[hobbies][]" id="hobbies" multiple>
                     <?php foreach($hobbiesData as $hobbiesValue): ?>
                         <option value="<?php echo $hobbiesValue; ?>"
-                        <?php if(@isSelectedMulti('other','hobbies',$hobbiesValue)) echo 'selected'; ?>>
+                        <?php if(isSelectedMulti('other','hobbies',$hobbiesValue)) echo 'selected'; ?>>
                         <?php echo $hobbiesValue; ?></option>
                     <?php endforeach; ?>
                 </select>
