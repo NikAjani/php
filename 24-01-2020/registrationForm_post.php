@@ -35,26 +35,85 @@ function getSessionValue($section, $fieldName){
         $_SESSION['userData'][$section][$fieldName] : '';
 }
 
-function validAllFields(){
-    $valid = false;
+$valid = false;
 
-    foreach($_POST as $sectionKey => $sectionValue){
-        foreach($sectionValue as $fieldKey => $value){
-            if(isset($_POST[$sectionKey][$fieldKey]) && !empty($_POST[$sectionKey][$fieldKey]))
-                $valid = true;
-            else{
-                echo '<b>'.$fieldKey.' field is required Please Enter Value..</b><br>';
-                $valid = false;
-                break;
-            }
-        }
-        if(!$valid) 
-            break;
+function validField($sectionKey, $fieldKey){
+    global $valid;
+    
+    if(isset($_POST[$sectionKey][$fieldKey]) && !empty($_POST[$sectionKey][$fieldKey])){
+        return $valid = true; 
     }
-    return $valid;
+    else{
+        return $valid = false;
+    }
+    
 }
 
-if(validAllFields())
+function validAdditionFields($sectionKey, $fieldKey){
+    global $valid;
+
+    switch($fieldKey){
+        
+        case 'emailId':
+        if(!filter_var($_POST['account']['emailId'],FILTER_VALIDATE_EMAIL)){
+                return $valid = false;
+            } else
+                return $valid = true; 
+            
+        case 'password':
+           if($_POST['account']['password'] != $_POST['account']['confirmPassword']){
+                return $valid = false;
+            } else
+                return $valid = true; 
+           
+        case 'phoneNo':
+            if(strlen($_POST['account']['phoneNo']) != 10){
+                return $valid = false;
+            } else
+                return $valid = true; 
+            
+        case 'postalCode':
+            if(strlen($_POST['address']['postalCode']) != 6){
+                return $valid = false;
+            } else
+                return $valid = true;
+            
+    }
+}
+
+
+function uploadFile($fileExtnsion,$nameOfFile){
+    $fileName = $_FILES[$nameOfFile]['name'];
+    $fileTempLocation = $_FILES[$nameOfFile]['tmp_name'];
+    $extension = strtolower(substr($fileName, strpos($fileName, '.')+1));
+    $fileType = $_FILES[$nameOfFile]['type'];
+    if(!empty($fileName)){
+
+        if($extension == $fileExtnsion){
+
+            $location = 'uploads/';
+
+            if(move_uploaded_file($fileTempLocation, $location.$fileName)){
+                
+            } else{
+                echo 'Eroor in File Upload';
+            }
+
+        } else{
+            echo 'File Should be '.$fileExtnsion;
+            
+        }
+    } else{
+        echo 'Please choose File';      
+        
+    }
+}
+
+
+if($valid){
+    uploadFile('jpg','profileImage');
+    uploadFile('pdf','certificateFile');
     setSessionValue();
+}
 
 ?>
