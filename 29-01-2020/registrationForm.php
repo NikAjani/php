@@ -11,6 +11,7 @@
 <div>
     <?php
         require_once 'connection.php';
+        require_once 'registrationForm_post.php';
     ?>
 </div>
 <br><hr><hr>
@@ -22,7 +23,7 @@
 
             <div>
                 <label for="prefix">Prefix : </label>
-                <select name="" id="">
+                <select name="account[prefix]">
                 <?php 
                     $prefixData = fetchAllData(['prefix'],'prefix'); 
 
@@ -35,27 +36,32 @@
             
             <div>
                 <label for="firstName">First Name : </label>
-                <input type="text" name="firstName" id="firstName">
+                <input type="text" name="account[firstName]" id="firstName" value="<?php echo getValue('account','firstName'); ?>">
             </div>
             
             <div>
                 <label for="lastName">Last Name : </label>
-                <input type="text" name="lastName" id="lastName">
+                <input type="text" name="account[lastName]" id="lastName" value="<?php echo getValue('account','lastName'); ?>">
+            </div>
+
+            <div>
+                <label for="dateOfBirth">Date Of Birth : </label>
+                <input type="date" name="account[dateOfBirth]" id="dateOfBirth" value="<?php echo getValue('account','dateOfBirth'); ?>">
             </div>
 
             <div>
                 <label for="phoneNo">Phone No : </label>
-                <input type="number" name="phoneNo" id="phoneNo">
+                <input type="number" name="account[phoneNo]" id="phoneNo" value="<?php echo getValue('account','phoneNo'); ?>">
             </div>
 
             <div>
                 <label for="emailId">Email Id : </label>
-                <input type="email" name="emailId" id="emailId">
+                <input type="email" name="account[emailId]" id="emailId" value="<?php echo getValue('account','emailId'); ?>">
             </div>
 
             <div>
                 <label for="password">Password : </label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="account[password]" id="password" value="<?php echo getValue('account','password'); ?>">
             </div>
 
             <div>
@@ -66,7 +72,7 @@
         
         <br>
         <div>
-            <input type="submit" value="Submit">
+            <input type="submit" name="submit" value="Submit">
             <input type="reset" value="Clear">
         </div>
     </form>
