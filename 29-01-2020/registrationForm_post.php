@@ -68,7 +68,7 @@ $valid = true;
     
     if($valid){
         $key = array_keys($_POST['account']);
-        insertIntoTable($key,$_POST['account'],'customers');
+        insertIntoTable($_POST);
     }
 }
 

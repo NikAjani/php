@@ -26,33 +26,18 @@ function fetchAllData($colName,$tableName){
 
 }
 
-function insertIntoTable($key,$colData, $tableName){
+function insertIntoTable($colData){
     
     global $connection;
-    
-    $queryString = 'INSERT INTO '.$tableName.' ( ';
 
-    for($i = 0; $i < sizeof($key); $i++){
-        $queryString .= $key[$i];
-        if($i < sizeof($key)-1)
-            $queryString .= ', '; 
-    }
+    $password = md5($_POST['account']['password']);
 
-    $queryString .= ") VALUES ( ";
+    $sqlQuery = "INSERT INTO `customers` (prefix, firstName, lastName, dateOfBirth, phoneNo, emailId, password)
+    VALUES ("."'".$colData['account']['prefix']."', '".$colData['account']['firstName']."', '".$colData['account']['lastName']."'
+    , '".$colData['account']['dateOfBirth']."', '".$colData['account']['phoneNo']."', '".$colData['account']['emailId']."', 
+    '".$password."')";
 
-    for($i = 0; $i < sizeof($key); $i++){
-        $queryString .= '\'';
-        $queryString .= $colData[$key[$i]];
-        $queryString .= '\'';
-        if($i < sizeof($key)-1)
-            $queryString .= ', '; 
-    }
-
-    $queryString .= ')';
-
-    echo $queryString;
-
-    if($connection -> query($queryString) === TRUE){
+    if($connection -> query($sqlQuery) === TRUE){
         echo "Inserted";
     }else {
         echo mysqli_error($connection);
