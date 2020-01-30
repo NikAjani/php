@@ -178,8 +178,13 @@ $tr = '';
     while($row = $tableData -> fetch_assoc()){
         $tr .= '<tr>';
         foreach($row as $key => $value){
+            $pos = strpos($value, 'jpg', 0);
             if($key == 'password' || $key == 'certificateFile')
                 continue;
+            if($pos){
+                $tr .= '<td><img src="'.$value.'"></td>';    
+                continue;
+            }
             $tr .= '<td>'.$value.'</td>';
         }
         $tr .= '</tr>';

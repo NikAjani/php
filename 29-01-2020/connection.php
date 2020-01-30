@@ -94,4 +94,7 @@ function insertData($tableName, $colData){
         return false;
 }
 
+
+//SELECT C.firstName, CA.address1, CO.fieldValue AS hobbies from `customers` C LEFT JOIN `customer_address` CA ON C.custId = CA.custId LEFT JOIN `customer_additional_info` CO ON C.custId = CO.custId where CO.fieldKey = 'hobbies' AND C.custID = 1
+
 ?>
