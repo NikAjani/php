@@ -12,11 +12,38 @@ if($connection -> connect_error){
     die('Not Connected To DataBase');
 }
 
-function fetchAllData($colName,$tableName){
+function loadData($colName, $tableName, $whereCondition){
+    global $connection;
+
+    $key = array_keys($whereCondition);
+
+    $where = '';
+    $where .= "`".$key[0]."` = '".$whereCondition[$key[0]]."'";
+    
+    for($i = 1; $i < sizeof($key); $i++){
+
+        if(sizeof($key) > 1){
+            $where .= " AND `".$key[$i]."` = '".$whereCondition[$key[$i]]."'";
+        } else {
+
+        }
+    }
+
+    $sqlQuery = "SELECT `".$colName."` FROM `".$tableName."` WHERE ".$where;
+    $tableData = $connection -> query($sqlQuery);
+
+    if($tableData -> num_rows > 0){
+        $row = $tableData -> fetch_assoc();
+        return $row[$colName];
+    }
+
+}
+
+function fetchAllData($tableName){
     
     global $connection;
 
-    echo $sqlQuery = "SELECT `".$colName[0]."` FROM `".$tableName."`";
+    $sqlQuery = "SELECT * FROM `".$tableName."`";
     $tableData = $connection -> query($sqlQuery);
 
     if($tableData -> num_rows > 0)
@@ -26,22 +53,45 @@ function fetchAllData($colName,$tableName){
 
 }
 
-function insertIntoTable($colData){
-    
+function fetchRow($tableName, $whereCondition){
+
     global $connection;
 
-    $password = md5($_POST['account']['password']);
+    $key = array_keys($whereCondition);
 
-    $sqlQuery = "INSERT INTO `customers` (prefix, firstName, lastName, dateOfBirth, phoneNo, emailId, password)
-    VALUES ("."'".$colData['account']['prefix']."', '".$colData['account']['firstName']."', '".$colData['account']['lastName']."'
-    , '".$colData['account']['dateOfBirth']."', '".$colData['account']['phoneNo']."', '".$colData['account']['emailId']."', 
-    '".$password."')";
+    $where = '';
+    $where .= "`".$key[0]."` = '".$whereCondition[$key[0]]."'";
+    
+    for($i = 1; $i < sizeof($key); $i++){
+
+        if(sizeof($key) > 1){
+            $where .= " AND `".$key[$i]."` = '".$whereCondition[$key[$i]]."'";
+        }
+    }
+
+    $sqlQuery = "SELECT * FROM `".$tableName."` WHERE ".$where;
+    $tableData = $connection -> query($sqlQuery);
+
+    if($tableData -> num_rows > 0)
+        return $tableData;
+    else    
+        return false;
+}
+
+function insertData($tableName, $colData){
+
+    global $connection;
+
+    $column = implode(',', array_keys($colData));
+    $columnValue = implode('\',\'', array_values($colData));
+    $columnValue = '\''.$columnValue.'\'';
+
+    $sqlQuery = "INSERT INTO `$tableName` (".$column.") VALUES (".$columnValue.")";
 
     if($connection -> query($sqlQuery) === TRUE){
-        echo "Inserted";
-    }else {
-        echo mysqli_error($connection);
-    }
+        return $connection -> insert_id;
+    } else  
+        return false;
 }
 
 ?>

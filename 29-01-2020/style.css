@@ -3,3 +3,13 @@ label{
    display: inline-block;
    width: 150px;
 }
+table, th, td, tr{
+   border: 1px solid black;
+}
+td{
+   padding: 5px;
+}
+img{
+   height: 20px;
+   width: 20px;
+}
