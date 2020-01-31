@@ -80,9 +80,8 @@ function insertData($tableName, $colData){
 
     $column = implode(',', array_keys($colData));
     $columnValue = implode('\',\'', array_values($colData));
-    $columnValue = '\''.$columnValue.'\'';
 
-    $sqlQuery = "INSERT INTO `$tableName` (".$column.") VALUES (".$columnValue.")";
+    $sqlQuery = "INSERT INTO `$tableName` (".$column.") VALUES ('".$columnValue."')";
 
     if($connection -> query($sqlQuery) === TRUE){
         return $connection -> insert_id;
@@ -138,11 +137,9 @@ function editDataQuery($id = 1){
 function updateData($updateData, $tableName, $whereArray) {
 
     global $connection;
-
-    $whereArray['custId'];
+    
     $colName = array_keys($updateData);
     $colValue = array_values($updateData);
-    $tableName;
 
     $updateString = "";
 
