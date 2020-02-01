@@ -18,3 +18,14 @@ a{
     text-decoration: none;
     color: blue;
 }
+td,th{
+    border: 1px solid black;
+    margin: auto;
+}
+table{
+    border: 1px solid black;
+    margin: auto;
+}
+h3{
+    text-align: center;
+}
