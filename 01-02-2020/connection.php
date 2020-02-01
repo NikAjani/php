@@ -100,6 +100,10 @@ class Connection {
         return $where;
     }
 
+    function __destruct(){
+        mysqli_close($this -> connSql);   
+    }
+
 }
 
 ?>

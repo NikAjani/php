@@ -33,16 +33,14 @@ class Login {
             $loginData = $_POST['loginDetail'];
 
             $isLoad = $connect -> fetchRow(['userId', 'name'], 'login', $loginData);
-            $isLoad = $isLoad -> fetch_assoc();
-
             if($isLoad){
-                
+                $isLoad = $isLoad -> fetch_assoc();
                 $_SESSION['user']['name'] = $isLoad['name'];
                 $_SESSION['user']['id'] = $isLoad['userId'];
                 $_SESSION['user']['loginTime'] = date("Y-m-d H:i:s", time());
                 header('Location: index.php');
             } else {
-                echo '<script>alert("Please TryAgain");</script>';
+                echo '<script>alert("Please Enter Valid User Name and Password");</script>';
             }
 
         }
