@@ -82,7 +82,6 @@ class Connection {
             $where = "";
             $key = array_keys($whereArray);
             $value = array_values($whereArray);
-            
             $where = " WHERE ".$key[0]." = '".$value[0]."'";
 
             if(sizeof($whereArray) > 1){
