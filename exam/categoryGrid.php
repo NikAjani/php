@@ -28,10 +28,10 @@
 <div>
     <table class="table table-striped">
     <?php
-            $rowData = $index -> fetchAll('category');
+            $rowData = $index -> fetchRow(['*'],'category',['userId' => $_SESSION['id']]);
             echo $table -> createTableHeader($rowData);
 
-            $rowData = $index -> fetchAll('category');;
+            $rowData = $index -> fetchRow(['*'],'category',['userId' => $_SESSION['id']]);
 
             echo $table -> createTableRow($rowData);  
     ?>

@@ -15,7 +15,7 @@ class Connection {
     function load($colName, $tableName, $whereArray){
         $where = $this -> whereCondition($whereArray);
 
-        $sqlQuery = "SELECT $colName FROM `$tableName` ".$where;
+        echo $sqlQuery = "SELECT `$colName` FROM `$tableName` ".$where;
         $tableData = $this -> connSql -> query($sqlQuery);
 
         if(@$tableData -> num_rows > 0){
@@ -50,7 +50,7 @@ class Connection {
         
         $where = $this -> whereCondition($whereArray);
 
-        $sqlQuery = "SELECT $colNameString FROM `$tableName`".$where;
+        echo $sqlQuery = "SELECT `$colNameString` FROM `$tableName`".$where;
         $tableData = $this -> connSql -> query($sqlQuery);
 
         if(@$tableData -> num_rows > 0){
@@ -100,29 +100,12 @@ class Connection {
     
         echo $sqlQuery = "UPDATE `$tableName` SET ".$updateString."".$where;
     
-        if($this -> connSql -> query($sqlQuery) === TRUE)
+        if($connection -> query($sqlQuery) === TRUE)
             return true;
         else{
             echo mysqli_error($connection);    
             return false;
         }
-    }
-
-    function deleteRow($tableName, $whereArray){
-
-        global $connection;
-    
-        $where = $this -> whereCondition($whereArray);
-    
-        echo $sqlQuery = "DELETE FROM `$tableName` ".$where;
-    
-        if($this -> connSql -> query($sqlQuery) === TRUE){
-            echo mysqli_error($connection);
-            return true;
-        } else {
-            return false;
-        }
-    
     }
     
 

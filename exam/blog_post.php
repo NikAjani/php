@@ -8,40 +8,40 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <title>category Grid</title>
+    <title>Blog Posts</title>
 </head>
 <body>
 <div>
     <?php
-    session_start();
-    if(isset($_SESSION['userName'])){
-        require_once 'connection.php';
-        require_once 'printTable.php';
+        session_start();
+        if(isset($_SESSION['userName'])){ 
+            include_once('header.php'); 
+            require_once 'connection.php';
+            require_once 'printTable.php';
 
-        $index = new Connection();
-        $table = new PrintTable();
-    ?>
+            $index = new Connection();
+            $table = new PrintTable();
+    ?>     
 </div>
-<div>
-    <?php include_once('header.php'); ?>
-</div>
+
+<a href="addPost.php"><button class="btn btn-outline-info">Add Blog Post</button></a>
+
 <div>
     <table class="table table-striped">
-    <?php
-            $rowData = $index -> fetchAll('category');
-            echo $table -> createTableHeader($rowData);
+        <?php
+                $rowData = $index -> fetchAll('post_category');
+                echo $table -> createTableHeader($rowData);
 
-            $rowData = $index -> fetchAll('category');;
+                $rowData = $index -> fetchAll('post_category');
 
-            echo $table -> createTableRow($rowData);  
-    ?>
-    
+                echo $table -> createTableRow($rowData);  
+        ?>
+        
     </table>
 </div>
-
 <div>
     <?php
-        }else
+        } else
             echo '<b>Please Login First <a href="index.php"> Login </a></b>';
     ?>
 </div>
