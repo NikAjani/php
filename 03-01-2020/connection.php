@@ -43,14 +43,14 @@ class Connection {
     function fetchRow($colName, $tableName, $whereArray){
 
         if(sizeof($colName) > 1){
-            $colNameString = implode('`, `', $colName);
+            $colNameString = implode(', ', $colName);
         } else {
             $colNameString = $colName[0];
         }
         
         $where = $this -> whereCondition($whereArray);
 
-        $sqlQuery = "SELECT $colNameString FROM `$tableName`".$where;
+        echo $sqlQuery = "SELECT $colNameString FROM `$tableName`".$where;
         $tableData = $this -> connSql -> query($sqlQuery);
 
         if(@$tableData -> num_rows > 0){
