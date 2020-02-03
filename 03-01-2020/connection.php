@@ -1,29 +1,61 @@
 <?php
 
 class Connection {
-
-    private $hostName = 'localhost';
+    
+    private $host = 'localhost';
     private $userName = 'root';
     private $password = '';
-    private $database = 'blog_portal';
+    private $databaseName = 'blog_portal';
+    private $connSql;
 
     function __construct() {
-        
-        $this -> dbConnection = new mysqli($this -> hostName, $this -> userName, $this -> password, $this -> database);
-
+        $this -> connSql = new mysqli($this -> host, $this -> userName, $this -> password, $this -> databaseName);
     }
 
     function load($colName, $tableName, $whereArray){
-
         $where = $this -> whereCondition($whereArray);
 
-        $sqlQuery = "SELECT `$colName` FROM `$tableName` WHERE ".$where;
-        $tableData = $this -> dbConnection -> query($sqlQuery);
+        echo $sqlQuery = "SELECT `$colName` FROM `$tableName` ".$where;
+        $tableData = $this -> connSql -> query($sqlQuery);
 
         if(@$tableData -> num_rows > 0){
             $row = $tableData -> fetch_assoc();
 
             return $row[$colName];
+        }
+        else    
+            return false;
+
+    }
+
+    function fetchAll($tableName){
+
+        $sqlQuery = "SELECT * FROM `$tableName`";
+
+        $tableData = $this -> connSql -> query($sqlQuery);
+
+        if($tableData -> num_rows > 0)
+            return $tableData;
+        else    
+            return false;
+    }
+
+    function fetchRow($colName, $tableName, $whereArray){
+
+        if(sizeof($colName) > 1){
+            $colNameString = implode('`, `', $colName);
+        } else {
+            $colNameString = $colName[0];
+        }
+        
+        $where = $this -> whereCondition($whereArray);
+
+        $sqlQuery = "SELECT `$colNameString` FROM `$tableName`".$where;
+        $tableData = $this -> connSql -> query($sqlQuery);
+
+        if(@$tableData -> num_rows > 0){
+            mysqli_error($this -> connSql);
+            return $tableData;
         }
         else    
             return false;
@@ -36,8 +68,8 @@ class Connection {
 
         $sqlQuery = "INSERT INTO `$tableName` (".$column.") VALUES ('".$columnValue."')";
 
-        if($this -> dbConnection -> query($sqlQuery) === TRUE){
-            return $this -> dbConnection -> insert_id;
+        if($this -> connSql -> query($sqlQuery) === TRUE){
+            return $this -> connSql -> insert_id;
         } else {
             return false;
         }
@@ -66,10 +98,10 @@ class Connection {
         return $where;
     }
 
-    function __destruct() {
-        
-        mysqli_close($this -> dbConnection);
+    function __destruct(){
+        mysqli_close($this -> connSql);   
     }
+
 }
 
 ?>

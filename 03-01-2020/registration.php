@@ -116,11 +116,12 @@
                     if(isset($_POST['register'])){
                         if(!$register -> validation('information'))
                             echo 'Please Enter Infromation';
+                        
+                            if($register -> valid > 1){
+                            $register -> registerUser();
+                        }
                     }
-
-                    if($register -> valid > 1){
-                        $register -> registerUser();
-                    }
+                   
                 ?>
         </div><br>
 

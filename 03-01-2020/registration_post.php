@@ -63,24 +63,23 @@ class RegisterNow {
 
             $inserData = $this -> prepareData($_POST);
 
-            print_r($inserData);
+            //print_r($inserData);
 
-            $isInsert = $connect -> load('emailId','user',['emailId' => $_POST['emailId']]);
+            echo $isInsert = $connect -> load('emailId','user',['emailId' => $_POST['emailId']]);
 
-            if($isInsert){
+            if(!$isInsert){
                 
                 $id = $connect -> insertData('user',$inserData);
 
-                if($id)
+                if($id){
                     echo '<script>alert("User Register..");</script>';
-                else
+                    header('Location: blog_post.php');
+                } else
                     echo '<script>alert("Error in User Register..");</script>';
             
             } else {
                 echo '<script>alert("Email Id Already Register");</script>';
             }
-
-            
         }
     }
 
