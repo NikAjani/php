@@ -9,16 +9,14 @@
 <body>
 
 <?php
-
     require_once "fileUploadPost.php";
-
 ?>
 
 <div>
     <form method="post" enctype="multipart/form-data"> 
         <div>
-            <label for="fileName">Select Profile Image : </label>
-            <input type="file" name="profileImg" id="fileName">
+            <label for="profileImg">Select Profile Image : </label>
+            <input type="file" name="profileImg" id="profileImg">
             <span>
                 <?php
                     if(isset($_POST["upload"])){
