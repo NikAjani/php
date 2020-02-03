@@ -1,0 +1,13 @@
+explode()
+
+explode() function is used to split string by specific delemeter
+
+defi
+	explode(delemeter, stringVarible)
+
+example
+
+	$str = 'hello, how, are, you';
+	$result = explode(',', $str);
+
+explode() function is return result as array
