@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-
 require_once 'connection.php';
 
 class Login {
@@ -35,7 +34,9 @@ class Login {
             $isLoad = $connect -> fetchRow(['userId', 'firstName'], 'user', $loginData);
             if($isLoad){
                 $isLoad = $isLoad -> fetch_assoc();
-                
+                $_SESSION['userName'] = $isLoad['firstName'];
+                $_SESSION['id'] = $isLoad['userId'];
+                $_SESSION['loginTime'] = date("Y-m-d H:i:s", time());
                 header('Location: blog_post.php');
             } else {
                 echo '<script>alert("Please Enter Valid User Name and Password");</script>';

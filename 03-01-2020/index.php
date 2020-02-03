@@ -13,9 +13,10 @@
 </head>
 <body>
 <div>
-    <?php 
-        require_once 'loginPost.php';
-
+    <?php
+        session_start();    
+        if(!isset($_SESSION['userName'])):
+            require_once 'loginPost.php';
     ?>
 <br>
 </div>
@@ -87,5 +88,10 @@
         </div>
     </form>
 </div>
+<?php
+    endif;
+    if(isset($_SESSION['userName']))
+        header('Location: blog_post.php');
+?>
 </body>
 </html>

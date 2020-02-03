@@ -9,8 +9,12 @@
                     <a class="nav-link" href="registration.php"><button class="btn btn-outline-info">My Profile</button></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href=""><button class="btn btn-outline-danger">Log Out</button></a>
+                    <a class="nav-link" href="logout.php"><button class="btn btn-outline-danger">Log Out</button></a>
                 </li>
             </ul>
         </nav>
 </header>
+<div>
+    <h3><a href="blog_post.php">Blog Post</a></h3><br>
+    
+</div>

@@ -50,7 +50,7 @@ class Connection {
         
         $where = $this -> whereCondition($whereArray);
 
-        $sqlQuery = "SELECT `$colNameString` FROM `$tableName`".$where;
+        echo $sqlQuery = "SELECT `$colNameString` FROM `$tableName`".$where;
         $tableData = $this -> connSql -> query($sqlQuery);
 
         if(@$tableData -> num_rows > 0){
@@ -74,6 +74,40 @@ class Connection {
             return false;
         }
     }
+
+    function update($updateData, $tableName, $whereArray) {
+
+        global $connection;
+        
+        $colName = array_keys($updateData);
+        $colValue = array_values($updateData);
+    
+        $updateString = "";
+    
+        $updateString .= $colName[0].' = \''.$colValue[0].'\'';
+    
+        if(sizeof($colName) > 1) {
+    
+            for($i = 1; $i < sizeof($colName); $i++){
+                $updateString .= ', '.$colName[$i].' = \''.$colValue[$i].'\'';
+            }
+    
+        }
+    
+        $updateString;
+    
+        $where = $this -> whereCondition($whereArray);
+    
+        echo $sqlQuery = "UPDATE `$tableName` SET ".$updateString."".$where;
+    
+        if($connection -> query($sqlQuery) === TRUE)
+            return true;
+        else{
+            echo mysqli_error($connection);    
+            return false;
+        }
+    }
+    
 
     function whereCondition($whereArray){
 
