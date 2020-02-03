@@ -17,8 +17,29 @@
 <div>
     <form method="post" enctype="multipart/form-data"> 
         <div>
-            <label for="fileName">Select File : </label>
+            <label for="fileName">Select Profile Image : </label>
+            <input type="file" name="profileImg" id="fileName">
+            <span>
+                <?php
+                    if(isset($_POST["upload"])){
+                        if(!checkExtension('profileImg','jpg'))
+                            echo 'Please Select JPG File Only';
+                    }
+                ?>
+            </span>
+        </div>
+        <br>
+        <div>
+            <label for="fileName">Select pdf : </label>
             <input type="file" name="fileName" id="fileName">
+            <span>
+                <?php
+                    if(isset($_POST["upload"])){
+                        if(!checkExtension('fileName','pdf'))
+                            echo 'Please Select PDF File Only';
+                    }
+                ?>
+            </span>
         </div>
         <br>
         <div>

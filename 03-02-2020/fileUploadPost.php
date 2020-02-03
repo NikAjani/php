@@ -21,9 +21,28 @@ function uploadFileAny($name, $fileExtension){
     }
 }
 
+function checkExtension($name, $fileExtension){
+    if(isset($_FILES[$name]) && !empty($_FILES[$name]['name'])){
+        
+        $fileName = $_FILES[$name]['name'];
+        
+        $extension = strtolower(substr($fileName, strpos($fileName, '.')+1));
+
+        if($extension === $fileExtension){
+            return  true;
+        } else {
+            return false;
+        }
+        
+    } else {
+        return false;
+    }
+}
+
 if(isset($_POST['upload'])){
     
-    uploadFileAny('fileName', 'pdf');
+    //uploadFileAny('fileName', 'pdf');
+    
 }
 
 ?>
