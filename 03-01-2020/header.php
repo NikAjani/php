@@ -6,7 +6,7 @@
                     
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="registration.php"><button class="btn btn-outline-info">My Profile</button></a>
+                    <a class="nav-link" href="myProfile.php"><button class="btn btn-outline-info">My Profile</button></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="logout.php"><button class="btn btn-outline-danger">Log Out</button></a>

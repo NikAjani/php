@@ -11,7 +11,6 @@ class PrintTable {
                     continue;
                 $tr .= '<th>'.$key.'</th>';
             }
-            $tr .= '<th>Action</th>';
             $tr .= '</tr>';
             break;
         }
@@ -29,7 +28,6 @@ class PrintTable {
                 }
                 $tr .= '<td>'.$value.'</td>';
             }
-            $tr .= "<td><a href='editBlogPost.php?editId=".$row['postId']."'>Edit</a> | <a href='delete.php?delId=".$row['postId']."'>Delete</a></td>";
             $tr .= '</tr>';
         }
         return $tr;

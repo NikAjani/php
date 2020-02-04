@@ -27,18 +27,47 @@
 </div>
 <div>
     <table class="table table-striped">
-    <?php
-            $rowData = $index -> fetchAll('category');
-            echo $table -> createTableHeader($rowData);
-
-            $rowData = $index -> fetchAll('category');;
-
-            echo $table -> createTableRow($rowData);  
-    ?>
     
+
+        <tr>
+            <?php
+                $rowData = $index -> fetchAll('category');
+                while($row = $rowData -> fetch_assoc()){
+                    
+                    foreach($row as $key => $value){
+                        if($key == 'password')
+                            continue;
+                        ?>
+                        <th><?php echo $key; ?></th>
+                    <?php 
+                    }
+                    break;
+                }
+            ?>
+            <th>Action</th>
+        </tr>
+        <tr>
+        <?php
+            $rowData = $index -> fetchAll('category');
+            while($row = $rowData -> fetch_assoc()){
+                
+                foreach($row as $key => $value){
+                    if($key == 'password')
+                        continue;
+                    ?>
+                    <td><?php echo $value; ?></td>
+                <?php 
+                }
+                ?>
+                <td><a href="editBlogPost.php?editId=<?php echo $row['catId']; ?>">Edit </a>| <a href="delete.php?catDel=<?php echo $row['catId']; ?>">Delete</a></td>
+        </tr>
+                <?php
+                
+            }
+            ?>
+        
     </table>
 </div>
-
 <div>
     <?php
         }else

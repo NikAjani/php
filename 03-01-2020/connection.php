@@ -50,7 +50,7 @@ class Connection {
         
         $where = $this -> whereCondition($whereArray);
 
-        echo $sqlQuery = "SELECT $colNameString FROM `$tableName`".$where;
+        $sqlQuery = "SELECT $colNameString FROM `$tableName`".$where;
         $tableData = $this -> connSql -> query($sqlQuery);
 
         if(@$tableData -> num_rows > 0){

@@ -58,7 +58,7 @@
                 <?php 
                 }
                 ?>
-                <td><a href="editBlogPost.php?editId=<?php echo $row['postId']; ?>">Edit </a>| <a href="delete.php?delId=<?php echo $row['postId']; ?>">Delete</a></td>
+                <td><a href="editBlogPost.php?editId=<?php echo $row['postId']; ?>">Edit </a>| <a href="delete.php?blogId=<?php echo $row['postId']; ?>">Delete</a></td>
         </tr>
                 <?php
                 
