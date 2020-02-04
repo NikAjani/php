@@ -30,38 +30,45 @@
 
         <tr>
             <?php
-                $rowData = $index -> fetchAll('post');
+                $rowData = $index -> fetchRow(['*'],'post',['userId' => $_SESSION['id']]);
+                if(!$rowData){
+                    echo '<br><br><b>Welcom Add New Post</b>';
+                    
+                }else{
+                    while($row = $rowData -> fetch_assoc()){
+                        
+                        foreach($row as $key => $value){
+                            if($key == 'password')
+                                continue;
+                            ?>
+                            <th><?php echo $key; ?></th>
+                        <?php 
+                        }
+                        break;
+                    }
+            ?>
+            <th>Action</th>
+                <?php } ?>
+        </tr>
+        <tr>
+        <?php
+            $rowData = $index -> fetchRow(['*'],'post',['userId' => $_SESSION['id']]);
+            if($rowData){
                 while($row = $rowData -> fetch_assoc()){
                     
                     foreach($row as $key => $value){
                         if($key == 'password')
                             continue;
                         ?>
-                        <th><?php echo $key; ?></th>
+                        <td><?php echo $value; ?></td>
                     <?php 
                     }
-                    break;
-                }
-            ?>
-            <th>Action</th>
-        </tr>
-        <tr>
-        <?php
-            $rowData = $index -> fetchAll('post');
-            while($row = $rowData -> fetch_assoc()){
-                
-                foreach($row as $key => $value){
-                    if($key == 'password')
-                        continue;
                     ?>
-                    <td><?php echo $value; ?></td>
-                <?php 
-                }
-                ?>
-                <td><a href="editBlogPost.php?editId=<?php echo $row['postId']; ?>">Edit </a>| <a href="delete.php?blogId=<?php echo $row['postId']; ?>">Delete</a></td>
-        </tr>
-                <?php
-                
+                    <td><a href="editBlogPost.php?editId=<?php echo $row['postId']; ?>">Edit </a>| <a href="delete.php?blogId=<?php echo $row['postId']; ?>">Delete</a></td>
+            </tr>
+                    <?php
+                    
+                    }
             }
             ?>
         
