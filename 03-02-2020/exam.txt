@@ -1,0 +1,7 @@
+array diff
+
+array diffrent is used to check wheather array 2 element is present in array 1 or not 
+
+array_diff(array1, array2);
+
+this function return the element of array 2 that is not present in array 1
