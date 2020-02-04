@@ -13,8 +13,7 @@
 </head>
 <body>
 <div>
-    <?php
-        session_start();    
+    <?php   
         if(!isset($_SESSION['userName'])):
             require_once 'loginPost.php';
     ?>
