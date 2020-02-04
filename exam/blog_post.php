@@ -17,10 +17,8 @@
         if(isset($_SESSION['userName'])){ 
             include_once('header.php'); 
             require_once 'connection.php';
-            require_once 'printTable.php';
 
             $index = new Connection();
-            $table = new PrintTable();
     ?>     
 </div>
 
@@ -28,14 +26,44 @@
 
 <div>
     <table class="table table-striped">
+    
+
+        <tr>
+            <?php
+                $rowData = $index -> fetchAll('post');
+                while($row = $rowData -> fetch_assoc()){
+                    
+                    foreach($row as $key => $value){
+                        if($key == 'password')
+                            continue;
+                        ?>
+                        <th><?php echo $key; ?></th>
+                    <?php 
+                    }
+                    break;
+                }
+            ?>
+            <th>Action</th>
+        </tr>
+        <tr>
         <?php
-                $rowData = $index -> fetchAll('post_category');
-                echo $table -> createTableHeader($rowData);
-
-                $rowData = $index -> fetchAll('post_category');
-
-                echo $table -> createTableRow($rowData);  
-        ?>
+            $rowData = $index -> fetchAll('post');
+            while($row = $rowData -> fetch_assoc()){
+                
+                foreach($row as $key => $value){
+                    if($key == 'password')
+                        continue;
+                    ?>
+                    <td><?php echo $value; ?></td>
+                <?php 
+                }
+                ?>
+                <td><a href="editBlogPost.php?editId=<?php echo $row['postId']; ?>">Edit </a>| <a href="delete.php?blogId=<?php echo $row['postId']; ?>">Delete</a></td>
+        </tr>
+                <?php
+                
+            }
+            ?>
         
     </table>
 </div>

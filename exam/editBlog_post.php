@@ -7,8 +7,7 @@ $conn = new Connection();
 $rowData = $conn -> fetchRow(['*'],'post', ['postId' => $_GET['editId']]);
 
 $rowData = $rowData -> fetch_assoc();
-
-
+print_r($rowData);
 
 function get_editValue($fieldName, $retrunType = ''){
     global $rowData;
@@ -20,8 +19,6 @@ function get_editValue($fieldName, $retrunType = ''){
     else
         return ($rowData[$fieldName]);
 }
-
-
 class UpdatePost{
     public $valid = 1;
 

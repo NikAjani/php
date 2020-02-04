@@ -24,6 +24,7 @@
 </div>
 
 <div>
+    <h4><a href="categoryGrid.php">View</a></h4>
     <h3>Add new Category</h3>
     <form method="post">
         <div>

@@ -8,14 +8,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <title>Manage Category</title>
+    <title>Edit Category</title>
 </head>
 <body>
-<div>
+    
+
+    <div>
     <?php 
         session_start();
         if(isset($_SESSION['userName'])){
-        require_once 'manageCategory_post.php';
+            require_once 'editCategory_post.php';
         require_once 'connection.php';    
     ?>
 </div>
@@ -25,14 +27,14 @@
 
 <div>
     <h4><a href="categoryGrid.php">View</a></h4>
-    <h3>Add new Category</h3>
-    <form method="post">
+    <h3>Update Category</h3>
+    <form method="post" enctype="multipart/form-data">
         <div>
             <label for="title">Title : </label>
-            <input type="text" name="title" id="title">
+            <input type="text" name="title" id="title" value="<?php echo get_editValue('title'); ?>">
             <span>
                 <?php
-                    if(isset($_POST['addCat'])){
+                    if(isset($_POST['updateCat'])){
                         if(!$category -> validation('title'))
                             echo 'Please Enter Title';
                     }
@@ -42,10 +44,10 @@
         </div>
         <div>
             <label for="catContant">Contant : </label>
-            <textarea name="catContant" id="catContant"></textarea>
+            <textarea name="catContant" id="catContant"><?php echo get_editValue('catContant'); ?></textarea>
             <span>
                 <?php
-                    if(isset($_POST['addCat'])){
+                    if(isset($_POST['updateCat'])){
                         if(!$category -> validation('catContant'))
                             echo 'Please Enter Contant';
                     }
@@ -55,10 +57,10 @@
         </div>
         <div>
             <label for="catUrl">Url : </label>
-            <input type="text" name="catUrl" id="catUrl">
+            <input type="text" name="catUrl" id="catUrl" value="<?php echo get_editValue('catUrl'); ?>">
             <span>
                 <?php
-                    if(isset($_POST['addCat'])){
+                    if(isset($_POST['updateCat'])){
                         if(!$category -> validation('catUrl'))
                             echo 'Please Enter URL';
                     }
@@ -68,10 +70,10 @@
         </div>
         <div>
             <label for="metaName">Meta Title : </label>
-            <input type="text" name="metaName" id="metaName">
+            <input type="text" name="metaName" id="metaName" value="<?php echo get_editValue('metaName'); ?>">
             <span>
                 <?php
-                    if(isset($_POST['addCat'])){
+                    if(isset($_POST['updateCat'])){
                         if(!$category -> validation('metaName'))
                             echo 'Please Enter Meta Name';
                     }
@@ -99,19 +101,17 @@
             <input type="file" name="catImage" id="catImage">
             <span>
                 <?php
-                    if(isset($_POST['addCat'])){
-                        if(!$category -> validation('catImage'))
-                            echo 'Please select Image';
+                    if(isset($_POST['updateCat'])){;
 
                         if($category -> valid > 1)
-                            $category -> addCategory();
+                            $category -> updateCategoryfunc();
                     }
                 
                 ?>
             </span>
         </div>
         <div>
-            <input type="submit" value="Add Category" name="addCat">
+            <input type="submit" value="Update Category" name="updateCat">
         </div>
     </form>
 </div>

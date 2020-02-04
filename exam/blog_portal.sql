@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 03, 2020 at 05:33 PM
+-- Generation Time: Feb 04, 2020 at 11:09 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -43,17 +43,17 @@ CREATE TABLE `category` (
 
 INSERT INTO `category` (`catId`, `parentId`, `title`, `metaName`, `catUrl`, `catContant`) VALUES
 (1, 0, 'sport', 'sport', 'sport/', 'abc'),
-(2, 0, 'sport', 'sport', 'sport/', 'abc'),
 (3, 1, 'abc', 'ad', 'ad', 'asd'),
-(4, 0, 'education', 'edu', 'education', 'e');
+(4, 0, 'education', 'edu', 'education', 'e'),
+(5, 4, 'cat1', 'adad', 'adad', 'add');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `post_category`
+-- Table structure for table `post`
 --
 
-CREATE TABLE `post_category` (
+CREATE TABLE `post` (
   `postId` int(11) NOT NULL,
   `userId` int(11) NOT NULL,
   `title` varchar(30) NOT NULL,
@@ -64,15 +64,48 @@ CREATE TABLE `post_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `post`
+--
+
+INSERT INTO `post` (`postId`, `userId`, `title`, `contant`, `url`, `publish`, `category`) VALUES
+(4, 3, 'post2', 'Ajani', 'Nikhil', '2020-02-11', 'sport,abc,education'),
+(5, 3, 'post3', 'afaf', 'adad', '2020-02-11', 'sport,abc,education'),
+(6, 3, 'post4', 'abc', 'acfr', '2020-02-12', 'sport,abc,education'),
+(7, 3, 'post34', 'we', 'sdf', '0000-00-00', 'sport,abc,education'),
+(8, 3, 'post34', 'we', 'sdf', '0000-00-00', 'sport,abc,education'),
+(9, 3, 'post34', 'we', 'sdf', '0000-00-00', 'sport,abc,education'),
+(12, 3, 'post44', 'adad', 'adadd', '2020-02-10', 'sport,abc'),
+(13, 3, 'post55', '5848', '151', '2020-02-18', 'sport,abc,education'),
+(14, 3, 'adada', 'adad', 'dadadad', '2020-02-11', 'sport,abc,education'),
+(15, 3, 'adada', 'adad', 'dadadad', '2020-02-11', 'sport,abc,education'),
+(16, 3, 'adada', 'adad', 'dadadad', '2020-02-11', 'sport,abc,education'),
+(17, 3, 'post3', 'adad', 'adad', '2020-02-11', 'abc,education,cat1'),
+(18, 3, 'post3', 'adad', 'adad', '2020-02-11', 'abc,education,cat1'),
+(19, 3, 'post22223', 'fafa', 'afaf', '2020-02-10', 'abc,education'),
+(20, 3, 'post22223', 'fafa', 'afaf', '2020-02-10', 'abc,education'),
+(21, 3, 'postAjani', 'akjkd', 'akjdkja', '2020-02-05', 'sport,education');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `post_category`
+--
+
+CREATE TABLE `post_category` (
+  `postCatId` int(11) NOT NULL,
+  `postId` int(11) NOT NULL,
+  `catId` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
 -- Dumping data for table `post_category`
 --
 
-INSERT INTO `post_category` (`postId`, `userId`, `title`, `contant`, `url`, `publish`, `category`) VALUES
-(1, 3, 'post', 'afaf', 'ad', '2020-02-04', ''),
-(2, 3, 'post', 'afaf', 'ad', '2020-02-04', ''),
-(3, 3, 'post', 'afaf', 'ad', '2020-02-04', ''),
-(4, 3, 'post2', 'afaf', 'adad', '2020-02-11', 'sport,sport,abc'),
-(5, 3, 'post2', 'afaf', 'adad', '2020-02-11', 'sport,sport,abc');
+INSERT INTO `post_category` (`postCatId`, `postId`, `catId`) VALUES
+(10, 20, 3),
+(11, 20, 4),
+(12, 21, 1),
+(13, 21, 4);
 
 -- --------------------------------------------------------
 
@@ -118,11 +151,19 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`catId`);
 
 --
+-- Indexes for table `post`
+--
+ALTER TABLE `post`
+  ADD PRIMARY KEY (`postId`),
+  ADD KEY `userId` (`userId`);
+
+--
 -- Indexes for table `post_category`
 --
 ALTER TABLE `post_category`
-  ADD PRIMARY KEY (`postId`),
-  ADD KEY `userId` (`userId`);
+  ADD PRIMARY KEY (`postCatId`),
+  ADD KEY `postId` (`postId`),
+  ADD KEY `catId` (`catId`);
 
 --
 -- Indexes for table `user`
@@ -138,13 +179,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `catId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `catId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `post`
+--
+ALTER TABLE `post`
+  MODIFY `postId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `post_category`
 --
 ALTER TABLE `post_category`
-  MODIFY `postId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `postCatId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -157,10 +204,17 @@ ALTER TABLE `user`
 --
 
 --
+-- Constraints for table `post`
+--
+ALTER TABLE `post`
+  ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `post_category`
 --
 ALTER TABLE `post_category`
-  ADD CONSTRAINT `post_category_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `user` (`userId`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `post_category_ibfk_1` FOREIGN KEY (`postId`) REFERENCES `post` (`postId`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `post_category_ibfk_2` FOREIGN KEY (`catId`) REFERENCES `category` (`catId`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

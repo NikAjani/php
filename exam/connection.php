@@ -15,7 +15,7 @@ class Connection {
     function load($colName, $tableName, $whereArray){
         $where = $this -> whereCondition($whereArray);
 
-        echo $sqlQuery = "SELECT `$colName` FROM `$tableName` ".$where;
+        echo $sqlQuery = "SELECT $colName FROM `$tableName` ".$where;
         $tableData = $this -> connSql -> query($sqlQuery);
 
         if(@$tableData -> num_rows > 0){
@@ -43,14 +43,14 @@ class Connection {
     function fetchRow($colName, $tableName, $whereArray){
 
         if(sizeof($colName) > 1){
-            $colNameString = implode('`, `', $colName);
+            $colNameString = implode(', ', $colName);
         } else {
             $colNameString = $colName[0];
         }
         
         $where = $this -> whereCondition($whereArray);
 
-        echo $sqlQuery = "SELECT `$colNameString` FROM `$tableName`".$where;
+        $sqlQuery = "SELECT $colNameString FROM `$tableName`".$where;
         $tableData = $this -> connSql -> query($sqlQuery);
 
         if(@$tableData -> num_rows > 0){
@@ -84,7 +84,7 @@ class Connection {
     
         $updateString = "";
     
-        $updateString .= $colName[0].' = \''.$colValue[0].'\'';
+        echo $updateString .= $colName[0].' = \''.$colValue[0].'\'';
     
         if(sizeof($colName) > 1) {
     
@@ -100,12 +100,29 @@ class Connection {
     
         echo $sqlQuery = "UPDATE `$tableName` SET ".$updateString."".$where;
     
-        if($connection -> query($sqlQuery) === TRUE)
+        if($this -> connSql -> query($sqlQuery) === TRUE)
             return true;
         else{
             echo mysqli_error($connection);    
             return false;
         }
+    }
+
+    function deleteRow($tableName, $whereArray){
+
+        global $connection;
+    
+        $where = $this -> whereCondition($whereArray);
+    
+        echo $sqlQuery = "DELETE FROM `$tableName` ".$where;
+    
+        if($this -> connSql -> query($sqlQuery) === TRUE){
+            echo mysqli_error($connection);
+            return true;
+        } else {
+            return false;
+        }
+    
     }
     
 
