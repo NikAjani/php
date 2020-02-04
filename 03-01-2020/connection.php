@@ -15,7 +15,7 @@ class Connection {
     function load($colName, $tableName, $whereArray){
         $where = $this -> whereCondition($whereArray);
 
-        $sqlQuery = "SELECT $colName FROM `$tableName` ".$where;
+        echo $sqlQuery = "SELECT $colName FROM `$tableName` ".$where;
         $tableData = $this -> connSql -> query($sqlQuery);
 
         if(@$tableData -> num_rows > 0){
@@ -84,7 +84,7 @@ class Connection {
     
         $updateString = "";
     
-        $updateString .= $colName[0].' = \''.$colValue[0].'\'';
+        echo $updateString .= $colName[0].' = \''.$colValue[0].'\'';
     
         if(sizeof($colName) > 1) {
     

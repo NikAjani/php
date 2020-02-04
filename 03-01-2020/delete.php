@@ -6,7 +6,7 @@ if(isset($_GET['blogId'])) {
 
     $conn = new Connection();
 
-    $isDeleted = $conn -> deleteRow('post_category', ['postId' => $_GET['blogId']]);
+    $isDeleted = $conn -> deleteRow('post', ['postId' => $_GET['blogId']]);
 
     if($isDeleted){
         echo '<script>alert("Delete Sucessfull");</script>';

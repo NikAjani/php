@@ -23,13 +23,22 @@ class addNewPost{
 
     function addNewBlog(){
 
+        $cat = $_POST['cat'];
         $blogData = $this -> prepareData($_POST);
-
+        print_r($blogData);
         $connect = new Connection();
-        $id = $connect -> insertData('post_category', $blogData);
+        echo $id = $connect -> insertData('post', $blogData);
+        echo 'hii';
+        if($id){
+            echo 'hii';
+            foreach($cat as $value){
 
-        if($id)
+                echo $catId = $connect -> load('catId', 'category', ['title' => $value]);
+
+                $post_cat_id = $connect -> insertData('post_category', ['postId' => $id, 'catId' => $catId]);
+            }
             header('Location: blog_post.php');
+        }
         else    
             echo 'Error in blog post Insert';
 

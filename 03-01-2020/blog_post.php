@@ -30,7 +30,7 @@
 
         <tr>
             <?php
-                $rowData = $index -> fetchAll('post_category');
+                $rowData = $index -> fetchAll('post');
                 while($row = $rowData -> fetch_assoc()){
                     
                     foreach($row as $key => $value){
@@ -47,7 +47,7 @@
         </tr>
         <tr>
         <?php
-            $rowData = $index -> fetchAll('post_category');
+            $rowData = $index -> fetchAll('post');
             while($row = $rowData -> fetch_assoc()){
                 
                 foreach($row as $key => $value){

@@ -4,7 +4,7 @@
 require_once 'connection.php';
 $conn = new Connection();
 
-$rowData = $conn -> fetchRow(['*'],'post_category', ['postId' => $_GET['editId']]);
+$rowData = $conn -> fetchRow(['*'],'post', ['postId' => $_GET['editId']]);
 
 $rowData = $rowData -> fetch_assoc();
 
@@ -53,10 +53,11 @@ class UpdatePost{
         $updateData = $this -> prepareData($_POST);
         echo 'hiii';
 
-        $isUpdate = $connct -> update($updateData, 'post_category', ['postId' => $_GET['editId']]);
+        $isUpdate = $connct -> update($updateData, 'post', ['postId' => $_GET['editId']]);
 
-        if($isUpdate)
+        if($isUpdate){
             header('Location: blog_post.php');
+        }
         else    
             echo 'Error';
 
