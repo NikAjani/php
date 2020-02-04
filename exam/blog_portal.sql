@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 04, 2020 at 11:09 AM
+-- Generation Time: Feb 04, 2020 at 01:32 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -34,18 +34,22 @@ CREATE TABLE `category` (
   `title` varchar(30) NOT NULL,
   `metaName` varchar(50) NOT NULL,
   `catUrl` varchar(50) NOT NULL,
-  `catContant` varchar(50) NOT NULL
+  `catContant` varchar(50) NOT NULL,
+  `imagePath` varchar(100) NOT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updateAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `category`
 --
 
-INSERT INTO `category` (`catId`, `parentId`, `title`, `metaName`, `catUrl`, `catContant`) VALUES
-(1, 0, 'sport', 'sport', 'sport/', 'abc'),
-(3, 1, 'abc', 'ad', 'ad', 'asd'),
-(4, 0, 'education', 'edu', 'education', 'e'),
-(5, 4, 'cat1', 'adad', 'adad', 'add');
+INSERT INTO `category` (`catId`, `parentId`, `title`, `metaName`, `catUrl`, `catContant`, `imagePath`, `createdAt`, `updateAt`) VALUES
+(1, 0, 'sport', 'sport123', 'sport/123', 'abc', 'http://localhost/Cybercom/php/exam/uploads/gettyimages-1083073306-2048x2048.jpg', '2020-02-04 07:57:56', '2020-02-04 07:57:56'),
+(3, 0, 'abc', 'ad', 'ad', 'asd', 'http://localhost/Cybercom/php/exam/uploads/gettyimages-1083069018-2048x2048.jpg', '2020-02-04 07:57:56', '2020-02-04 07:57:56'),
+(4, 0, 'education', 'edu', 'education', 'e', 'http://localhost/Cybercom/php/exam/uploads/gettyimages-111487207-2048x2048.jpg', '2020-02-04 07:57:56', '2020-02-04 07:57:56'),
+(12, 3, 'post222', 'adda', 'adadda/', 'ad', 'http://localhost/Cybercom/php/exam/uploads/gettyimages-695162876-2048x2048.jpg', '2020-02-04 07:57:56', '2020-02-04 07:57:56'),
+(13, 0, 'life', 'adad', 'adad', 'adad', 'http://localhost/Cybercom/php/exam/uploads/MS-Dhoni-61-825x510.jpg', '2020-02-04 07:57:56', '2020-02-04 07:57:56');
 
 -- --------------------------------------------------------
 
@@ -60,30 +64,32 @@ CREATE TABLE `post` (
   `contant` varchar(100) NOT NULL,
   `url` varchar(50) NOT NULL,
   `publish` date NOT NULL,
-  `category` varchar(30) NOT NULL
+  `category` varchar(30) NOT NULL,
+  `createdAt` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updateAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `post`
 --
 
-INSERT INTO `post` (`postId`, `userId`, `title`, `contant`, `url`, `publish`, `category`) VALUES
-(4, 3, 'post2', 'Ajani', 'Nikhil', '2020-02-11', 'sport,abc,education'),
-(5, 3, 'post3', 'afaf', 'adad', '2020-02-11', 'sport,abc,education'),
-(6, 3, 'post4', 'abc', 'acfr', '2020-02-12', 'sport,abc,education'),
-(7, 3, 'post34', 'we', 'sdf', '0000-00-00', 'sport,abc,education'),
-(8, 3, 'post34', 'we', 'sdf', '0000-00-00', 'sport,abc,education'),
-(9, 3, 'post34', 'we', 'sdf', '0000-00-00', 'sport,abc,education'),
-(12, 3, 'post44', 'adad', 'adadd', '2020-02-10', 'sport,abc'),
-(13, 3, 'post55', '5848', '151', '2020-02-18', 'sport,abc,education'),
-(14, 3, 'adada', 'adad', 'dadadad', '2020-02-11', 'sport,abc,education'),
-(15, 3, 'adada', 'adad', 'dadadad', '2020-02-11', 'sport,abc,education'),
-(16, 3, 'adada', 'adad', 'dadadad', '2020-02-11', 'sport,abc,education'),
-(17, 3, 'post3', 'adad', 'adad', '2020-02-11', 'abc,education,cat1'),
-(18, 3, 'post3', 'adad', 'adad', '2020-02-11', 'abc,education,cat1'),
-(19, 3, 'post22223', 'fafa', 'afaf', '2020-02-10', 'abc,education'),
-(20, 3, 'post22223', 'fafa', 'afaf', '2020-02-10', 'abc,education'),
-(21, 3, 'postAjani', 'akjkd', 'akjdkja', '2020-02-05', 'sport,education');
+INSERT INTO `post` (`postId`, `userId`, `title`, `contant`, `url`, `publish`, `category`, `createdAt`, `updateAt`) VALUES
+(4, 3, 'ajaniNikhil', 'Ajani', 'Nikhil', '2020-02-11', 'sport,abc', '2020-02-04 07:58:45', '2020-02-04 08:01:25'),
+(5, 3, 'post3', 'afaf', 'adad', '2020-02-11', 'sport,abc,education', '2020-02-04 07:58:45', '2020-02-04 07:58:45'),
+(6, 3, 'post4', 'abc', 'acfr', '2020-02-12', 'sport,abc,education', '2020-02-04 07:58:45', '2020-02-04 07:58:45'),
+(7, 3, 'post34', 'we', 'sdf', '0000-00-00', 'sport,abc,education', '2020-02-04 07:58:45', '2020-02-04 07:58:45'),
+(8, 3, 'post34', 'we', 'sdf', '0000-00-00', 'sport,abc,education', '2020-02-04 07:58:45', '2020-02-04 07:58:45'),
+(9, 3, 'post34', 'we', 'sdf', '0000-00-00', 'sport,abc,education', '2020-02-04 07:58:45', '2020-02-04 07:58:45'),
+(12, 3, 'post44', 'adad', 'adadd', '2020-02-10', 'sport,abc', '2020-02-04 07:58:45', '2020-02-04 07:58:45'),
+(13, 3, 'post55', '5848', '151', '2020-02-18', 'sport,abc,education', '2020-02-04 07:58:45', '2020-02-04 07:58:45'),
+(14, 3, 'adada', 'adad', 'dadadad', '2020-02-11', 'sport,abc,education', '2020-02-04 07:58:45', '2020-02-04 07:58:45'),
+(15, 3, 'adada', 'adad', 'dadadad', '2020-02-11', 'sport,abc,education', '2020-02-04 07:58:45', '2020-02-04 07:58:45'),
+(16, 3, 'adada', 'adad', 'dadadad', '2020-02-11', 'sport,abc,education', '2020-02-04 07:58:45', '2020-02-04 07:58:45'),
+(17, 3, 'post3', 'adad', 'adad', '2020-02-11', 'abc,education,cat1', '2020-02-04 07:58:45', '2020-02-04 07:58:45'),
+(18, 3, 'post3', 'adad', 'adad', '2020-02-11', 'abc,education,cat1', '2020-02-04 07:58:45', '2020-02-04 07:58:45'),
+(19, 3, 'post22223', 'fafa', 'afaf', '2020-02-10', 'abc,education', '2020-02-04 07:58:45', '2020-02-04 07:58:45'),
+(20, 3, 'post22223', 'fafa', 'afaf', '2020-02-10', 'abc,education', '2020-02-04 07:58:45', '2020-02-04 07:58:45'),
+(21, 3, 'postAjani', 'akjkd', 'akjdkja', '2020-02-05', 'sport,education', '2020-02-04 07:58:45', '2020-02-04 07:58:45');
 
 -- --------------------------------------------------------
 
@@ -138,7 +144,7 @@ INSERT INTO `user` (`userId`, `prefix`, `firstName`, `lastName`, `emailId`, `pho
 (4, 'Mr', 'ajani', 'nikhil', 'admin123@gmaia', 1231231231, '202cb962ac59075b964b07152d234b70', '13', '2020-02-03 11:52:45', NULL, '2020-02-03 11:55:39'),
 (5, 'Mr', 'user1a', 'user2', 'user@gmail.com', 2147483647, '202cb962ac59075b964b07152d234b70', '123', '2020-02-03 11:53:15', NULL, '2020-02-03 11:55:39'),
 (6, 'Mr', 'user2', 'user22', 'user2@gmail.com', 2147483647, '202cb962ac59075b964b07152d234b70', '123', '2020-02-03 11:54:06', NULL, '2020-02-03 11:55:49'),
-(7, '', 'Nikhil', 'Ajani', 'ajani@gmail.com', 2147483647, '202cb962ac59075b964b07152d234b70', '123', '2020-02-03 12:01:58', NULL, '2020-02-03 12:01:58');
+(7, '', 'Nikhil', 'ajani', 'ajani@gmail.com', 2147483647, '202cb962ac59075b964b07152d234b70', '123', '2020-02-03 12:01:58', NULL, '2020-02-04 06:08:06');
 
 --
 -- Indexes for dumped tables
@@ -179,7 +185,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `catId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `catId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `post`
