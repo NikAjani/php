@@ -58,15 +58,14 @@ class UpdateCategory{
         $connct = new Connection();
 
         $updateData = $this -> prepareData($_POST);
-        echo $imagePath = $this -> uploadFile('catImage', 'jpg');
+        $imagePath = $this -> uploadFile('catImage', 'jpg');
         $updateData = array_merge($updateData, ['imagePath' => $imagePath]);
-        echo 'hiii';
 
         $isUpdate = $connct -> update($updateData, 'category', ['catId' => $_GET['editId']]);
 
         if($isUpdate){
-            echo 'Error';
-            //header('Location: categoryGrid.php');
+            //echo 'Error';
+            header('Location: categoryGrid.php');
         }
         else    
             echo 'Error';
@@ -98,7 +97,7 @@ class UpdateCategory{
             if($extension === $fileExtension){
                 $location = 'uploads/';
                 if(move_uploaded_file($tempLocation, $location.$fileName)) {
-                    return 'http://localhost/Cybercom/php/03-02-2020/uploads/'.$fileName;
+                    return 'http://localhost/Cybercom/php/exam/uploads/'.$fileName;
                 } else {
                     echo '<script>alert("Error in File uploads");</script>';
                     return NULL;

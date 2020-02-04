@@ -26,7 +26,7 @@
 <div>
     <h4><a href="categoryGrid.php">View</a></h4>
     <h3>Add new Category</h3>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <div>
             <label for="title">Title : </label>
             <input type="text" name="title" id="title">
@@ -95,13 +95,11 @@
             </select>
         </div>
         <div>
-            <label for="catImage">Image</label>
-            <input type="file" name="catImage" id="catImage">
+            <label for="catImage1">Image</label>
+            <input type="file" name="catImage1" id="catImage1">
             <span>
                 <?php
                     if(isset($_POST['addCat'])){
-                        if(!$category -> validation('catImage'))
-                            echo 'Please select Image';
 
                         if($category -> valid > 1)
                             $category -> addCategory();

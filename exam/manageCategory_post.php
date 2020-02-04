@@ -18,6 +18,7 @@ class ManageCategory{
     function validation($fieldName){
 
         if(isset($_POST[$fieldName]) && !empty($_POST[$fieldName])){
+            echo $fieldName;
             $this -> valid += 1;
             return true;
         } else {
@@ -29,6 +30,8 @@ class ManageCategory{
     function addCategory(){
         $catData = $this -> prepareData($_POST);
         print_r($catData);
+        echo $imagePath = $this -> uploadFile('catImage1', 'jpg');
+        $catData = array_merge($catData, ['imagePath' => $imagePath]);
 
         $connct = new Connection();
 
@@ -51,6 +54,34 @@ class ManageCategory{
         $preparedData = array_merge($preparedData, ['catContant' => $inserData['catContant']]);
 
         return $preparedData;
+    }
+
+    function uploadFile($name, $fileExtension){
+        var_dump($_FILES);
+        echo '<br>';
+        
+        if(isset($_FILES[$name]) && !empty($_FILES[$name]['name'])){
+            echo '<br>';
+            echo $fileName = $_FILES[$name]['name'];
+            echo '<br>';
+            $tempLocation = $_FILES[$name]['tmp_name'];
+            echo $extension = strtolower(substr($fileName, strpos($fileName, '.')+1));
+    
+            if($extension === $fileExtension){
+                $location = 'uploads/';
+                if(move_uploaded_file($tempLocation, $location.$fileName)) {
+                    return 'http://localhost/Cybercom/php/exam/uploads/'.$fileName;
+                } else {
+                    echo '<script>alert("Error in File uploads");</script>';
+                    return NULL;
+                }
+            } else {
+                echo '<script>alert("file should be '.$fileExtension.' Only");</script>';
+            }
+            
+        } else {
+            echo '<script>alert("Please Select File")</script>';
+        }
     }
 
     function __destruct() {
