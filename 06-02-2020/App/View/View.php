@@ -1,6 +1,6 @@
 <?php
 
-class View{
+class View {
 
     public $model;
     public $controller;
@@ -13,8 +13,9 @@ class View{
 
     function printData() {
 
-        return $this -> model -> welcomeMsg;
+        echo  $this -> model -> welcomeMsg;
     }
+    
 }
 
 ?>

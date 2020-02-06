@@ -1,19 +1,15 @@
 <?php
 
-require_once '../App/Model/Model.php';
-require_once '../App/Controller/Controller.php';
-require_once '../App/View/View.php';
+require_once '../core/rout.php';
 
-$model = new Model();
-$controller = new Controller($model);
-$view = new View($model, $controller);
+$route = new Route();
 
 echo '<a href="?action=clicked">Click Here</a><br><Br>';
 
-if(isset($_GET['action']) && !empty($_GET['action']))
-    $controller -> {$_GET['action']}();
+if(isset($_GET['action']) && !empty($_GET['action'])) {
+    $route -> callController($_GET['action']);
+}
 
-echo $view -> printData();
-
+$route -> callView();
 
 ?>
