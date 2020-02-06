@@ -5,7 +5,6 @@ $conn = new mysqli('localhost','root', '', 'blog_portal');
 $sql = 'SELECT catId,title FROM `category` WHERE parentId=0 ' ;
 
 $tableData = $conn->query($sql);
-
 echo '<select>';
 while($data = $tableData -> fetch_assoc()){
     echo '<optgroup label="'.$data['title'].'">';
@@ -45,6 +44,8 @@ echo '</optgroup></select>';
 
 // SELECT C.title FROM 
 // `category` C LEFT JOIN `post_category` P ON C.catId = P.catId WHERE P.postId = 22
+
+// SELECT C.title FROM `category` C LEFT JOIN `post_category` P ON C.catId = P.catId GROUP BY C.title
 
 
 ?>
