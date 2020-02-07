@@ -9,7 +9,7 @@ class Connection {
     private $connSql;
 
     function __construct() {
-        $this -> connSql = new mysqli($this -> host, $this -> userName, $this -> password, $this -> databaseName);
+        $this->connSql = new mysqli($this -> host, $this -> userName, $this -> password, $this -> databaseName);
     }
 
     function load($colName, $tableName, $whereArray){
