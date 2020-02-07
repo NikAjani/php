@@ -1,24 +1,52 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
 
-require_once '../Core/route.php';
+    <style>
+        .linkDiv{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        header{
+            text-align: center;
+            font-weight: 400;
+            font-size: 21px;
+            text-decoration: none;
+            color: blue;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
 
-$route = new Route();
+<div>
+    <!-- <header>
+        <a href="index.php"> Home </a> | 
+        <a href="?Product/index"> Product </a>| 
+        <a href="?ContactUs/index"> Contact Us </a> | 
+        <a href="?AboutUs/index"> About Us </a>
+    </header> -->
 
-$route->addRoute('',['controller'=>'Home', 'action'=>'index']);
-$route->addRoute('{controller}');
-$route->addRoute('{controller}/{action}');
-$route->addRoute('admin/{controller}/{action}');
-$route->addRoute('{controller}/{id:\d+}/{action}');
-$route->addRoute('admin/{controller}/{id:\d+}/{action}');
+    <header>
+        <a href="index.php"> Home </a> | 
+        <a href="Product/index"> Product </a>| 
+        <a href="ContactUs/index"> Contact Us </a> | 
+        <a href="AboutUs/index"> About Us </a>
+    </header>
+</div>
 
-$url = $_SERVER['QUERY_STRING'];
+<div class='linkDiv'>
+    <a href="Home/clicked">Click Here</a><br>
+</div>
 
+<div>
+    <?php require_once 'load.php'; ?>
+</div>
 
-if($route->match($url)){
-    echo '<pre>';
-    print_r($route->getRoute());
-    echo '</pre>';
-} else {
-    echo '<b>404 Not Found</b>';
-}
-?>
+</body>
+</html>
