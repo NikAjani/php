@@ -1,0 +1,33 @@
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+.headeFooter{
+    text-decoration: none;
+    color:white;
+    padding: 15px;
+}
+ul,li{
+    text-align: left;
+    color: black;
+    font-weight: 200;
+    font-size: 20px;
+    
+}
+header{
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 97%;
+    font-size: 20px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    
+}
