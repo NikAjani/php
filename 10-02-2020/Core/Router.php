@@ -36,7 +36,7 @@ class Router {
                 
             if(@class_exists($className)) {
                 
-                $controller = new $className();
+                $controller = new $className($this->param);
 
                 $methodName = $this->converMethodName($this->param['action']);
 

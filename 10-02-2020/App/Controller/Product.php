@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-class Product {
+class Product extends \Core\BaseControllers {
 
     function __construct() {
 
@@ -19,6 +19,7 @@ class Product {
         echo '<br>You are Inside Of Edit Of Product<br>';
         if($id != '')
             echo 'Id = '.$id;
+        //print_r($this->param);
     }
 }
 

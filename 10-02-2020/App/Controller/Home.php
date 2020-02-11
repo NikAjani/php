@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-class Home {
+class Home extends \Core\BaseControllers {
 
     function __construct() {
 
