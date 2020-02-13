@@ -6,11 +6,6 @@ use PDO;
 
 class Connection {
 
-    private $host = 'localhost';
-    private $userName = 'root';
-    private $password = '';
-    private $dbName = 'mvc_db';
-
     public function __construct() {
 
         $host = "mysql:host=".\App\config::HOST.";dbname=".\APP\config::DBNAME;
