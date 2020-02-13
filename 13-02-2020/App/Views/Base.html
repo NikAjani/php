@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% set url = 'http://localhost/MVC_DB_Demo/Public' %}
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="{{ url }}/css/style.css">
+
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+<div>
+    <header>
+        <nav>
+            <a class="headeFooter" href="{{ url }}/"> Home </a>  
+            <a class="headeFooter" href="{{ url }}/product"> Product </a>
+        </nav>
+    </header>
+</div>
+
+
+<div style="margin-bottom: 100px;">
+    {% block body %}
+    {% endblock %}
+</div>
+
+<div>
+    <footer>
+        <ul>
+            <li><a class="headeFooter" href="{{ url }}/"> Home </a></li>
+            <li><a class="headeFooter" href="{{ url }}/product"> Product </a></li>
+        </ul>
+    </footer>
+</div>
+
+</body>
+</html>

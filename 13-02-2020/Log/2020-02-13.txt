@@ -1,0 +1,288 @@
+[13-Feb-2020 10:31:32 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action abcAction (In Controller App\Controller\Product) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 52
+
+
+[13-Feb-2020 10:31:39 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\User Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[13-Feb-2020 10:31:49 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\User Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[13-Feb-2020 10:32:06 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action aubcAction (In Controller App\Controller\Product) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 52
+
+
+[13-Feb-2020 10:36:39 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action aubcAction (In Controller App\Controller\Product) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 52
+
+
+[13-Feb-2020 10:36:48 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\User Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[13-Feb-2020 10:37:10 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 61
+
+
+[13-Feb-2020 10:38:20 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Admin Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[13-Feb-2020 10:38:40 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Admin Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[13-Feb-2020 10:52:09 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Error'
+ Message : Call to undefined method App\Model\Product\ProductModel::fetchAll()
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Product\ProductModel.php' On Line 9
+
+
+[13-Feb-2020 10:52:50 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[HY000] [1045] Access denied for user 'rootq'@'localhost' (using password: NO)
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 16
+
+
+[13-Feb-2020 11:03:32 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Array to string conversion
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 26
+
+
+[13-Feb-2020 11:04:51 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mvc_db.product1' doesn't exist
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 25
+
+
+[13-Feb-2020 11:06:29 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Error'
+ Message : Call to a member function fetch_assoc() on array
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Product.php' On Line 80
+
+
+[13-Feb-2020 11:16:50 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : Unexpected "action" tag (expecting closing tag for the "if" tag defined near line 4).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 7
+
+
+[13-Feb-2020 11:16:51 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : Unexpected "action" tag (expecting closing tag for the "if" tag defined near line 4).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 7
+
+
+[13-Feb-2020 11:17:04 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : Unexpected "action" tag (expecting closing tag for the "if" tag defined near line 4).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 7
+
+
+[13-Feb-2020 11:19:36 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : A template that extends another one cannot include content outside Twig blocks. Did you forget to put the content inside a {% block %} tag?
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 7
+
+
+[13-Feb-2020 11:20:27 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : Unexpected token "end of print statement" of value "".
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 20
+
+
+[13-Feb-2020 11:21:02 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : A template that extends another one cannot include content outside Twig blocks. Did you forget to put the content inside a {% block %} tag?
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 7
+
+
+[13-Feb-2020 11:23:39 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : Unexpected "concat" tag (expecting closing tag for the "if" tag defined near line 4).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 6
+
+
+[13-Feb-2020 11:23:40 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : Unexpected "concat" tag (expecting closing tag for the "if" tag defined near line 4).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 6
+
+
+[13-Feb-2020 11:23:53 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : Unknown "concat" function.
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 6
+
+
+[13-Feb-2020 11:23:54 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : Unknown "concat" function.
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 6
+
+
+[13-Feb-2020 11:23:55 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : Unknown "concat" function.
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 6
+
+
+[13-Feb-2020 11:24:30 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : A hash key must be a quoted string, a number, a name, or an expression enclosed in parentheses (unexpected token "punctuation" of value "{".
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 6
+
+
+[13-Feb-2020 11:24:31 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : A hash key must be a quoted string, a number, a name, or an expression enclosed in parentheses (unexpected token "punctuation" of value "{".
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 6
+
+
+[13-Feb-2020 11:24:45 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : A hash key must be followed by a colon (:). Unexpected token "punctuation" of value "}" ("punctuation" expected with value ":").
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 6
+
+
+[13-Feb-2020 11:24:46 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : A hash key must be followed by a colon (:). Unexpected token "punctuation" of value "}" ("punctuation" expected with value ":").
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 6
+
+
+[13-Feb-2020 11:24:48 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : A hash key must be followed by a colon (:). Unexpected token "punctuation" of value "}" ("punctuation" expected with value ":").
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 6
+
+
+[13-Feb-2020 11:26:29 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\RuntimeError'
+ Message : An exception has been thrown during the rendering of a template ("A non-numeric value encountered").
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 6
+
+
+[13-Feb-2020 11:29:40 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : Unexpected character "!".
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Product\addProduct.html' On Line 9
+
+
+[13-Feb-2020 11:30:07 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Public Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[13-Feb-2020 11:30:26 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Public Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[13-Feb-2020 11:30:38 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Error'
+ Message : Call to undefined method PDO::lastInsertedId()
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 55
+
+
+[13-Feb-2020 11:33:54 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'productName = 'abccc111', productPrice = '250000'' at line 1
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 80
+
+

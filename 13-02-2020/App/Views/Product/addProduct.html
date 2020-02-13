@@ -1,0 +1,58 @@
+{% extends "Base.html" %}
+
+{% block title %} Product | {{title}} {% endblock %}
+
+{% block body %}
+
+{% if add == 'add' %}
+    {% set title = "Add New" %}
+    {% set action = url~"/product/add-product" %}
+    {% set btn = 'submitProduct' %}
+
+{% else %}
+
+    {% set title = "Edit" %}
+    {% set action = url~"/product/edit" %}
+    {% set btn = 'updateProduct' %}
+
+{% endif %}
+
+
+    <div class="container">
+        
+        <div style="margin-bottom: 30px;">
+            <h4>{{title}} Product</h4>
+        </div>
+
+        <form class="form-horizontal" action="{{action}}" method="post">
+            
+            <div class="form-group">
+                <label class="control-label col-sm-4" for="productName">Product Name:</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" name="productName" id="productName" value="{{editData.productName}}" placeholder="Enter Product Name" required>
+                  <span class="error">{{error.productName}}</span>
+                </div>
+                
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-4" for="productPrice">Product Price:</label>
+                <div class="col-sm-6">
+                  <input type="number" class="form-control" name="productPrice" id="productPrice" value="{{editData.productPrice}}" placeholder="Enter Product Price" required>
+                  <span class="error">{{error.productPrice}}</span>
+                </div>
+                
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-6">
+                    <input type="hidden" name="id" value="{{id}}">
+                    <input type="submit" class="btn btn-outline-success" value="{{btn}}" name="{{btn}}">
+                    <input type="reset" class="btn btn-outline-danger" value="Clear">
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+{% endblock %}
