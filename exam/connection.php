@@ -68,7 +68,7 @@ class Connection {
 
         $sqlQuery = "INSERT INTO `$tableName` (".$column.") VALUES ('".$columnValue."')";
 
-        if($this -> connSql -> query($sqlQuery) === TRUE){
+        if($this -> connSql -> query($sqlQuery) === TRUE){	
             return $this -> connSql -> insert_id;
         } else {
             return false;
