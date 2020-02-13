@@ -1,0 +1,72 @@
+[13-Feb-2020 10:31:32 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action abcAction (In Controller App\Controller\Product) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 52
+
+
+[13-Feb-2020 10:31:39 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\User Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[13-Feb-2020 10:31:49 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\User Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[13-Feb-2020 10:32:06 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action aubcAction (In Controller App\Controller\Product) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 52
+
+
+[13-Feb-2020 10:36:39 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action aubcAction (In Controller App\Controller\Product) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 52
+
+
+[13-Feb-2020 10:36:48 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\User Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[13-Feb-2020 10:37:10 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 61
+
+
+[13-Feb-2020 10:38:20 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Admin Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[13-Feb-2020 10:38:40 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Admin Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+

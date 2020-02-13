@@ -1,0 +1,40 @@
+
+{% extends "Base.html" %}
+
+{% block title %} Product | Index {% endblock %}
+
+{% block body %}
+    
+    <div class="container">
+        
+        <div>
+            <h4><a href="{{url}}/product/add-product">Add New Product</a></h4>
+
+        </div>
+
+        <div style="margin-top: 50px;">
+            <table class="table table-striped">
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Action</th>
+                </tr>
+            
+                {% for datas in data %}
+                
+                <tr>
+                    <td>{{ datas.productName }}</td>
+                    <td>{{ datas.productPrice }}</td>
+                    
+                    <td> <a href="{{url}}/product/{{datas.productId}}/edit"> Edit </a> | <a href="{{url}}/product/{{datas.productId}}/delete">Delete</a></td>
+                </tr>
+            
+                {% endfor %}
+            
+            </table>
+        
+        </div>
+        
+    </div>
+
+{% endblock %}
