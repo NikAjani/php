@@ -1,0 +1,786 @@
+[17-Feb-2020 05:24:34 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Product Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 63
+
+
+[17-Feb-2020 05:28:33 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Error In Category Update
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Category.php' On Line 85
+
+
+[17-Feb-2020 05:59:56 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 05:59:56 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 06:21:12 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Array to string conversion
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 151
+
+
+[17-Feb-2020 07:40:01 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Array to string conversion
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 102
+
+
+[17-Feb-2020 07:40:43 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Array to string conversion
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 102
+
+
+[17-Feb-2020 07:41:01 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Array to string conversion
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 102
+
+
+[17-Feb-2020 07:41:02 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Array to string conversion
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 102
+
+
+[17-Feb-2020 07:41:13 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Array to string conversion
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 102
+
+
+[17-Feb-2020 07:41:40 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as parentCat , GROUP_CONCAT(C.categoryName) as childCat GROUP BY CP.categoryName' at line 1
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 104
+
+
+[17-Feb-2020 07:42:35 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as parentCat, GROUP_CONCAT(C.categoryName) as childCat GROUP BY CP.categoryName' at line 1
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 104
+
+
+[17-Feb-2020 07:42:48 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as parentCat, GROUP_CONCAT(C.categoryName) as childCat GROUP BY CP.categoryName' at line 1
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 104
+
+
+[17-Feb-2020 07:43:55 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'categoryName' in where clause is ambiguous
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 104
+
+
+[17-Feb-2020 07:49:02 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 08:26:26 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\RuntimeError'
+ Message : An exception has been thrown during the rendering of a template ("Array to string conversion").
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Base.html' On Line 33
+
+
+[17-Feb-2020 08:34:58 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\RuntimeError'
+ Message : An exception has been thrown during the rendering of a template ("Array to string conversion").
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\User\Category\index.html' On Line 10
+
+
+[17-Feb-2020 08:51:49 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Array to string conversion
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\User\CategoryModel.php' On Line 30
+
+
+[17-Feb-2020 08:51:55 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Array to string conversion
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\User\CategoryModel.php' On Line 30
+
+
+[17-Feb-2020 08:52:14 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Array to string conversion
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\User\CategoryModel.php' On Line 30
+
+
+[17-Feb-2020 09:05:19 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ParseError'
+ Message : syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Home.php' On Line 20
+
+
+[17-Feb-2020 09:05:58 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined property: App\Controller\Home::$category
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Home.php' On Line 31
+
+
+[17-Feb-2020 09:16:00 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : A hash key must be followed by a colon (:). Unexpected token "punctuation" of value "}" ("punctuation" expected with value ":").
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Base.html' On Line 24
+
+
+[17-Feb-2020 09:16:00 Europe/Berlin] PHP Fatal error:  Uncaught Twig\Error\SyntaxError: A hash key must be followed by a colon (:). Unexpected token "punctuation" of value "}" ("punctuation" expected with value ":"). in C:\xampp\htdocs\MVC_DB_Demo\App\Views\Base.html:24
+Stack trace:
+#0 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\ExpressionParser.php(379): Twig\TokenStream->expect(9, ':', 'A hash key must...')
+#1 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\ExpressionParser.php(281): Twig\ExpressionParser->parseHashExpression()
+#2 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\ExpressionParser.php(175): Twig\ExpressionParser->parsePrimaryExpression()
+#3 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\ExpressionParser.php(70): Twig\ExpressionParser->getPrimary()
+#4 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\ExpressionParser.php(593): Twig\ExpressionParser->parseExpression(0, false)
+#5 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\ExpressionParser.php(477): Twig\ExpressionParser->parseArguments()
+#6 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\s in C:\xampp\htdocs\MVC_DB_Demo\App\Views\Base.html on line 24
+[17-Feb-2020 09:17:10 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : An array element must be followed by a comma. Unexpected token "arrow function" of value "=>" ("punctuation" expected with value ",").
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Base.html' On Line 24
+
+
+[17-Feb-2020 09:17:10 Europe/Berlin] PHP Fatal error:  Uncaught Twig\Error\SyntaxError: An array element must be followed by a comma. Unexpected token "arrow function" of value "=>" ("punctuation" expected with value ","). in C:\xampp\htdocs\MVC_DB_Demo\App\Views\Base.html:24
+Stack trace:
+#0 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\ExpressionParser.php(329): Twig\TokenStream->expect(9, ',', 'An array elemen...')
+#1 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\ExpressionParser.php(279): Twig\ExpressionParser->parseArrayExpression()
+#2 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\ExpressionParser.php(175): Twig\ExpressionParser->parsePrimaryExpression()
+#3 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\ExpressionParser.php(70): Twig\ExpressionParser->getPrimary()
+#4 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\ExpressionParser.php(593): Twig\ExpressionParser->parseExpression(0, false)
+#5 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\ExpressionParser.php(477): Twig\ExpressionParser->parseArguments()
+#6 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig in C:\xampp\htdocs\MVC_DB_Demo\App\Views\Base.html on line 24
+[17-Feb-2020 09:40:33 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Product Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 63
+
+
+[17-Feb-2020 09:41:28 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 09:44:25 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 09:55:48 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 09:57:50 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 09:58:24 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 09:58:28 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 09:58:31 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 09:58:38 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 09:59:43 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:01:04 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:01:16 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:01:53 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:03:07 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:04:09 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:05:58 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:06:04 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:06:17 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:06:27 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:06:45 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:06:57 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:07:26 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:07:45 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:08:01 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:08:05 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:08:44 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:08:48 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:09:25 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:10:08 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:10:45 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:11:50 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:12:03 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:12:33 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:13:02 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:14:18 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:15:27 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:15:31 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:15:38 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:16:28 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:16:33 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:16:38 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:17:09 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:17:17 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:17:55 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:18:06 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:18:35 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:19:53 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:20:02 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:21:30 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:21:42 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:21:49 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:21:58 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:23:24 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:23:40 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:25:25 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:25:31 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:25:47 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:30:27 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:40:42 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:40:42 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:40:43 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:40:43 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 10:54:49 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : Unexpected token "operator" of value "<=".
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\User\Product\index.html' On Line 26
+
+
+[17-Feb-2020 11:39:54 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 11:39:57 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 11:41:23 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 11:45:07 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 11:49:04 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 11:52:04 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 12:01:10 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 12:01:26 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[17-Feb-2020 12:01:33 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+

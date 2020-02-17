@@ -8,6 +8,7 @@ class HomeModel extends \App\Model\Connection {
 
         return $this->fetchRow('cmsName, content', 'cms', ['UrlKey' => $url]);
     }
+
 }
 
 ?>

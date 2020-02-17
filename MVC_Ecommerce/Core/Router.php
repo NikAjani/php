@@ -18,14 +18,15 @@ class Router {
         $this->add('admin/{controller}/{action}', ['namespace' => 'admin']);
         $this->add('admin/{controller}/', ['namespace' => 'admin']);
         $this->add('{controller}/{action}/{url}');
+        $this->add('{controller}/{action}/');
         $this->add('admin/{controller}/{id:\d+}/{action}', ['namespace' => 'admin']);
     }
 
     public function add($route, $param = []) {
 
         $route = preg_replace('/\//','\\/',$route);
-        $route = preg_replace('/\{([a-z]+)\}/','(?P<\1>[a-z-]+)',$route);
-        $route = preg_replace('/\{([a-z]+):([^\}]+)\}/','(?P<\1>\2)',$route);
+        $route = preg_replace('/\{([a-z0-9]+)\}/','(?P<\1>[0-9a-z-]+)',$route);
+        $route = preg_replace('/\{([a-z0-9]+):([^\}]+)\}/','(?P<\1>\2)',$route);
         $route = '/^'.$route.'$/i';
         
         $this->route[$route] = $param;
@@ -85,7 +86,7 @@ class Router {
                     $this->param['action'] = 'index';
                 
                 return true;
-            }
+            };
         }
         return false;
     }

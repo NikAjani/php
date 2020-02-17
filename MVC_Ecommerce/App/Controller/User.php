@@ -4,9 +4,19 @@ namespace App\Controller;
 
 use \Core\BaseView as View;
 use \App\Model\User\User as UserModel;
+use \App\Model\User\CategoryModel as CatModel;
 use \App\config as Config;
 
 class User extends \Core\BaseControllers {
+
+    function __construct($param) {
+        
+        parent::__construct($param);
+
+        $getCategory = new CatModel();
+
+        $this->category = $getCategory->getCategory('categoryName');
+    }
 
     function validation() {
 
@@ -49,11 +59,11 @@ class User extends \Core\BaseControllers {
                 }
 
             } else
-                View::renderTemplet('/user/login/login.html', ['error' => $valid]);
+                View::renderTemplet('/user/login/login.html', ['category'=>$this->category, 'error' => $valid]);
 
         } else {
             
-            View::renderTemplet('/User/login/login.html');
+            View::renderTemplet('/User/login/login.html', ['category'=>$this->category]);
         }
     }
 

@@ -82,11 +82,11 @@ class Connection {
             return false;
     }
 
-    protected function deleteRow($tableName, $whereArray= []){
+    protected function deleteRow($tableName, $whereArray= []) {
     
         $where = $this->whereCondition($whereArray);
     
-        echo $sqlQuery = "DELETE FROM `$tableName` ".$where;
+        $sqlQuery = "DELETE FROM `$tableName` ".$where;
     
         if($this->connection->exec($sqlQuery))
             return true;
@@ -95,11 +95,11 @@ class Connection {
     
     }
 
-    function join($colName, $table, $joinType, $On , $whereArray = []) {
+    function join($colName, $table, $joinType, $On , $whereArray = [], $other = "") {
 
         $join = $this->prepareJoin($table, $joinType, $On, $whereArray);
 
-        $sqlQuery = "SELECT $colName FROM $join[0] $join[1]";
+        $sqlQuery = "SELECT $colName FROM $join[0] $join[1] $other";
 
         $stmt = $this->connection->query($sqlQuery);
         
@@ -107,7 +107,6 @@ class Connection {
             return $tableData;
         else    
             return false;
-
         
     }
 
@@ -142,16 +141,16 @@ class Connection {
 
     }
 
-    protected function whereCondition($whereArray){
+    protected function whereCondition($whereArray) {
 
-        if(sizeof($whereArray) >= 1){
+        if(sizeof($whereArray) >= 1) {
             $where = "";
             $key = array_keys($whereArray);
             $value = array_values($whereArray);
             $where = " WHERE ".$key[0]."='".$value[0]."'";
 
-            if(sizeof($whereArray) > 1){
-                for($cnt = 1; $cnt < sizeof($whereArray); $cnt++){
+            if(sizeof($whereArray) > 1) {
+                for($cnt = 1; $cnt < sizeof($whereArray); $cnt++) {
                     if($key[$cnt] == 'password')
                         $where .= ' AND '.$key[$cnt]." = '".md5($value[$cnt])."'";
                     else    

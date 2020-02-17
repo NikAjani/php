@@ -1,16 +1,47 @@
 {% extends "Base.html" %}
 
-{% block title %} Product | Index {% endblock %}
+{% block title %} Product | View {% endblock %}
 
 {% block body %}
 
-<h3>This is Product Page</h3>
+<div class="childCategory">
+    <div>
+        <div>
+            <img class="productImage" src="{{url}}/Images/{{productData.image}}" alt="{{productData.productName}}">
+        </div>
+        <div class="productImageName">
+            <b>{{productData.productName}}</b>
+        </div>        
+    </div>
 
-{% for row in catList %}
-    <ul>
-        <li>{{row.categoryName}}</li>
-    </ul>
-    
-{% endfor %}
+    <div class="productDetail">
+        <div class="productIteam">
+            Product Name : <b>{{productData.productName}}</b>
+        </div>
+        <div class="productIteam">
+            Price : Rs <b>{{productData.price}}</b>
+        </div>
+
+        <div class="productIteam">
+            {% if productData.stock != 0 %}
+                <span class="inStock">In Stock</span>
+
+            {% else %}
+                <span class="outStock">Out Of Stock</span>
+
+            {% endif %}
+            
+        </div>
+
+        <div class="productIteam">
+            Description: {{productData.description}}
+        </div>
+
+        <div class="productIteam">
+            <button class="btn btn-success">Buy</button>
+            <button class="btn btn-danger addToCartBtn">Add To Cart</button>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

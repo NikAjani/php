@@ -1,3 +1,8 @@
+.container {
+    width: 100%;
+    margin-left: 25px;
+    
+}
 .login-form {
     width: 350px;
     margin: 50px auto;
@@ -96,4 +101,60 @@
 .tableImg{
     height: 70px;
     width: 100px;
+}
+
+.childCategory {
+    margin-top: 20px;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.categoryImage{
+
+    height: 120px;
+    width: 100px;
+}
+
+.categoryName {
+    margin-top: 20px; 
+    text-align: center;
+}
+
+.productImageName {
+    margin-top: 10px; 
+    text-align: center; 
+    font-size: 20px;
+}
+
+.productDetail{
+    font-size: 20px;
+    margin-top: 30px; 
+    margin-left: 30px;
+}
+
+.productIteam{
+    margin-top: 20px;
+}
+
+.inStock {
+
+    background-color: green; 
+    font-weight: bold; 
+    color: honeydew;
+}
+
+.outStock {
+    background-color: red; 
+    font-weight: bold; 
+    color: honeydew;
+}
+
+.addToCartBtn{
+    margin-left: 20px;
+}
+
+.productImage{
+    margin-top: 20px;
+    height: 300px;
+    width: 210px;
 }

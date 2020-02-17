@@ -4,9 +4,9 @@ namespace App\Model\User;
 
 class ProductModel extends \App\Model\Connection {
 
-    function getRow() {
+    function getProduct($urlKey) {
 
-        return $this->fetchRow('categoryName', 'category', ['parentId' => 0]);
+        return $this->fetchRow('*', 'product', ['UrlKey' => $urlKey]);
     }
 }
 

@@ -17,13 +17,33 @@
 </head>
 
 <body>
-
+    
+    
     <div style="margin: 20px;">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
 
             <a href="{{url}}/" class="navbar-brand">Home</a>
 
-            <a href="{{url}}/product/view" class="navbar-brand">Product</a>
+                {% for cat in category %}
+                    <div class="dropdown">
+
+                        <a href="" class="navbar-brand dropdown-toggle" data-toggle="dropdown">{{cat.parentCat }}</a>
+
+                        <div class="dropdown-menu">
+
+                            {% set childCat = cat.childCat|split(',') %}
+                            {% set chilUrl = cat.childUrl|split(',') %}
+
+                            {% set len = childCat|length %}
+
+                            {% for i in 0..len-1 %}
+                                <a href="{{url}}/category/view/{{chilUrl[i]}}" class=" dropdown-item">{{childCat[i]}}</a>
+                            {% endfor %}
+
+                        </div>
+
+                    </div>
+                {% endfor %}
 
             <a href="{{url}}/Home/view/contactus" class="navbar-brand">Contact Us</a>
 
