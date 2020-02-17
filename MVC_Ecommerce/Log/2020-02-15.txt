@@ -1,0 +1,1264 @@
+[15-Feb-2020 05:06:56 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:07:29 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:07:29 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:07:56 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:08:41 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:08:42 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:08:56 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:08:56 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:08:57 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action editAction (In Controller App\Controller\admin\Product) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[15-Feb-2020 05:09:29 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:09:54 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:09:55 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:10:07 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:10:07 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:10:10 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:12:25 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 05:12:25 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 06:03:56 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 06:04:10 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : sizeof(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 119
+
+
+[15-Feb-2020 06:07:04 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : sizeof(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 119
+
+
+[15-Feb-2020 06:07:35 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : sizeof(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 119
+
+
+[15-Feb-2020 06:08:06 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : sizeof(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 120
+
+
+[15-Feb-2020 06:08:07 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : sizeof(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 120
+
+
+[15-Feb-2020 06:08:30 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : sizeof(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 122
+
+
+[15-Feb-2020 06:09:20 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined offset: 2
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 140
+
+
+[15-Feb-2020 06:09:21 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined offset: 2
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 140
+
+
+[15-Feb-2020 06:09:48 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined offset: 2
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 140
+
+
+[15-Feb-2020 06:09:55 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined offset: 2
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 140
+
+
+[15-Feb-2020 06:09:56 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined offset: 2
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 140
+
+
+[15-Feb-2020 06:10:31 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined offset: 2
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 140
+
+
+[15-Feb-2020 06:10:32 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined offset: 2
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 140
+
+
+[15-Feb-2020 06:11:03 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined offset: 2
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 140
+
+
+[15-Feb-2020 06:37:27 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ParseError'
+ Message : syntax error, unexpected '}', expecting ';'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\ProductModel.php' On Line 43
+
+
+[15-Feb-2020 06:37:42 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ParseError'
+ Message : syntax error, unexpected '}', expecting ';'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\ProductModel.php' On Line 43
+
+
+[15-Feb-2020 06:37:43 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ParseError'
+ Message : syntax error, unexpected '}', expecting ';'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\ProductModel.php' On Line 43
+
+
+[15-Feb-2020 06:37:46 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ParseError'
+ Message : syntax error, unexpected '}', expecting ';'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\ProductModel.php' On Line 43
+
+
+[15-Feb-2020 06:37:48 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ParseError'
+ Message : syntax error, unexpected '}', expecting ';'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\ProductModel.php' On Line 43
+
+
+[15-Feb-2020 06:37:51 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ParseError'
+ Message : syntax error, unexpected '}', expecting ';'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\ProductModel.php' On Line 43
+
+
+[15-Feb-2020 06:37:59 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ParseError'
+ Message : syntax error, unexpected '}', expecting ';'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\ProductModel.php' On Line 43
+
+
+[15-Feb-2020 06:38:01 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ParseError'
+ Message : syntax error, unexpected '}', expecting ';'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\ProductModel.php' On Line 43
+
+
+[15-Feb-2020 06:38:02 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ParseError'
+ Message : syntax error, unexpected '}', expecting ';'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\ProductModel.php' On Line 43
+
+
+[15-Feb-2020 06:38:07 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ParseError'
+ Message : syntax error, unexpected '}', expecting ';'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\ProductModel.php' On Line 43
+
+
+[15-Feb-2020 06:38:08 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ParseError'
+ Message : syntax error, unexpected '}', expecting ';'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\ProductModel.php' On Line 43
+
+
+[15-Feb-2020 06:38:16 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ParseError'
+ Message : syntax error, unexpected '}', expecting ';'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\ProductModel.php' On Line 43
+
+
+[15-Feb-2020 07:08:53 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'catdId' in 'where clause'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 91
+
+
+[15-Feb-2020 07:09:38 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'catdId' in 'where clause'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 91
+
+
+[15-Feb-2020 07:09:51 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Admin Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 63
+
+
+[15-Feb-2020 07:16:35 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Array to string conversion
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 39
+
+
+[15-Feb-2020 07:42:25 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : sizeof(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 45
+
+
+[15-Feb-2020 07:44:30 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : sizeof(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 45
+
+
+[15-Feb-2020 07:46:22 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : count(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 45
+
+
+[15-Feb-2020 08:06:42 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : sizeof(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 39
+
+
+[15-Feb-2020 08:07:06 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : sizeof(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 39
+
+
+[15-Feb-2020 08:07:17 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : sizeof(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 39
+
+
+[15-Feb-2020 08:07:44 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : count(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 39
+
+
+[15-Feb-2020 08:08:29 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : count(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 39
+
+
+[15-Feb-2020 08:09:22 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : count(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 39
+
+
+[15-Feb-2020 08:09:35 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : array_keys() expects parameter 1 to be array, bool given
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 40
+
+
+[15-Feb-2020 08:09:36 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : array_keys() expects parameter 1 to be array, bool given
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 40
+
+
+[15-Feb-2020 08:10:24 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : array_keys() expects parameter 1 to be array, bool given
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 40
+
+
+[15-Feb-2020 08:10:45 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Invalid argument supplied for foreach()
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 41
+
+
+[15-Feb-2020 08:11:13 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Invalid argument supplied for foreach()
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 41
+
+
+[15-Feb-2020 08:11:35 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Invalid argument supplied for foreach()
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 41
+
+
+[15-Feb-2020 08:12:20 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : array_unshift() expects parameter 1 to be array, bool given
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 41
+
+
+[15-Feb-2020 08:14:14 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : array_unshift() expects parameter 1 to be array, bool given
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 41
+
+
+[15-Feb-2020 08:14:20 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : count(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 43
+
+
+[15-Feb-2020 08:14:33 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : count(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 43
+
+
+[15-Feb-2020 08:17:25 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : count(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 46
+
+
+[15-Feb-2020 08:20:07 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : count(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 46
+
+
+[15-Feb-2020 08:26:21 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : count(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 69
+
+
+[15-Feb-2020 08:27:00 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Error In Category Delete
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 59
+
+
+[15-Feb-2020 08:28:26 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Error In Category Delete
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 59
+
+
+[15-Feb-2020 08:32:44 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Illegal string offset 'catId'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 66
+
+
+[15-Feb-2020 08:35:04 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined offset: 0
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 66
+
+
+[15-Feb-2020 08:38:07 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined offset: 0
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 71
+
+
+[15-Feb-2020 08:42:06 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : count(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 60
+
+
+[15-Feb-2020 08:43:13 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : count(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 60
+
+
+[15-Feb-2020 08:47:07 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : sizeof(): Parameter must be an array or an object that implements Countable
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 81
+
+
+[15-Feb-2020 08:48:31 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: catId
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 81
+
+
+[15-Feb-2020 08:52:45 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined offset: 0
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 66
+
+
+[15-Feb-2020 08:55:46 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: catId
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 64
+
+
+[15-Feb-2020 10:01:40 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\LoaderError'
+ Message : Unable to find template "/Admin/CMD/addCMS.html" (looked into: ../App/Views).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Loader\FilesystemLoader.php' On Line 250
+
+
+[15-Feb-2020 10:02:20 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\LoaderError'
+ Message : Unable to find template "/Admin/CMD/addCMS.html" (looked into: ../App/Views).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Loader\FilesystemLoader.php' On Line 250
+
+
+[15-Feb-2020 10:23:34 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mvc_ecommerce`.`product_category`, CONSTRAINT `product_category_ibfk_1` FOREIGN KEY (`catId`) REFERENCES `category` (`catId`) ON DELETE CASCADE ON UPDATE CASCADE)
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 51
+
+
+[15-Feb-2020 10:42:51 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Error In CMS Add
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\CMS.php' On Line 44
+
+
+[15-Feb-2020 11:36:48 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Admin Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 63
+
+
+[15-Feb-2020 11:41:44 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action indexAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[15-Feb-2020 11:41:57 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action indexAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[15-Feb-2020 11:41:58 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action indexAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[15-Feb-2020 11:42:18 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action indexAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[15-Feb-2020 11:42:20 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action indexAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[15-Feb-2020 11:42:28 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action indexAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[15-Feb-2020 12:19:11 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\LoaderError'
+ Message : Unable to find template "/Home/User/index.html" (looked into: ../App/Views).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Loader\FilesystemLoader.php' On Line 250
+
+
+[15-Feb-2020 12:19:18 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\LoaderError'
+ Message : Unable to find template "/Home/User/index.html" (looked into: ../App/Views).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Loader\FilesystemLoader.php' On Line 250
+
+
+[15-Feb-2020 12:19:19 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\LoaderError'
+ Message : Unable to find template "/Home/User/index.html" (looked into: ../App/Views).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Loader\FilesystemLoader.php' On Line 250
+
+
+[15-Feb-2020 12:19:19 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\LoaderError'
+ Message : Unable to find template "/Home/User/index.html" (looked into: ../App/Views).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Loader\FilesystemLoader.php' On Line 250
+
+
+[15-Feb-2020 12:19:21 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\LoaderError'
+ Message : Unable to find template "/Home/User/index.html" (looked into: ../App/Views).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Loader\FilesystemLoader.php' On Line 250
+
+
+[15-Feb-2020 12:19:29 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\LoaderError'
+ Message : Unable to find template "User/Home/User/index.html" (looked into: ../App/Views).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Loader\FilesystemLoader.php' On Line 250
+
+
+[15-Feb-2020 12:19:34 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\LoaderError'
+ Message : Unable to find template "/User/Home/User/index.html" (looked into: ../App/Views).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Loader\FilesystemLoader.php' On Line 250
+
+
+[15-Feb-2020 12:44:22 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\RuntimeError'
+ Message : An exception has been thrown during the rendering of a template ("Object of class App\Model\User\HomeModel could not be converted to string").
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\User\Home\index.html' On Line 7
+
+
+[15-Feb-2020 12:44:34 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Error'
+ Message : Cannot use object of type App\Model\User\HomeModel as array
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Home.php' On Line 13
+
+
+[15-Feb-2020 12:45:06 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Error'
+ Message : Cannot use object of type App\Model\User\HomeModel as array
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Home.php' On Line 13
+
+
+[15-Feb-2020 12:45:32 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Error'
+ Message : Cannot use object of type App\Model\User\HomeModel as array
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Home.php' On Line 14
+
+
+[15-Feb-2020 12:46:44 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Error'
+ Message : Cannot use object of type App\Model\User\HomeModel as array
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Home.php' On Line 14
+
+
+[15-Feb-2020 12:47:42 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\RuntimeError'
+ Message : An exception has been thrown during the rendering of a template ("Array to string conversion").
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\User\Home\index.html' On Line 7
+
+
+[15-Feb-2020 12:55:01 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action indexAction (In Controller App\Controller\Home) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[15-Feb-2020 12:57:53 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 12:58:03 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 12:59:28 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[15-Feb-2020 13:00:07 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[15-Feb-2020 13:00:12 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[15-Feb-2020 13:01:09 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : preg_replace(): Unknown modifier '\'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 28
+
+
+[15-Feb-2020 13:01:17 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : preg_replace(): Unknown modifier '\'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 28
+
+
+[15-Feb-2020 13:01:18 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : preg_replace(): Unknown modifier '\'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 28
+
+
+[15-Feb-2020 13:01:19 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : preg_replace(): Unknown modifier '\'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 28
+
+
+[15-Feb-2020 13:01:20 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : preg_replace(): Unknown modifier '\'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 28
+
+
+[15-Feb-2020 13:01:53 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : preg_replace(): Unknown modifier '\'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 28
+
+
+[15-Feb-2020 13:01:54 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : preg_replace(): Unknown modifier '\'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 28
+
+
+[15-Feb-2020 13:01:55 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : preg_replace(): Unknown modifier '\'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 28
+
+
+[15-Feb-2020 13:02:04 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : preg_replace(): Unknown modifier '{'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 28
+
+
+[15-Feb-2020 13:02:05 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : preg_replace(): Unknown modifier '{'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 28
+
+
+[15-Feb-2020 13:02:06 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : preg_replace(): Unknown modifier '{'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 28
+
+
+[15-Feb-2020 13:02:06 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : preg_replace(): Unknown modifier '{'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 28
+
+
+[15-Feb-2020 13:02:21 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : preg_replace(): Unknown modifier '\'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 28
+
+
+[15-Feb-2020 13:03:49 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 69
+
+
+[15-Feb-2020 13:04:48 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Admin Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 65
+
+
+[15-Feb-2020 13:04:59 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Admin Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 65
+
+
+[15-Feb-2020 13:05:28 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Admin Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 65
+
+
+[15-Feb-2020 13:06:24 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Admin Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 64
+
+
+[15-Feb-2020 13:06:33 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Admin Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 64
+
+
+[15-Feb-2020 13:09:47 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 13:10:20 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 13:10:22 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 13:10:28 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 13:11:09 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 13:11:26 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 13:11:28 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 13:11:30 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 13:11:34 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 13:11:48 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 13:11:48 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 13:11:50 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 13:11:54 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 13:11:56 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 67
+
+
+[15-Feb-2020 13:12:37 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 69
+
+
+[15-Feb-2020 13:12:42 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 69
+
+
+[15-Feb-2020 13:12:47 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 69
+
+
+[15-Feb-2020 13:13:11 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 69
+
+
+[15-Feb-2020 13:15:57 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: id
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Home.php' On Line 12
+
+
+[15-Feb-2020 13:16:00 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: id
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Home.php' On Line 12
+
+
+[15-Feb-2020 13:16:08 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: id
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Home.php' On Line 12
+
+
+[15-Feb-2020 13:16:11 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: id
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Home.php' On Line 12
+
+
+[15-Feb-2020 13:18:25 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 69
+
+
+[15-Feb-2020 13:18:26 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 69
+
+
+[15-Feb-2020 13:18:31 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 69
+
+
+[15-Feb-2020 13:18:37 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 69
+
+
+[15-Feb-2020 13:18:41 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 69
+
+
+[15-Feb-2020 13:18:47 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 69
+
+

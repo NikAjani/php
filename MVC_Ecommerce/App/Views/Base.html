@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% set url = 'http://localhost/MVC_DB_Demo/Public' %}
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{{url}}/css/style.css">
+
+    <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body>
+
+    <div style="margin: 20px;">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+            <a href="{{url}}/" class="navbar-brand">Home</a>
+
+            <a href="{{url}}/product/view" class="navbar-brand">Product</a>
+
+            <a href="{{url}}/Home/view/contactus" class="navbar-brand">Contact Us</a>
+
+            <a href="{{url}}/Home/view/aboutus" class="navbar-brand">About Us</a>
+        
+            <a class="navbar-brand" href="{{url}}/user/login">Log In</a>
+        </nav>
+    </div>
+
+{% block body %}
+ 
+{% endblock %}
+
+</body>
+</html>

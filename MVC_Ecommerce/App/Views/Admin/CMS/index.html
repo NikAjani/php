@@ -1,0 +1,34 @@
+{% extends "adminBash.html" %}
+
+{% block title %} CMS | Index {% endblock %}
+
+{% block body %}
+
+<h3><a href="{{url}}/Admin/CMS/add-CMS">Add CMS</a></h3>
+
+<div style="margin-top: 20px;">
+
+    <table class="table table-striped">
+        
+        <tr>
+            <th>CMS Name</th>
+            <th>URL</th>
+            <th>Status</th>
+            <th>Content</th>
+            <th>Action</th>
+        </tr>
+        
+        {% for data in cmsData %}
+            <tr>
+                <td>{{data.cmsName}}</td>
+                <td>{{data.UrlKey}}</td>
+                <td>{{data.status}}</td>
+                <td>{{data.content}}</td>
+                <td><a href="{{url}}/Admin/CMS/{{data.cmsId}}/edit"> Edit </a> | <a href="{{url}}/Admin/CMS/{{data.cmsId}}/delete"> Delete </a> </td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+</div>
+{% endblock %}

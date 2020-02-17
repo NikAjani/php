@@ -1,0 +1,16 @@
+{% extends "Base.html" %}
+
+{% block title %} Product | Index {% endblock %}
+
+{% block body %}
+
+<h3>This is Product Page</h3>
+
+{% for row in catList %}
+    <ul>
+        <li>{{row.categoryName}}</li>
+    </ul>
+    
+{% endfor %}
+
+{% endblock %}

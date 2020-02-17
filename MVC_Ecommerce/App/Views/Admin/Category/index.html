@@ -1,0 +1,37 @@
+{% extends "adminBash.html" %}
+
+{% block title %} Category | Index {% endblock %}
+
+{% block body %}
+
+<a href="{{url}}/Admin/Category/add-category">Add Category</a>
+
+<div style="margin-top: 20px;">
+
+    <table class="table table-striped">
+        
+        <tr>
+            <th>Category Name</th>
+            <th>Image</th>
+            <th>Url Key</th>
+            <th>Status</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+        
+        {% for data in catData %}
+            <tr>
+                <td>{{data.categoryName}}</td>
+                <td><img class="tableImg" src="{{url}}/Images/{{data.image}}"></td>
+                <td>{{data.UrlKey}}</td>
+                <td>{{data.status}}</td>
+                <td>{{data.description}}</td>
+                <td><a href="{{url}}/Admin/category/{{data.catId}}/edit"> Edit </a> | <a href="{{url}}/Admin/category/{{data.catId}}/delete"> Delete </a> </td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+</div>
+
+{% endblock %}

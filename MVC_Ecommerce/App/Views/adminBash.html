@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {% set url = 'http://localhost/MVC_DB_Demo/Public' %}
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{{url}}/css/style.css">
+
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+
+    <div style="margin: 20px;">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+            <a href="{{url}}/Admin/Dashboard/grid" class="navbar-brand">Home</a>
+
+            <a class="navbar-brand" href="{{url}}/Admin/CMS/"> Manage CMS </a>
+            
+            <a class="navbar-brand" href="{{url}}/Admin/Category/"> Manage Category </a>
+                    
+            <a class="navbar-brand" href="{{url}}/Admin/Product/"> Manage Product </a>
+        
+            <a class="navbar-brand" href="{{url}}/user/logout"> Log Out </a>
+        </nav>
+    </div>
+
+{% block body %}
+ 
+{% endblock %}
+
+</body>
+</html>

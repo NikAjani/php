@@ -1,0 +1,62 @@
+{% extends "adminBash.html" %}
+
+{% block title %} Category | Add {% endblock %}
+
+{% block body %}
+
+{% if add == "add" %}
+ 
+    {% set formTitle = "Create CMS" %}
+    {% set btn = "AddCMS" %}
+    
+{% else %}
+
+    {% set formTitle = "Edit CMS" %}
+    {% set btn = "UpdateCMS" %}
+
+{% endif %}
+
+<div class="signup-form">
+
+    <form method="post">
+
+		<h2>{{formTitle}}</h2>
+		<p>Please fill in this form to {{formTitle}}!</p>
+		<hr>
+        
+        <div class="form-group">
+        	<input type="text" class="form-control" name="cmsName" value="{{editData.cmsName}}" placeholder="CMS Name" >
+        </div>
+        <div class="validation">
+            <span> {{error.cmsName}} </span>
+        </div>
+
+        <div class="form-group">
+        	<input type="text" class="form-control" name="UrlKey" value="{{editData.UrlKey}}" placeholder="URL" >
+        </div>
+        <div class="validation">
+            <span> {{error.UrlKey}} </span>
+        </div>
+
+		<div class="form-group">
+            <input type="text" class="form-control" name="status" value="{{editData.status}}" placeholder="status">
+        </div>  
+        <div class="validation">
+            <span> {{error.status}} </span>
+        </div>
+        
+        <div class="form-group">
+           <textarea name="content" class="form-control" rows="10" id="content" placeholder="content">{{editData.content}}</textarea>
+        </div>
+        <div class="validation">
+            <span> {{error.content}} </span>
+        </div>
+        
+		<div class="form-group" style="margin-top: 15px;">
+            <button type="submit" name="{{btn}}" value="{{btn}}" class="btn btn-primary btn-lg">{{btn}}</button>
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}

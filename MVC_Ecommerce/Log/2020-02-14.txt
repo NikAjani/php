@@ -1,0 +1,554 @@
+[14-Feb-2020 13:54:15 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action indexAction (In Controller App\Controller\User) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 13:54:15 Asia/Kolkata] PHP Fatal error:  Uncaught Twig\Error\LoaderError: Unable to find template "500.html" (looked into: ../App/Views). in C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Loader\FilesystemLoader.php:250
+Stack trace:
+#0 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Loader\FilesystemLoader.php(150): Twig\Loader\FilesystemLoader->findTemplate('500.html')
+#1 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Environment.php(299): Twig\Loader\FilesystemLoader->getCacheKey('500.html')
+#2 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Environment.php(381): Twig\Environment->getTemplateClass('500.html')
+#3 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Environment.php(359): Twig\Environment->loadTemplate('500.html')
+#4 C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Environment.php(318): Twig\Environment->load('500.html')
+#5 C:\xampp\htdocs\MVC_DB_Demo\Core\BaseView.php(20): Twig\Environment->render('500.html', Array)
+#6 C:\xampp\htdocs\MVC_DB_Demo\Core\Error.php(45): Core\BaseView::renderTemplet('500.html')
+#7 [internal function]:  in C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Loader\FilesystemLoader.php on line 250
+[14-Feb-2020 13:55:10 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action indexAction (In Controller App\Controller\User) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 13:55:53 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action indexAction (In Controller App\Controller\User) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 13:57:23 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Admin Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 65
+
+
+[14-Feb-2020 14:01:43 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action logoutAction (In Controller App\Controller\User) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 56
+
+
+[14-Feb-2020 14:01:56 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action logoutAction (In Controller App\Controller\User) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 56
+
+
+[14-Feb-2020 14:01:58 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action logoutAction (In Controller App\Controller\User) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 56
+
+
+[14-Feb-2020 14:02:15 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action logoutAction (In Controller App\Controller\User) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 56
+
+
+[14-Feb-2020 14:03:27 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Error'
+ Message : Class 'App\Controller\Admin\View' not found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Dashboard.php' On Line 10
+
+
+[14-Feb-2020 14:19:03 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Blog Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 65
+
+
+[14-Feb-2020 14:20:42 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Blog Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 65
+
+
+[14-Feb-2020 14:23:47 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\LoaderError'
+ Message : Unable to find template "adminBase.html" (looked into: ../App/Views) in "/Admin/index.html" at line 1.
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Loader\FilesystemLoader.php' On Line 250
+
+
+[14-Feb-2020 14:26:46 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action loginAction (In Controller App\Controller\User) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:28:37 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Error'
+ Message : Call to undefined method App\Controller\Admin\Dashboard::before()
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 48
+
+
+[14-Feb-2020 14:29:29 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action loginAction (In Controller App\Controller\User) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:30:50 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action loginAction (In Controller App\Controller\User) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:30:57 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action loginAction (In Controller App\Controller\User) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:34:29 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action indexAction (In Controller App\Controller\User) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:34:45 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action indexAction (In Controller App\Controller\User) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:36:39 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action loginAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 56
+
+
+[14-Feb-2020 14:36:48 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action laddAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:38:06 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 69
+
+
+[14-Feb-2020 14:38:10 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action gridAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:38:24 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action gridAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:38:36 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action gridAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:38:56 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action gridAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:40:43 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action gAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 56
+
+
+[14-Feb-2020 14:41:08 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action indexAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 56
+
+
+[14-Feb-2020 14:43:57 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action gridAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:45:41 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action gridAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:46:21 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action gridAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:47:19 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action gridAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 60
+
+
+[14-Feb-2020 14:47:54 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action gridAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 61
+
+
+[14-Feb-2020 14:48:23 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action gridAction (In Controller App\Controller\admin\Dashboard) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 61
+
+
+[14-Feb-2020 15:01:15 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\LoaderError'
+ Message : Unable to find template "/Category/index.html" (looked into: ../App/Views).
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Vendor\twig\twig\src\Loader\FilesystemLoader.php' On Line 250
+
+
+[14-Feb-2020 15:11:13 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action addCategoryAction (In Controller App\Controller\admin\Category) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[14-Feb-2020 15:12:42 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action addCategoryAction (In Controller App\Controller\admin\Category) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[14-Feb-2020 15:12:52 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Action addCategoryAction (In Controller App\Controller\admin\Category) Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 57
+
+
+[14-Feb-2020 15:48:55 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\SyntaxError'
+ Message : Unexpected "}".
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Admin\Category\add_category.html' On Line 38
+
+
+[14-Feb-2020 15:55:03 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'ParseError'
+ Message : syntax error, unexpected ')', expecting ']'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Category.php' On Line 32
+
+
+[14-Feb-2020 15:58:37 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\RuntimeError'
+ Message : An exception has been thrown during the rendering of a template ("Array to string conversion").
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\Admin\Category\add_category.html' On Line 33
+
+
+[14-Feb-2020 16:10:36 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined variable: category
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Category.php' On Line 43
+
+
+[14-Feb-2020 16:38:45 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Error In Category Delete
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Category.php' On Line 70
+
+
+[14-Feb-2020 16:39:21 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Error In Category Delete
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Category.php' On Line 70
+
+
+[14-Feb-2020 16:39:39 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Error In Category Delete
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Category.php' On Line 70
+
+
+[14-Feb-2020 16:39:43 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Error In Category Delete
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Category.php' On Line 70
+
+
+[14-Feb-2020 16:41:53 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mvc_ecommerce`.`category`, CONSTRAINT `category_ibfk_1` FOREIGN KEY (`parentId`) REFERENCES `category` (`catId`) ON DELETE CASCADE ON UPDATE CASCADE)
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 51
+
+
+[14-Feb-2020 17:57:05 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'catImage' in 'field list'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 51
+
+
+[14-Feb-2020 17:58:41 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'catImage' in 'field list'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 51
+
+
+[14-Feb-2020 17:59:36 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'catImage' in 'field list'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 51
+
+
+[14-Feb-2020 18:01:00 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[42S22]: Column not found: 1054 Unknown column 'catImage' in 'field list'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 79
+
+
+[14-Feb-2020 18:25:39 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Admin Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 63
+
+
+[14-Feb-2020 18:25:54 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\Admin Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 63
+
+
+[14-Feb-2020 18:31:39 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Error'
+ Message : Call to protected method App\Model\Connection::getAll() from context 'App\Controller\Admin\Product'
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Product.php' On Line 16
+
+
+[14-Feb-2020 20:42:18 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Error In Category Insert
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Category.php' On Line 30
+
+
+[14-Feb-2020 20:42:54 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Error In Category Insert
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Category.php' On Line 30
+
+
+[14-Feb-2020 20:43:12 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : move_uploaded_file(uploads/cat.jpg): failed to open stream: No such file or directory
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 63
+
+
+[14-Feb-2020 20:46:39 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : move_uploaded_file(MVC_DB_Demo/Public/Imagescat.jpg): failed to open stream: No such file or directory
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 64
+
+
+[14-Feb-2020 20:47:39 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : move_uploaded_file(c/xampp/htdocs/MVC_DB_Demo/Public/Images/cat.jpg): failed to open stream: No such file or directory
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 64
+
+
+[14-Feb-2020 20:48:28 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : move_uploaded_file(../MVC_DB_Demo/Public/Images/cat.jpg): failed to open stream: No such file or directory
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 64
+
+
+[14-Feb-2020 20:49:20 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : move_uploaded_file(Public/Images/cat.jpg): failed to open stream: No such file or directory
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 64
+
+
+[14-Feb-2020 20:51:05 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : move_uploaded_file(../../Public/Images/cat.jpg): failed to open stream: No such file or directory
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 64
+
+
+[14-Feb-2020 20:52:01 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Error In Category Insert
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Category.php' On Line 30
+
+
+[14-Feb-2020 21:00:00 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Error In Category Update
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Category.php' On Line 49
+
+
+[14-Feb-2020 21:02:42 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : move_uploaded_file(http://localhost/MVC_DB_Demo/Public/Images/cat.jpg): failed to open stream: HTTP wrapper does not support writeable connections
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Admin\CategoryModel.php' On Line 64
+
+
+[14-Feb-2020 21:27:44 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: id
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Category.php' On Line 53
+
+
+[14-Feb-2020 21:28:26 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: id
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Admin\Category.php' On Line 53
+
+
+[14-Feb-2020 21:35:47 Asia/Kolkata] 
+
+ Fatal Error.
+ Uncaught Exception :'PDOException'
+ Message : SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mvc_ecommerce`.`product_category`, CONSTRAINT `product_category_ibfk_1` FOREIGN KEY (`catId`) REFERENCES `category` (`catId`) ON DELETE CASCADE ON UPDATE CASCADE)
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Model\Connection.php' On Line 51
+
+

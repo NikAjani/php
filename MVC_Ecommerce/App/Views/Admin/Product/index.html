@@ -1,0 +1,41 @@
+{% extends "adminBash.html" %}
+
+{% block title %} Category | Index {% endblock %}
+
+{% block body %}
+
+<h3><a href="{{url}}/Admin/product/add-product">Add Product</a></h3>
+
+<div style="margin-top: 20px;">
+
+    <table class="table table-striped">
+        
+        <tr>
+            <th>Product Name</th>
+            <th>Image</th>
+            <th>Url Key</th>
+            <th>Status</th>
+            <th>Short Description</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Action</th>
+        </tr>
+        
+        {% for data in productData %}
+            <tr>
+                <td>{{data.productName}}</td>
+                <td><img class="tableImg" src="{{url}}/Images/{{data.image}}"></td>
+                <td>{{data.UrlKey}}</td>
+                <td>{{data.status}}</td>
+                <td>{{data.shortDescription}}</td>
+                <td>{{data.price}}</td>
+                <td>{{data.stock}}</td>
+                <td><a href="{{url}}/Admin/product/{{data.productId}}/edit"> Edit </a> | <a href="{{url}}/Admin/product/{{data.productId}}/delete"> Delete </a> </td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+</div>
+
+{% endblock %}
