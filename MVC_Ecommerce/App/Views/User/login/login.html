@@ -5,16 +5,21 @@
 {% block body %}
 
 <div class="login-form">
-    <form method="post">
+    <form method="post" id="user-login">
         <h2 class="text-center">Log in</h2>       
         <div class="form-group">
-            <input type="text" name="userName" class="form-control" placeholder="Email" >
+            <p>
+                <label for="userName"><span></span></label>
+                <input type="text" id="userName" name="userName" class="form-control" placeholder="Email" >
+            </p>
+            
         </div>
         <div class="validation">
             <span> {{error.userName}} </span>
         </div>
         <div class="form-group">
-            <input type="password" name="loginpassword" class="form-control" placeholder="Password">
+            <label for="loginPassword"><span></span></label>
+            <input type="password" id="loginPassword" name="loginpassword" class="form-control" placeholder="Password">
         </div>
         <div class="validation">
             <span> {{error.loginpassword}} </span>
@@ -29,4 +34,42 @@
     </form>
     <p class="text-center"><a href="{{url}}/User/addUser">Create an Account</a></p>
 </div>
+
+<script>
+
+    $(document).ready(function() {
+
+        $('#user-login').validate({
+
+            rules : {
+                userName : {
+
+                    required : true,
+                    email : true
+                },
+
+                loginPassword : {
+
+                    required : true
+                }
+            },
+
+            messages : {
+
+                userName : {
+
+                    required : "Please Enter Email ", 
+                    email : "The email should be in the format: abc@domain.tld"
+                },
+
+                loginPassword : {
+
+                    required : "Please Enter Password"
+                }
+            }
+        });
+    });
+
+</script>
+
 {% endblock %}

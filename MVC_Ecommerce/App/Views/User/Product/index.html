@@ -16,10 +16,17 @@
 
     <div class="productDetail">
         <div class="productIteam">
-            Product Name : <b>{{productData.productName}}</b>
+            Product Name : <span id="abc">{{productData.productName}}</span>
+            
+            <input type="hidden" name="productName" id="productName" value="{{productData.productName}}">
+            <script>
+                productName = "{{productData.productName}}";
+                
+            </script>
         </div>
         <div class="productIteam">
-            Price : Rs <b>{{productData.price}}</b>
+            Price : &#8377; <b>{{productData.price}}</b>
+            <input type="hidden" name="productPrice" id="productPrice" value="{{productData.price}}">
         </div>
 
         <div class="productIteam">
@@ -36,12 +43,43 @@
         <div class="productIteam">
             Description: {{productData.description}}
         </div>
+        
+        <div class="row productIteam">
+            
+            <div class="col-lg-2">
+                <div class="input-group">
+                    
+                    <span class="input-group-btn">
+                        
+                        <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
+                            <span class="glyphicon glyphicon-minus"></span>
+                        </button>
+                    </span>
+
+                    <input type="text" id="quantity" name="quantity" class="form-control" style="width: 50px; text-align: center;" value="1" min="1" max="{{productData.stock}}" disabled>
+
+                    <span class="input-group-btn">
+                        <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
 
         <div class="productIteam">
             <button class="btn btn-success">Buy</button>
-            <button class="btn btn-danger addToCartBtn">Add To Cart</button>
+            <button class="btn btn-danger addToCartBtn" id="cart">Add To Cart</button>
+            <script>
+                document.querySelector("#cart").addEventListener('click', function() {
+                    var quantity = parseInt($('#quantity').val());
+                    var data = { productName: "{{productData.UrlKey}}", price : "{{productData.price}}", qunt : quantity};
+                    addToCart(data);
+                });
+            </script>
         </div>
     </div>
 </div>
+
 
 {% endblock %}

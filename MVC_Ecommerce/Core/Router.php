@@ -13,7 +13,7 @@ class Router {
 
         $this->add('',['controller'=>'Home', 'action'=>'view']);
         $this->add('{controller}/');
-        $this->add('{controller}');
+        $this->add('{controller}', ['action' => 'index']);
         $this->add('{controller}/{action}');
         $this->add('admin/{controller}/{action}', ['namespace' => 'admin']);
         $this->add('admin/{controller}/', ['namespace' => 'admin']);

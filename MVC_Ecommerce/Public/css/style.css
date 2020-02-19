@@ -158,3 +158,31 @@
     height: 300px;
     width: 210px;
 }
+label {
+    width: 300px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+label span {
+font-size: 1rem;
+}
+
+label.error {
+    color: red;
+    font-size: 1rem;
+    display: block;
+    margin-top: 15px;
+}
+
+.cart{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.delete {
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+}

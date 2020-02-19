@@ -1,0 +1,832 @@
+[19-Feb-2020 04:57:59 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 28
+
+
+[19-Feb-2020 04:58:06 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 28
+
+
+[19-Feb-2020 05:02:43 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 28
+
+
+[19-Feb-2020 05:02:45 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 28
+
+
+[19-Feb-2020 05:23:18 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\RuntimeError'
+ Message : An exception has been thrown during the rendering of a template ("Array to string conversion").
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\User\Product\index.html' On Line 49
+
+
+[19-Feb-2020 05:23:37 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\RuntimeError'
+ Message : An exception has been thrown during the rendering of a template ("Array to string conversion").
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\User\Product\index.html' On Line 49
+
+
+[19-Feb-2020 05:24:02 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Twig\Error\RuntimeError'
+ Message : An exception has been thrown during the rendering of a template ("Array to string conversion").
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Views\User\Product\index.html' On Line 49
+
+
+[19-Feb-2020 05:52:42 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 05:52:44 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 05:53:16 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 05:54:03 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 05:54:18 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 05:54:44 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 06:00:22 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 06:02:52 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 06:02:54 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 06:02:55 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 06:02:56 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 06:02:56 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 06:02:57 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 06:02:57 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 06:02:57 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 06:02:57 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 06:02:57 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 06:02:58 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 06:03:12 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productPrice
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 06:11:19 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 28
+
+
+[19-Feb-2020 06:11:21 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 28
+
+
+[19-Feb-2020 06:11:22 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 28
+
+
+[19-Feb-2020 06:26:24 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Array to string conversion
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 28
+
+
+[19-Feb-2020 06:29:54 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 28
+
+
+[19-Feb-2020 06:29:57 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 28
+
+
+[19-Feb-2020 06:29:59 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 28
+
+
+[19-Feb-2020 06:47:37 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined property: App\Controller\Home::$sessionData
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\Home.php' On Line 36
+
+
+[19-Feb-2020 07:04:25 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: action
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 15
+
+
+[19-Feb-2020 07:04:33 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: action
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 15
+
+
+[19-Feb-2020 07:04:49 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: productName
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 08:38:23 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: qunt
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 24
+
+
+[19-Feb-2020 08:38:29 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: qunt
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 24
+
+
+[19-Feb-2020 08:42:57 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: qunt
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 24
+
+
+[19-Feb-2020 08:47:57 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: qunt
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 08:48:40 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 38
+
+
+[19-Feb-2020 08:48:43 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 38
+
+
+[19-Feb-2020 08:48:43 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 38
+
+
+[19-Feb-2020 08:48:44 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: qunt
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 08:48:55 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 38
+
+
+[19-Feb-2020 08:49:02 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: qunt
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 17
+
+
+[19-Feb-2020 08:49:51 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 38
+
+
+[19-Feb-2020 08:49:52 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 19
+
+
+[19-Feb-2020 08:50:31 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 28
+
+
+[19-Feb-2020 08:59:47 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Illegal offset type
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 23
+
+
+[19-Feb-2020 09:00:43 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Illegal offset type
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 23
+
+
+[19-Feb-2020 09:01:02 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Illegal offset type
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 23
+
+
+[19-Feb-2020 09:01:42 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Illegal offset type
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 23
+
+
+[19-Feb-2020 09:02:15 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 38
+
+
+[19-Feb-2020 09:02:24 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 20
+
+
+[19-Feb-2020 09:02:28 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 38
+
+
+[19-Feb-2020 09:05:21 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 38
+
+
+[19-Feb-2020 09:05:22 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 38
+
+
+[19-Feb-2020 09:05:27 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 38
+
+
+[19-Feb-2020 09:06:33 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 38
+
+
+[19-Feb-2020 09:06:36 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 38
+
+
+[19-Feb-2020 09:06:36 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 38
+
+
+[19-Feb-2020 09:06:38 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 20
+
+
+[19-Feb-2020 09:06:44 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 20
+
+
+[19-Feb-2020 09:06:52 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 38
+
+
+[19-Feb-2020 09:07:05 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 20
+
+
+[19-Feb-2020 09:07:57 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 41
+
+
+[19-Feb-2020 09:07:59 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined variable: is_exist
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 31
+
+
+[19-Feb-2020 09:08:12 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 41
+
+
+[19-Feb-2020 09:08:19 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Illegal offset type
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 25
+
+
+[19-Feb-2020 09:09:38 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Illegal offset type
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 25
+
+
+[19-Feb-2020 09:10:09 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 41
+
+
+[19-Feb-2020 09:10:13 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 41
+
+
+[19-Feb-2020 09:13:16 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Illegal offset type
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 25
+
+
+[19-Feb-2020 09:14:39 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Illegal offset type
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 24
+
+
+[19-Feb-2020 09:14:56 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Illegal offset type
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 24
+
+
+[19-Feb-2020 09:15:29 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Illegal offset type
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 24
+
+
+[19-Feb-2020 09:16:07 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Illegal offset type
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 26
+
+
+[19-Feb-2020 09:16:32 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Illegal offset type
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 27
+
+
+[19-Feb-2020 09:16:58 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Illegal offset type
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 26
+
+
+[19-Feb-2020 10:38:09 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 41
+
+
+[19-Feb-2020 10:39:35 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 10:39:37 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 10:39:38 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 10:39:39 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:29:58 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:29:59 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:30:02 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:30:03 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:30:03 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:30:05 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:31:09 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:31:22 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:31:31 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:31:45 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:32:04 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:32:19 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:34:29 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:37:41 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:42:28 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:42:29 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:45:49 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+
+[19-Feb-2020 11:45:49 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 43
+
+

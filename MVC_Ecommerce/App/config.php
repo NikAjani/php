@@ -4,7 +4,7 @@ namespace App;
 
 class config {
 
-    const SHOW_ERROR = true;
+    const SHOW_ERROR = false;
 
     const HOST = 'localhost';
 

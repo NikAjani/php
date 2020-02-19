@@ -1,0 +1,384 @@
+[18-Feb-2020 10:11:56 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:12:33 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 25
+
+
+[18-Feb-2020 10:13:04 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 25
+
+
+[18-Feb-2020 10:13:31 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 25
+
+
+[18-Feb-2020 10:13:39 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 25
+
+
+[18-Feb-2020 10:15:09 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:15:11 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:15:13 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:15:30 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:15:35 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:15:41 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:16:25 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:16:27 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:18:52 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:19:01 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:19:07 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:22:21 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:22:44 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:23:05 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:23:09 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:23:15 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:24:31 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:24:36 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:24:39 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:25:11 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:25:16 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:25:24 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:25:27 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:25:31 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:26:06 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:26:34 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:26:37 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:26:58 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:27:01 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:27:08 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:32:32 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:33:41 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:33:42 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:33:42 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:33:43 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:33:43 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:33:44 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:33:44 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:33:45 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:33:46 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:34:54 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : No Route Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 68
+
+
+[18-Feb-2020 10:42:32 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'Exception'
+ Message : Cntroller Class App\Controller\A Not Found
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\Core\Router.php' On Line 64
+
+
+[18-Feb-2020 14:14:11 Europe/Berlin] 
+
+ Fatal Error.
+ Uncaught Exception :'ErrorException'
+ Message : Undefined index: shoppingCart
+ Thrown in : 'C:\xampp\htdocs\MVC_DB_Demo\App\Controller\AddToCart.php' On Line 28
+
+

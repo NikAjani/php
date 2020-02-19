@@ -6,6 +6,8 @@ use Core\BaseView as View;
 use App\config as Config;
 use App\Model\User\ProductModel as ProductModel;
 
+session_start();
+
 class Product extends \Core\BaseControllers {
 
     function __construct($param) {

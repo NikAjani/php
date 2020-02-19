@@ -16,7 +16,7 @@ abstract class BaseControllers {
     function before($methoName) {
 
         //echo $methoName;
-        if(\in_array($methoName, ['loginAction', 'indexAction', 'viewAction'])){
+        if(\in_array($methoName, ['loginAction', 'indexAction', 'viewAction', 'getCartAction','removeCartItemAction'])){
             return true;
         } else {
             if(isset($_SESSION['user'])){
@@ -24,7 +24,7 @@ abstract class BaseControllers {
             } else
                 header("Location: ".Config::URL."/user/login");
         }
-    }
+    }   
 
     function after() {
 

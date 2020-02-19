@@ -5,6 +5,7 @@ use Core\BaseView as View;
 use App\Model\User\HomeModel as HomeModel;
 use App\Model\User\CategoryModel as CatModel;
 
+session_start();
 
 class Home extends \Core\BaseControllers {
 

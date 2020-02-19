@@ -9,6 +9,12 @@ use Exception;
 
 class Product extends \Core\BaseControllers {
 
+    function __construct($routeParam) {
+        parent::__construct($routeParam);
+        $cat = new ProductModel();
+        $this->category = $cat->getRow('catId, categoryName', 'category', ['parentId !' => 0]);
+    }
+
     function indexAction() {
 
         $viewProduct = new ProductModel();
@@ -52,9 +58,9 @@ class Product extends \Core\BaseControllers {
                 throw new Exception("Error in Insert Product");
         } else {
 
-            $category = $addProduct->getRow('catId, categoryName', 'category', ['parentId !' => 0]);
+            //$category = $addProduct->getRow('catId, categoryName', 'category', ['parentId !' => 0]);
             
-            view::renderTemplet('\Admin\Product\addProduct.html', ['add'=>'add', 'category' => $category]);
+            view::renderTemplet('\Admin\Product\addProduct.html', ['add'=>'add', 'category' => $this->category]);
         }
         
     }
@@ -76,9 +82,9 @@ class Product extends \Core\BaseControllers {
 
             $editData = $edit->getEditProduct($this->routeParam['id']);
             
-            $category = $edit->getRow('catId, categoryName', 'category', ['parentId !' => 0]);
+            //$category = $edit->getRow('catId, categoryName', 'category', ['parentId !' => 0]);
 
-            view::renderTemplet('\Admin\Product\addProduct.html', ['category'=> $category, 'editData' => $editData[0]]);
+            view::renderTemplet('\Admin\Product\addProduct.html', ['category'=> $this->category, 'editData' => $editData[0]]);
         }
     }
 

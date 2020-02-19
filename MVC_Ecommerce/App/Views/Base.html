@@ -9,15 +9,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <script src="{{url}}/js/script.js"></script>
+    
     <link rel="stylesheet" href="{{url}}/css/style.css">
 
     <title>{% block title %} {% endblock %}</title>
 </head>
 
 <body>
-    
     
     <div style="margin: 20px;">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
@@ -50,8 +54,34 @@
             <a href="{{url}}/Home/view/aboutus" class="navbar-brand">About Us</a>
         
             <a class="navbar-brand" href="{{url}}/user/login">Log In</a>
+            
+            <span class="navbar-brand cart glyphicon" data-toggle="modal" data-target="#carthead">&#xe116;</span>
+            </div>
         </nav>
     </div>
+
+    <div class="modal fade" id="carthead" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Your Cart</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <span id="cartData">
+                    
+                </span>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success" data-dismiss="modal">CheckOut</button>
+              <button type="button" class="btn btn-danger">Clear Cart</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
 
 {% block body %}
  
