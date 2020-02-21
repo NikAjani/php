@@ -1,0 +1,48 @@
+{% extends "navbar.html" %}
+
+{% block title %} Vehicle | Index {% endblock %}
+
+{% block div %}
+
+<div class="container">
+    <div>
+        <a href="{{url}}/Vehicle/Service/register"><button class="btn btn-success">Service Register</button></a>
+    </div>
+    
+</div>
+
+<div>
+    <table class="table table-striped">
+        <tr>
+            <th>Title</th>
+            <th>Vehicle Number</th>
+            <th>License Number</th>
+            <th>Date</th>
+            <th>Time Slote</th>
+            <th>Vehicle Issue</th>
+            <th>Status</th>
+        </tr>
+        
+            {% for data in userData %}
+            <tr>
+                <td>{{data.title}}</td>
+                <td>{{data.vehicleNumber}}</td>
+                <td>{{data.licenseNumber}}</td>
+                <td>{{data.date}}</td>
+                <td>{{data.timeSlote}}</td>
+                <td>{{data.vehicleIssue}}</td>
+                <td>
+                    {% if data.status == 0 %}
+                        Pendding
+                    {% else %}
+                        Approve
+                    {% endif %}
+                </td>
+            </tr>
+
+            {% endfor %}
+        </tr>
+    </table>
+</div>
+
+{% endblock %}

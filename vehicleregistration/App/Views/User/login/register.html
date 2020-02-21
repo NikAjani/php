@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %} User | Registration {% endblock %}
+
+{% block body %}
+
+
+<div class="signup-form">
+
+    <form method="post" id="register-form">
+
+		<h2>Sign Up</h2>
+		<p>Please fill in this form to Registration!</p>
+		<hr>
+        
+        <div class="form-group">
+            <input type="text" id="firstName" name="firstName" value="{{post.firstName}}" class="form-control" placeholder="First Name" >
+        </div>
+
+        <div class="validation">
+            <span> {{error.firstName}} </span>
+        </div>
+
+        <div class="form-group">
+           <input type="text" id="lastName" name="lastName" value="{{post.lastName}}" class="form-control" placeholder="Last Name" >
+        </div>
+
+        <div class="validation">
+            <span> {{error.lastName}} </span>
+        </div>
+
+        <div class="form-group">
+            <input type="email" id="email" name="email" value="{{post.email}}" class="form-control" placeholder="Email Id" >
+         </div>
+
+         <div class="validation">
+            <span> {{error.email}} </span>
+        </div>
+
+         <div class="form-group">
+            <input type="password" id="password" name="password" value="{{post.password}}" class="form-control" placeholder="Password" >
+         </div>
+
+         <div class="validation">
+            <span> {{error.password}} </span>
+        </div>
+
+         <div class="form-group">
+            <input type="password" id="confirmPassword" name="confirmPassword" value="{{post.confirmPassword}}" class="form-control" placeholder="Confirm Password" >
+         </div>
+
+         <div class="validation">
+            <span> {{error.confirmPassword}} </span>
+        </div>
+
+         <div class="form-group">
+            <input type="number" id="phoneNo" name="phoneNo" value="{{post.phoneNo}}" class="form-control" placeholder="Phone No" >
+         </div>
+
+         <div class="validation">
+            <span> {{error.phoneNo}} </span>
+        </div>
+
+         <div class="form-group">
+            <input type="text" id="street" name="street" value="{{post.street}}" class="form-control" placeholder="Street Name" >
+         </div>
+
+         <div class="validation">
+            <span> {{error.street}} </span>
+        </div>
+
+         <div class="form-group">
+            <input type="text" id="city" name="city" value="{{post.city}}" class="form-control" placeholder="City Name" >
+         </div>
+
+         <div class="validation">
+            <span> {{error.city}} </span>
+        </div>
+
+         <div class="form-group">
+            <input type="text" id="state" name="state" value="{{post.state}}" class="form-control" placeholder="State Name" >
+         </div>
+
+         <div class="validation">
+            <span> {{error.state}} </span>
+        </div>
+
+        <div class="form-group">
+            <input type="number" id="zipCode" name="zipCode" value="{{post.zipCode}}" class="form-control" placeholder="Zip Code" >
+         </div>
+
+         <div class="validation">
+            <span> {{error.zipCode}} </span>
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="country" name="country" value="{{post.country}}" class="form-control" placeholder="Country Name" >
+         </div>
+
+         <div class="validation">
+            <span> {{error.country}} </span>
+        </div>
+        
+		<div class="form-group" style="margin-top: 15px;">
+            <button type="submit" name="Register" value="Register" class="btn btn-primary btn-lg">Register</button>
+        </div>
+
+    </form>
+</div>
+
+
+{% endblock %}

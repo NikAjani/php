@@ -1,0 +1,97 @@
+{% extends "navbar.html" %}
+
+{% block title %} Vehicle | Register {% endblock %}
+
+{% block div %}
+
+
+
+<div class="signup-form">
+
+    <form method="post" id="register-form">
+
+		<h2>Sign Up</h2>
+		<p>Please fill in this form to Registration!</p>
+		<hr>
+        
+        <div class="form-group">
+            <input type="text" id="title" name="title" value="{{post.title}}" class="form-control" placeholder="Title" >
+        </div>
+
+        <div class="validation">
+            <span> {{error.title}} </span>
+        </div>
+
+        <div class="form-group">
+           <input type="text" id="vehicleNumber" name="vehicleNumber" value="{{post.vehicleNumber}}" class="form-control" placeholder="Vehicle Number eg. GJ12AB1234" >
+        </div>
+
+        <div class="validation">
+            <span> {{error.vehicleNumber}} </span>
+        </div>
+
+        <div class="form-group">
+            <input type="text" id="licenseNumber" name="licenseNumber" value="{{post.licenseNumber}}" class="form-control" placeholder="Lincese Number" >
+         </div>
+
+         <div class="validation">
+            <span> {{error.licenseNumber}} </span>
+        </div>
+
+         <div class="form-group">
+            <input type="date" id="date" name="date" value="{{post.date}}" class="form-control" placeholder="Date" >
+         </div>
+
+         <div class="validation">
+            <span> {{error.date}} </span>
+        </div>
+
+        <div class="form-group">
+           <select class="form-control" name="timeSlote" id="timeSlote">
+              <option value="select">--Select Time Slote--</option>
+              {% set time = ['9-10', '10-11', '11-12', '12-1', '1-2', '2-3', '3-4', '4-5', '5-6'] %}
+
+              {% for slot in time %}
+               <option value="{{slot}}" {% if slot==post.timeSlote %} selected {% endif %}>{{slot}}</option>
+              {% endfor %}
+
+           </select>
+        </div>
+
+        <div class="validation">
+         <span> {{error.timeSlote}} </span>
+         </div>
+
+         <div class="form-group">
+            <input type="text" id="vehicleIssue" name="vehicleIssue" value="{{post.vehicleIssue}}" class="form-control" placeholder="Vehicle Issue" >
+         </div>
+
+         <div class="validation">
+            <span> {{error.vehicleIssue}} </span>
+        </div>
+
+        <div class="form-group">
+         <select class="form-control" name="serviceCenter" id="serviceCenter">
+            <option value="select">--Select Service Center--</option>
+            {% set center = ['Center 1', 'Center 2', 'Center 3', 'Center 4'] %}
+
+            {% for row in center %}
+             <option value="{{row}}" {% if row == post.serviceCenter %} selected {% endif %}>{{row}}</option>
+            {% endfor %}
+            
+         </select>
+      </div>
+      <div class="validation">
+         <span> {{error.serviceCenter}} </span>
+     </div>
+
+         
+		<div class="form-group" style="margin-top: 15px;">
+            <button type="submit" name="RegisterService" value="Register" class="btn btn-primary btn-lg">Register Service</button>
+        </div>
+
+    </form>
+</div>
+
+
+{% endblock %}
