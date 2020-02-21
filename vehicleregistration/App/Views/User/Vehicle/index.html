@@ -32,10 +32,10 @@
                 <td>{{data.timeSlote}}</td>
                 <td>{{data.vehicleIssue}}</td>
                 <td>
-                    {% if data.status == 0 %}
-                        Pendding
+                    {% if data.Status == 0 %}
+                        <span style="background-color: red; color: honeydew;">Pendding</span>
                     {% else %}
-                        Approve
+                    <span style="background-color: green; color: honeydew;">Approve</span>
                     {% endif %}
                 </td>
             </tr>

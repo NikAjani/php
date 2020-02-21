@@ -31,7 +31,7 @@ class Connection {
 
         $where = $this->whereCondition($whereArray);
 
-        $sqlQuery = "SELECT $colName FROM `$tableName`".$where. $other;
+        echo $sqlQuery = "SELECT $colName FROM `$tableName`".$where. $other;
         $stmt = $this->connection->query($sqlQuery);
         
         if($tableData = $stmt->fetchAll(PDO::FETCH_ASSOC))
@@ -95,51 +95,7 @@ class Connection {
     
     }
 
-    function join($colName, $table, $joinType, $On , $whereArray = [], $other = "") {
-
-        $join = $this->prepareJoin($table, $joinType, $On, $whereArray);
-
-        $sqlQuery = "SELECT $colName FROM $join[0] $join[1] $other";
-
-        $stmt = $this->connection->query($sqlQuery);
-        
-        if($tableData = $stmt->fetchAll(PDO::FETCH_ASSOC))
-            return $tableData;
-        else    
-            return false;
-        
-    }
-
-    protected function prepareJoin($table, $joinType, $On, $whereArray) {
-
-        $tableString = " $table[0] $joinType $table[1] ON $On[0] ";
-
-        if(sizeof($table) > 2) {
-           
-            for($i = 2; $i < sizeof($table); $i++) {
-
-                $tableString .= $joinType ." ". $table[$i] . " ON " . $On[$i - 1];
-            }
-        }
-
-        $whereCondition = "";
-
-        if(sizeof($whereArray) >= 1) { 
-
-            $whereCondition = " WHERE " . $whereArray[0];
-
-            if(sizeof($whereArray) > 1) {
-
-                for($i = 1; $i < sizeof($whereArray); $i++) {
-
-                    $whereCondition .= " AND ". $whereArray[$i];
-                }
-            }
-        }
-
-        return [$tableString, $whereCondition];
-
-    }
+    
 
     protected function whereCondition($whereArray) {
 

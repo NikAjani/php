@@ -16,7 +16,7 @@ class Service extends \Core\BaseControllers {
 
 
         $licenseReg = '/^[0-9a-zA-Z]{4,9}$/';
-        $vehicleReg = '/^[a-z]{2}[0-9]{6}/';
+        $vehicleReg = '/^[a-z]{2}[0-9]{2}[a-z]{2}[0-9]{4}$/';
 
         foreach($_POST as $fieldName => $fieldValue) {
 

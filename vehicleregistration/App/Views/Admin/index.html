@@ -13,6 +13,7 @@
             <th>Date</th>
             <th>Time Slote</th>
             <th>Vehicle Issue</th>
+            <th>Change Status</th>
             <th>Action</th>
         </tr>
         
@@ -24,15 +25,16 @@
                 <td>{{data.date}}</td>
                 <td>{{data.timeSlote}}</td>
                 <td>{{data.vehicleIssue}}</td>
-                <td>
+                <td style="text-align: left;">
                     {% if data.Status == 0 %}
                         <a href="{{url}}/Admin/Home/{{data.serviceId}}/editStatus"><button class="btn btn-success">&#10004;</button></a>
                     {% else %}
-                        <button class="btn btn-danger">&#10006;</button>
+                        <a href="{{url}}/Admin/Home/{{data.serviceId}}/editStatus"><button class="btn btn-danger">&#10006;</button></a>
                     {% endif %}
                 </td>
+                <th> <a href="{{url}}/Admin/Home/{{data.serviceId}}/edit">Edit </a>|
+                    <a href="{{url}}/Admin/Home/{{data.serviceId}}/delete"> Delete</a></th>
             </tr>
-
             {% endfor %}
         </tr>
     </table>
