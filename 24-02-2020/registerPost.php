@@ -10,7 +10,7 @@ echo $query = "INSERT INTO `demo` (`firstName`, `lastName`) VALUES ('".$_POST['f
  
 if($adapte->insert($query)) {
 
-    header("index.php");
+    header("Location: index.php");
 }
 
 ?>

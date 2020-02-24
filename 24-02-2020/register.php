@@ -8,21 +8,33 @@ include_once "header.php";
 </style>
 
 <div style="margin-top: 50px">
-<h2>Add User</h2>
-    <form action="registerPost.php" method="post">
+
+    <?php 
+        if(isset($_GET['editId'])){
+            $action = "edit.php";
+            require_once $action;
+        } else{
+            $editData['firstName'] = "";
+            $editData['lastName'] ="";
+            $action = "registerPost.php";
+        }
+    ?>
+
+    <form action=<?php echo $action; ?> method="post">
 
         <div class="field">
             <label for="firtsName">First Name : </label>
-            <input type="text" name="firstName" id="firstName">
+            <input type="text" name="firstName" id="firstName" value="<?php echo $editData['firstName']; ?>">
+            <input type="hidden" name="id" id="id" value="<?php echo $editData['demoId']; ?>">
         </div>
 
         <div class="field">
             <label for="lastName">last Name : </label>
-            <input type="text" name="lastName" id="lastName">
+            <input type="text" name="lastName" id="lastName" value="<?php echo $editData['lastName']; ?>">
         </div>
 
         <div class="field">
-            <input type="submit" value="Add User" name="submit">
+            <input type="submit" value="Submit" name="submit">
         </div>
     </form>
 </div>
