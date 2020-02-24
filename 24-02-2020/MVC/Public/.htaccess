@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /Cybercom/php/24-02-2020/Public/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?$1 [L,QSA]
