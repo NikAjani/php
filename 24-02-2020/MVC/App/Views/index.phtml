@@ -2,5 +2,31 @@
 
     <h1>Index HTML</h1>
 
+    <div>
+        <table>
+            <tr>
+                <th>Category Name</th>
+                <th>Url Key</th>
+                <th>Image</th>
+                <th>Status</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+            <?php
+                foreach($catData as $row):
+            ?>
+
+            <tr>
+                <td><?php echo $row['categoryName']; ?></td>
+                <td><?php echo $row['UrlKey']; ?></td>
+                <td><?php echo $row['image']; ?></td>
+                <td><?php echo $row['status']; ?></td>
+                <td><?php echo $row['description']; ?></td>
+                <td><a href="<?php echo $url; ?>Home/<?php echo $row['catId']; ?>/edit"> Edit </a> | <a href=""> Delete </a></td>
+            </tr>
+
+            <?php endforeach ?>
+        </table>
+    </div>
 </body>
 </html>

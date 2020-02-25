@@ -1,14 +1,82 @@
 <?php
     include_once "header.phtml";
+
+    function getData(&$data, $fileName) {
+        return (isset($data[$fileName])) ? $data[$fileName] : "";
+    }
 ?>
+
+<style>
+    .field {
+        margin-top: 10px;
+    }
+</style>
 
 <h3>Add User</h3>
 
 <div>
-    <form method="post">
-        
+    <form method="post" enctype="multipart/form-data">
+
+        <div class="field">
+            <label for="firtsName">Category Name : </label>
+            <input type="text" name="categoryName" id="categoryName" value="<?php echo getData($editData, 'categoryName') ?>">
+        </div>
+
+        <div>
+            <span><?php echo getData($error, 'categoryName'); ?></span>
+        </div>
+
+        <div class="field">
+            <label for="lastName">Category Image : </label>
+            <input type="file" name="image" id="image" value="<?php echo getData($editData, 'image') ?>">
+        </div>
+
+        <div>
+            <span><?php echo getData($error, 'image'); ?></span>
+        </div>
+
+        <div class="field">
+            <label for="status">Status : </label>
+            <select name="status" id="status">
+                <option value="select">-- Select Status --</option>
+                <option value="1" <?php if(getData($editData, 'status') == 'yes') echo 'selected'; ?>>Yes</option>
+                <option value="0" <?php if(getData($editData, 'status') == 'no') echo 'selected'; ?>>No</option>
+            </select>
+        </div>
+
+        <div>
+            <span><?php echo getData($error, 'status'); ?></span>
+        </div>
+
+        <div class="field">
+            <label for="parentCat">Parent Category : </label>
+            <select name="parentCat" id="parentCat">
+                <option value="select">-- Select Parent Category --</option>
+                <?php
+                    foreach($categoryName as $category):
+                ?>
+                <option value="<?php echo $category['catId']; ?>" <?php if($category['catId'] == getData($editData, 'parentId')) echo "selected"; ?> ><?php echo $category['categoryName']; ?></option>
+                
+                <?php
+                    endforeach;
+                ?>
+            </select>
+        </div>
+
+        <div class="field">
+            <label for="description">Description : </label>
+            <textarea name="description" id="description"><?php echo getData($editData, 'description') ?></textarea>
+        </div>
+
+        <div>
+            <span><?php echo getData($error, 'description'); ?></span>
+        </div>
+
+        <div class="field">
+            <input type="submit" value="Submit" name="submit">
+        </div>
+
     </form>
 </div>
-
 </body>
 </html>
