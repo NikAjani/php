@@ -37,10 +37,10 @@ class Adapter {
     }
 
     function connect() {
-
         $config = $this->getConfig();
         $connect = new mysqli($config['host'], $config['userName'], $config['password'], $config['dbName']);
-        $this->setConnect($connect);
+        
+        return $this->setConnect($connect);
     }
 
     function isConnected() {
@@ -49,15 +49,15 @@ class Adapter {
         return true;
     }
 
-    function query($query) {
+    function query() {
         
         if(!$this->isConnected())
             $this->connect();
         
-        return $this->getConnect()->query($query);
+        return $this->getConnect()->query($this->getQuery());
     }
 
-    /* function insert($query) {
+    function insert($query) {
         $this->setQuery($query);
         if($this->query()) {
             return $this->getConnect()->insert_id;
@@ -85,37 +85,23 @@ class Adapter {
 
     function fetchAll($query) {
         $this->setQuery($query);
-        return $this->query()->fetch_all(MYSQLI_ASSOC);
+        $collection = $this->query()->fetch_all(MYSQLI_ASSOC);
+        
+        if($collection)
+            return $collection;
+        
+        return null;
     }
 
     function fetchRow($query) {
         $this->setQuery($query);
-        return $this->query()->fetch_all(MYSQLI_ASSOC)[0];
+        $row = $this->query()->fetch_assoc();
+
+        if($row)
+            return $row;
+
+        return null;
     }
-
-    function fetchOne($query) {
-        $this->setQuery($query);
-        return $this->query()->fetch_all(MYSQLI_ASSOC)[0];
-    }
-
-    function fetchPairs($colNameArray, $tableName) {
-        if(!is_array($colNameArray))
-            throw new Exception("ColName must be in Array");
-        
-        $colNameArray[1] = (isset($colNameArray[1])) ? $colNameArray[1] : null;
-
-        $this->setQuery("SELECT `$colNameArray[0]`, `$colNameArray[1]` FROM `$tableName`");
-        
-        $result = $this->query()->fetch_all(MYSQLI_ASSOC);
-
-        $resultpairs = [];
-        
-        $resultpairs = array_column($result, $colNameArray[1], $colNameArray[0]);
-    
-        print_r($resultpairs);
-
-        return $resultpairs;
-    } */
 
 }
 
