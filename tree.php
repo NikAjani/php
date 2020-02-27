@@ -1,29 +1,26 @@
 <?php
 
-$row = 5;
-$tree = [];
-
-for($i = 1; $i < $row; $i++){
-    for($j = 0; $j <= 1; $j++)
-        $tree[$i][$j] = $i * 2 + $j;
-}
+$data = [
+    ['c' => 1, 'a' => 1, 'o' => 1],
+    ['c' => 1, 'a' => 1, 'o' => 2],
+    ['c' => 1, 'a' => 2, 'o' => 3],
+    ['c' => 1, 'a' => 2, 'o' => 4],
+    ['c' => 2, 'a' => 3, 'o' => 5],
+    ['c' => 2, 'a' => 3, 'o' => 6],
+    ['c' => 2, 'a' => 4, 'o' => 7],
+    ['c' => 2, 'a' => 4, 'o' => 8]
+];
 
 echo '<pre>';
-print_r($tree);
-echo '</pre><br><br>';
 
-$conn = new mysqli('localhost','root', '', 'logindemo');
+$final = [];
 
-$sql = 'SELECT * FROM `tree`';
-
-$tableData = $conn->query($sql);
-
-$data = $tableData -> fetch_all();
-
-echo '<Br>';
-foreach($data as $key => $value){
-    print_r($value);
-    echo '<br>';
+foreach ($data as $key => $row){
+    $final[$row['c']][$row['a']][$row['o']] = $row['o'];
+    
 }
+print_r($final);
+
+// $final[$row['c']] = [$row['c'] => [$row['a'] => [$row['o'] => $row['o']]]];
 
 ?>
