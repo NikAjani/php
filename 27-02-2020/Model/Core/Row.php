@@ -152,9 +152,6 @@ class Row {
 
     public function delete() {
 
-        if($this->getRowChanged() == false)
-            throw new Exception("Provide Id For Delete Recored");
-
         $delId = $this->getData($this->getPrimaryKey());
         $this->unsetData($this->getPrimaryKey());
 

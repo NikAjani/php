@@ -95,6 +95,7 @@ class Adapter {
 
     function fetchRow($query) {
         $this->setQuery($query);
+        
         $row = $this->query()->fetch_assoc();
 
         if($row)
