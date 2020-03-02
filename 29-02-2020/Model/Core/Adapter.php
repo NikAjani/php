@@ -1,5 +1,10 @@
 <?php
 
+namespace Model\Core;
+
+use mysqli;
+use Exception;
+
 class Adapter {
 
     protected $config = ['host' => 'Localhost', 'userName' => 'root', 'password' => '', 'dbName' => 'practice'];
@@ -89,15 +94,12 @@ class Adapter {
         
         if($collection)
             return $collection;
-        
         return null;
     }
 
     function fetchRow($query) {
         $this->setQuery($query);
-        
         $row = $this->query()->fetch_assoc();
-
         if($row)
             return $row;
 

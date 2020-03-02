@@ -1,28 +1,18 @@
 <?php
 
-require_once 'Model/Core/Request.php';
-require_once 'Model/CategoryModel.php';
+namespace Controller;
+use Exception;
+use Model\CategoryModel as CategoryModel;
 
-class Category {
+class Category extends \Controller\Core\BaseController {
 
-    protected $request = null;
     protected $categories = null;
     protected $category = null;
-    protected $parentCategory =- null;
-
+    protected $parentCategory = null;
 
     public function __construct() {
         $this->setRequest();
         $this->setCategories();
-    }
-
-    public function setRequest(){
-        $this->request = new Request();
-        return $this;
-    }
-
-    public function getRequest() {
-        return $this->request;
     }
 
     public function setCategories() {
@@ -31,15 +21,13 @@ class Category {
 
         $this->categories = $categoryModel->fetchAll();
 
-        if($this->categories == null)
-            return null;
-
-        $this->categories = array_map(function (&$row) {
-                return $row = $row->getData();
-        }, $this->categories);
-
         return $this;
 
+    }
+
+    public function getCategories() {
+        
+        return $this->categories;
     }
 
     public function getParentCategory() {
@@ -48,8 +36,8 @@ class Category {
             return [];
         
         $this->parentCategory = array_map(function ($row) {
-            if($row['parentId'] == 0)
-                return $row = [$row['catId'], $row['name']];
+            if($row->parentId == 0)
+                return $row = [$row->catId, $row->name];
             else
                 null;
         }, $this->getCategories());
@@ -57,13 +45,8 @@ class Category {
         return array_filter($this->parentCategory);
     }
 
-    public function getCategories() {
-        
-        return $this->categories;
-    }
-
     public function indexAction() {
-        
+
         require_once "Views/category/show.php";
     }
 
@@ -91,8 +74,8 @@ class Category {
 
         $categoryModel = new CategoryModel();
 
-        $data = $categoryModel->load($this->getRequest()->getRequest('id'));
-        $this->setCategory($data->getData());
+        $categoryModel->load($this->getRequest()->getRequest('id'));
+        $this->setCategory($categoryModel->getData());
 
         $categories = $this->getParentCategory();
         $action = "?c=category&a=save&id=".$this->getRequest()->getRequest('id');
@@ -103,9 +86,9 @@ class Category {
     public function deleteAction() {
         $categoryModel = new CategoryModel();
         $categoryModel->catId = $this->getRequest()->getRequest('id');
-
+        
         if($categoryModel->deleteCategory())
-            header("Location: ".Ccc::getBaseUrl()."?c=category");
+            $this->redirect('Category');
         throw new Exception("Error in Delete Category");
     }
 
@@ -116,11 +99,11 @@ class Category {
             $categoryModel->setData($this->getRequest()->getPost());
             $categoryModel->catId = $this->getRequest()->getRequest('id');
             if($categoryModel->update())
-                header("Location: ".Ccc::getBaseUrl()."?c=category");
+                $this->redirect('Category');
             throw new Exception("Error in update Category");
         }
         
         if($categoryModel->setData($this->getRequest()->getPost())->insert())
-            header("Location: ".Ccc::getBaseUrl()."?c=category");
-    }
+            $this->redirect('Category');
+    }   
 }

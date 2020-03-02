@@ -1,6 +1,9 @@
 <?php
 
-require_once "Model/Core/Request.php";
+namespace Controller\Core;
+
+use Exception;
+use Model\Core\Request as Request;
 
 class Front {
 
@@ -13,8 +16,7 @@ class Front {
         $controllerName = ucfirst($request->getRequest('c'));
         if($controllerName == "")
             $controllerName = "Home";
-
-        require_once 'Controller/'.$controllerName.'.php';
+        $controllerName = "\Controller\\".$controllerName;
 
         if(!class_exists($controllerName))
             throw new Exception('Class does not exists');

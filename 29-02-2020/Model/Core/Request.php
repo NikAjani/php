@@ -1,5 +1,7 @@
 <?php
 
+namespace Model\Core;
+
 class Request {
 
     public function getPost($key = null, $value = null) {

@@ -15,11 +15,11 @@
             foreach($products as $row): 
         ?>
         <tr style="text-align: center">
-            <td><?php echo $row['name']; ?></td>
-            <td><?php echo $row['price']; ?></td>
-            <td><?php echo $row['stock']; ?></td>
-            <td><?php echo $row['description']; ?></td>
-            <td> <a href="?c=product&a=edit&id=<?php echo $row['productId']; ?>">Edit </a>| <a href="?c=product&a=delete&id=<?php echo $row['productId']; ?>">Delete</a></td>
+            <td><?php echo $row->name; ?></td>
+            <td><?php echo $row->price; ?></td>
+            <td><?php echo $row->stock; ?></td>
+            <td><?php echo $row->description; ?></td>
+            <td> <a href="?c=product&a=edit&id=<?php echo $row->productId; ?>">Edit </a>| <a href="?c=product&a=delete&id=<?php echo $row->productId; ?>">Delete</a></td>
         </tr>
 
             <?php endforeach; ?>

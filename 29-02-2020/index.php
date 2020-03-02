@@ -1,6 +1,7 @@
 <?php
+namespace Ccc;
 
-require_once 'Controller/Core/Front.php';
+use Controller\Core\Front;
 
 class Ccc {
 
@@ -20,6 +21,12 @@ class Ccc {
         Front::init();
     }
 }
+
+spl_autoload_register(function ($class) {
+    
+    $fileName = Ccc::getBaseDirectory($class).'.php';
+    require_once $fileName;
+});
 
 echo '<pre>';
 Ccc::init();

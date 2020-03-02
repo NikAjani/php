@@ -1,5 +1,9 @@
 <?php
 
+namespace Model\Core;
+
+use Exception;
+
 require_once "Adapter.php";
 
 class Row {
@@ -116,7 +120,7 @@ class Row {
         
         $colValues = "'".implode("', '", $colValues)."'";
         
-        echo $query = "INSERT 
+        $query = "INSERT 
         INTO `{$this->getTableName()}` ({$colName}) 
         VALUES ({$colValues});";
 
@@ -173,10 +177,10 @@ class Row {
         return $this;
     }
 
-    public function fetchAll() {
+    public function fetchAll($query = null) {
 
-        $query = "SELECT * 
-        FROM `{$this->getTableName()}`;";
+        if($query == null)
+            $query = "SELECT * FROM `{$this->getTableName()}`;";
 
         $rows = $this->getAdapter()->fetchAll($query);
 

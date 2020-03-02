@@ -4,11 +4,10 @@ namespace Model;
 
 use Model\Core\Row;
 
-class ProductModel extends Row {
+class CustomerModel extends Row {
 
     public function __construct() {
-        parent::__construct('product', 'productId');
+        parent::__construct('customer', 'custId');
     }
-
 
 }

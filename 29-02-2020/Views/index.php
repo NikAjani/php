@@ -14,4 +14,5 @@
     <header style="display: inline-flex">
         <li><a href="?c=Category">Category</a></li>
         <li><a href="?c=Product">Product</a></li>
+        <li><a href="?c=Customer">Customer</a></li>
     </header>

@@ -18,8 +18,8 @@
                 <td>Categpory </td>
                 <td>
                     <select name="category" id="category">
-                        <?php foreach($categories as $parentCat): ?>
-                            <option value="<?php echo $parentCat[0]; ?>"><?php echo $parentCat[1]; ?></option>
+                        <?php foreach($this->getCategoryName() as $parentCat): ?>
+                            <option value="<?php echo $parentCat->catId; ?>" <?php if($parentCat->catId == $this->getProduct('catId')) echo 'selected'; ?>><?php echo $parentCat->name; ?></option>
                         <?php endforeach; ?>
                     </select>
                 </td>
@@ -29,7 +29,7 @@
                 <td><textarea name="description" id="description" ><?php echo $this->getProduct('description'); ?></textarea></td>
             </tr>
             <tr>
-                <td colspan="2" align="center"><input type="submit" value="Edit Product"></td>
+                <td colspan="2" align="center"><input type="submit" value="Submit"></td>
             </tr>
         </table>
     </form>

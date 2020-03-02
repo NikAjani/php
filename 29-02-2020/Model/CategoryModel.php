@@ -1,6 +1,9 @@
 <?php
 
-require_once 'Core/Row.php';
+namespace Model;
+
+use Exception;
+use Model\Core\Row;
 
 class CategoryModel extends Row {
 
@@ -9,14 +12,15 @@ class CategoryModel extends Row {
     }
 
     public function deleteCategory() {
-        print_r($this->getData());
+    
         $query = "SELECT `catId` 
         FROM `{$this->getTableName()}` 
         WHERE `parentId` = '{$this->getData('catId')}';";
 
         $ids = $this->getAdapter()->fetchAll($query);
-        // $this->delete();
+        
         if($ids != []) {
+            $this->delete();
             foreach($ids as $value) {
                 $this->catId = $value['catId'];
                 if(!$this->delete()) 
@@ -26,9 +30,6 @@ class CategoryModel extends Row {
         }
         
         return $this->delete();
-
-
-        print_r($ids);
     }
 
 }
