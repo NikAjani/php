@@ -2,10 +2,6 @@
 
 namespace Model\Core;
 
-use Exception;
-
-require_once "Adapter.php";
-
 class Row {
 
     protected $tableName = null;
@@ -30,7 +26,7 @@ class Row {
 
     public function setData($data) {
         if(!is_array($data))
-            throw new Exception("Data Must Be in Array");
+            throw new \Exception("Data Must Be in Array");
         
         $this->data = array_merge($this->data, $data);
         $this->setRowChanged(true);
@@ -42,7 +38,9 @@ class Row {
         if($name == null)
             return $this->data;
 
-        return $this->data[$name];
+        if(key_exists($name, $this->data))
+            return $this->data[$name];
+        return null;
     }
 
     public function unsetData($name = null) {
@@ -191,6 +189,13 @@ class Row {
             $row = (new $this())->setData($row);
 
         return $rows;
+    }
+
+    public function save() {
+        if($this->getData($this->getPrimaryKey()))
+            return $this->update();
+
+        return $this->insert();
     }
 }
 

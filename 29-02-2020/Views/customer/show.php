@@ -13,7 +13,8 @@
             <th>Action</th>
         </tr>
         <?php
-            foreach($this->getCustomers() as $row) :
+            $customers = $this->getCustomers();
+            foreach($customers as $row) :
         ?>
 
         <tr style="text-align: center">

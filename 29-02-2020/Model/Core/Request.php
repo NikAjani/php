@@ -39,6 +39,14 @@ class Request {
 
     }
 
+    public function getControllerName() {
+        return $this->getRequest('c', 'Index');
+    }
+
+    public function getActionName() {
+        return $this->getRequest('a', 'index');
+    }
+
 }
 
 

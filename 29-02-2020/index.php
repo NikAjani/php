@@ -1,7 +1,4 @@
 <?php
-namespace Ccc;
-
-use Controller\Core\Front;
 
 class Ccc {
 
@@ -18,7 +15,7 @@ class Ccc {
     }
 
     public static function init() {
-        Front::init();
+        \Controller\Core\Front::init();
     }
 }
 

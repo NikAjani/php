@@ -1,10 +1,11 @@
 <?php
 
 namespace Controller;
-use Exception;
-use Model\CategoryModel as CategoryModel;
 
-class Category extends \Controller\Core\BaseController {
+use Exception;
+use Model\Category as CategoryModel;
+
+class Category extends \Controller\Core\Base {
 
     protected $categories = null;
     protected $category = null;
@@ -56,30 +57,43 @@ class Category extends \Controller\Core\BaseController {
     }
 
     public function getCategory($key = null){
-        if($key == null)
-            return $this->category; 
-        return $this->category[$key];
+        return $this->category;
     }
 
     public function addAction() {
 
         $categories = $this->getParentCategory();
-
-        $action = "?c=category&a=save";
+        $categoryModel = new CategoryModel();
+        $this->setCategory($categoryModel);
+        $status = $categoryModel->getStatusName();
         
         require_once "Views/category/add.php";
     }
 
     public function editAction() {
 
-        $categoryModel = new CategoryModel();
+        try {
 
-        $categoryModel->load($this->getRequest()->getRequest('id'));
-        $this->setCategory($categoryModel->getData());
+            $id = (int)$this->getRequest()->getRequest('id');
+            if(!$id)
+                throw new Exception("Invalid request.");
+            
+            $categoryModel = new CategoryModel();
+            $categories = $this->getParentCategory();
+            $status = $categoryModel->getStatusName();
 
-        $categories = $this->getParentCategory();
-        $action = "?c=category&a=save&id=".$this->getRequest()->getRequest('id');
-        require_once "Views/category/add.php";
+            $category = $categoryModel->load($id);
+            
+            if($category == null)
+                throw new Exception("No record found.");
+            
+            $this->setCategory($category);
+            require_once "Views/category/add.php";
+                
+
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
 
     }
 
@@ -89,21 +103,29 @@ class Category extends \Controller\Core\BaseController {
         
         if($categoryModel->deleteCategory())
             $this->redirect('Category');
-        throw new Exception("Error in Delete Category");
+        throw new \Exception("Error in Delete Category");
     }
 
     public function saveAction() {
-        $categoryModel = new CategoryModel();
 
-        if($this->getRequest()->getRequest('id')) {
+        try {
+
+            $categoryModel = new CategoryModel();
+
+            if(!$this->getRequest()->isPost())
+                throw new Exception("Invalid Request");
+            
+            if($id = (int)$this->getRequest()->getRequest('id')) {
+                $categoryModel->load($id);
+            }
+            
             $categoryModel->setData($this->getRequest()->getPost());
-            $categoryModel->catId = $this->getRequest()->getRequest('id');
-            if($categoryModel->update())
+            if($categoryModel->save())
                 $this->redirect('Category');
-            throw new Exception("Error in update Category");
+                
+
+        } catch (Exception $e) {
+            echo $e->getMessage();
         }
-        
-        if($categoryModel->setData($this->getRequest()->getPost())->insert())
-            $this->redirect('Category');
     }   
 }

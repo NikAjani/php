@@ -2,9 +2,10 @@
 
 namespace Controller;
 
-use Model\CustomerModel;
+use Model\Customer as CustomerModel;
+use Model\CustomerAddress;
 
-class Customer extends \Controller\Core\BaseController{
+class Customer extends \Controller\Core\Base {
 
     protected $customers = null;
     protected $customer = null;
@@ -79,42 +80,31 @@ class Customer extends \Controller\Core\BaseController{
     public function saveAction() {
 
         $customerModel = new CustomerModel();
+        $customerAddress = new CustomerAddress();
 
         if($this->getRequest()->getRequest('id')) {
             $customerModel->custId = $this->getRequest()->getRequest('id');
 
             if($customerModel->setData($this->getRequest()->getPost('account'))->update()) {
 
-                $customerModel->unsetData();
-
-                $customerModel->setTableName('customer_address');
-                $customerModel->setPrimaryKey('addressId');
-
                 $query = "SELECT * 
-                FROM `{$customerModel->getTableName()}` 
+                FROM `{$customerAddress->getTableName()}` 
                 WHERE `custId` = {$this->getRequest()->getRequest('id')};";
 
-                $customerModel->fetchRow($query);
-
-                $customerModel->setData($this->getRequest()->getPost('address'));
-
-                if($customerModel->update())
+                $customerAddress->fetchRow($query);
+                $customerAddress->setData($this->getRequest()->getPost('address'));
+                
+                if($customerAddress->update())
                     $this->redirect('Customer');
             }
         }
 
         if($customerModel->setData($this->getRequest()->getPost('account'))->insert()){
+
+            $customerAddress->setData($this->getRequest()->getPost('address'));
+            $customerAddress->custId = $customerModel->getData('custId');;
             
-            $custId = $customerModel->getData('custId');
-            $customerModel->unsetData();
-            
-            $customerModel->setData($this->getRequest()->getPost('address'));
-            $customerModel->custId = $custId;
-            
-            $customerModel->setTableName('customer_address');
-            $customerModel->setPrimaryKey('addressId');
-            
-            if($customerModel->insert())
+            if($customerAddress->insert())
                 $this->redirect('Customer');
             
             throw new \Exception("Error Insert customer address");

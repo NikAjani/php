@@ -2,9 +2,6 @@
 
 namespace Model\Core;
 
-use mysqli;
-use Exception;
-
 class Adapter {
 
     protected $config = ['host' => 'Localhost', 'userName' => 'root', 'password' => '', 'dbName' => 'practice'];
@@ -13,7 +10,7 @@ class Adapter {
 
     public function setConfig($config) {
         if(!is_array($config))
-            throw new Exception("Config Variable Must be Array");
+            throw new \Exception("Config Variable Must be Array");
 
         $this->config = array_merge($this->config, $config);
         return $this;
@@ -43,7 +40,7 @@ class Adapter {
 
     function connect() {
         $config = $this->getConfig();
-        $connect = new mysqli($config['host'], $config['userName'], $config['password'], $config['dbName']);
+        $connect = new \mysqli($config['host'], $config['userName'], $config['password'], $config['dbName']);
         
         return $this->setConnect($connect);
     }
