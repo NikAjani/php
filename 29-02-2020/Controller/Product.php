@@ -62,18 +62,19 @@ class Product extends \Controller\Core\Base {
 
     public function editAction() {
 
-        $productModel = new ProductModel();
-        
-        $query = "SELECT  * 
-        FROM `product` as P 
-        INNER JOIN `product_category` as PC 
-        ON PC.productId = P.productId 
-        WHERE P.productId = {$this->getRequest()->getRequest('id')}";
+        $product = new ProductModel();
 
-        $productModel->fetchRow($query);
+        try {
 
-        $this->setProduct($productModel->getData());
-        $action = "?c=product&a=save&id=".$this->getRequest()->getRequest('id');
+            if(!(int)$this->getRequest()->getRequest('id'))
+                throw new Exception("Id not found.");
+
+            $product = $this->setProduct($product->getProduct());
+
+        } catch (Exception $e) {
+
+            echo $e->getMessage();
+        }
 
         require_once 'Views/product/add.php';
 
@@ -81,12 +82,27 @@ class Product extends \Controller\Core\Base {
 
     public function deleteAction(){
 
-        $productModel = new ProductModel();
-        $productModel->productId = $this->getRequest()->getRequest('id');
-        if($productModel->delete())
-            $this->redirect("Porduct");
+        if(!$this->getRequest()->isPost()) {
+            throw new Exception("Invalid Request");
+                
+        }
 
-        throw new \Exception("Error Delete Product");
+        $deleteIdArray = $this->getRequest()->getPost('delId');
+        
+        if($deleteIdArray == [])
+            $this->redirect('Product');
+
+        $productModel = new ProductModel();
+
+        foreach($deleteIdArray as $deleteId) {
+            $productModel->productId = $deleteId;
+            if(!$productModel->delete())
+                throw new Exception("Error in delete record.");    
+        }
+
+        $this->redirect('Product');
+
+
     }
 
     public function saveAction() {
@@ -98,56 +114,31 @@ class Product extends \Controller\Core\Base {
             
             if(!$this->getRequest()->isPost())
                 throw new Exception("Invalid request.");
+
+            if($id = (int)$this->getRequest()->getRequest('id')) {
+                
+                $productModel->load($id);
+                echo $query = "SELECT * FROM `{$productCategory->getTableName()}` WHERE `productId` = {$id};";
+                $productCategory->fetchRow($query);
+            }
             
             $productModel->setData($this->getRequest()->getPost('product'));
-            print_r($this->getRequest()->getPost('product_category')['category']);
+            
             if($productModel->save()) {
+
                 $productCategory->productId = $productModel->productId;
                 $productCategory->catId = $this->getRequest()->getPost('product_category')['category'];
 
                 if($productCategory->save())
                     $this->redirect('Product');
                 
-                throw new Exception("Error in insert product_category data.");
-                
+                throw new Exception("Error in save product_category data.");
             }
                 
-
         } catch (Exception $e) {
             echo $e->getMessage();
         }
-        /* $productModel = new ProductModel();
-        $productCategory = new ProductCategory();
-
-        $productModel->setData($this->getRequest()->getPost());
-        $productModel->unsetData('category');
-
-        if($this->getRequest()->getRequest('id')){
-           
-            $productModel->productId = $this->getRequest()->getRequest('id');
-
-            if($productModel->update()){
-
-                $query = "SELECT * FROM `{$productCategory->getTableName()}` WHERE `productId` = {$this->getRequest()->getRequest('id')}";
-
-                $productCategory->fetchRow($query);
-
-                $productCategory->catId = $this->getRequest()->getPost('category');
-                $productCategory->productId = $this->getRequest()->getRequest('id');
-
-                if($productCategory->update())
-                    $this->redirect("Product");
-            }
-
-            throw new \Exception("Error Upadte Product");
-        }
-
-        if($productModel->insert()) {
-            $productCategory->catId = $this->getRequest()->getPost('category');
-            $productCategory->productId = $productModel->getData('productId');
-            if($productCategory->insert())
-                $this->redirect("Product");
-        } */
+        
     }
 
 }

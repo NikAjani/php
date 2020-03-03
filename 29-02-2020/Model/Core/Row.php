@@ -148,7 +148,8 @@ class Row {
         SET {$updateString} 
         WHERE `{$this->getPrimaryKey()}` = '{$editId}'";
 
-        return $this->getAdapter()->update($query);
+        if($this->getAdapter()->update($query))
+            return $this->load($editId);
 
     }
 
@@ -192,7 +193,10 @@ class Row {
     }
 
     public function save() {
-        if($this->getData($this->getPrimaryKey()))
+
+        $request = new Request();
+
+        if($request->getRequest('id'))
             return $this->update();
 
         return $this->insert();

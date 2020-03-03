@@ -17,5 +17,18 @@ class Product extends \Model\Core\Row {
         return $this->fetchAll($query);
     }
 
+    public function getProduct() {
+
+        $request = new \Model\Core\Request();
+
+        $query = "SELECT  * 
+        FROM `product` as P 
+        INNER JOIN `product_category` as PC 
+        ON PC.productId = P.productId 
+        WHERE P.productId = {$request->getRequest('id')}";
+
+        return $this->fetchRow($query);
+    }
+
 
 }
