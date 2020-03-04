@@ -10,7 +10,7 @@
         
         {% for data in catData %}
 
-        <a href="{{url}}/product/view/{{data.UrlKey}}">
+        <a style="text-decoration: none;" href="{{url}}/product/view/{{data.UrlKey}}">
 
             <div style="margin-left: 25px;">
                 <div>
@@ -20,8 +20,10 @@
                 <div class="categoryName">
                     <b>{{data.productName}}</b>
                 </div>
+                <div style="text-align: center;">
+                    &#8377; <b>{{data.price}}</b>
+                </div>
             </div>
-
         </a>
 
         {% endfor %}

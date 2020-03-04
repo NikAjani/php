@@ -27,11 +27,11 @@ class Connection {
             return false;
     }
 
-    protected function fetchRow($colName, $tableName, $whereArray = []) {
+    protected function fetchRow($colName, $tableName, $whereArray = [], $other='') {
 
         $where = $this->whereCondition($whereArray);
 
-        $sqlQuery = "SELECT $colName FROM `$tableName`".$where;
+        $sqlQuery = "SELECT $colName FROM `$tableName`".$where. $other;
         $stmt = $this->connection->query($sqlQuery);
         
         if($tableData = $stmt->fetchAll(PDO::FETCH_ASSOC))

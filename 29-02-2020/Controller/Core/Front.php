@@ -26,7 +26,7 @@ class Front {
             $methodName = 'indexAction';
 
         if(!method_exists($controller, $methodName))
-            throw new \MyException('Method does not exists '.$methodName);
+            throw new \Exception('Method does not exists '.$methodName);
 
         $controller->$methodName();
         

@@ -9,12 +9,6 @@ use Exception;
 
 class Product extends \Core\BaseControllers {
 
-    function __construct($routeParam) {
-        parent::__construct($routeParam);
-        $cat = new ProductModel();
-        $this->category = $cat->getRow('catId, categoryName', 'category', ['parentId !' => 0]);
-    }
-
     function indexAction() {
 
         $viewProduct = new ProductModel();
@@ -94,6 +88,10 @@ class Product extends \Core\BaseControllers {
 
         if($delete->deleteProduct($this->routeParam['id']))
             header("Location: ".Config::URL."/Admin/Product/");
+    }
+
+    function deletAllAction(){
+        
     }
 }
 

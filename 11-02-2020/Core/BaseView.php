@@ -6,7 +6,7 @@ class BaseView {
 
     /* public static function render($view, $args = []) {
 
-        $args = extract($args);
+        $args = extract($args, EXTR_SKIP);
 
         $file = "../App/Views/$view";
 

@@ -63,8 +63,10 @@ class Category extends \Controller\Core\Base {
     public function addAction() {
 
         $categories = $this->getParentCategory();
+
         $categoryModel = new CategoryModel();
         $this->setCategory($categoryModel);
+
         $status = $categoryModel->getStatusName();
         
         require_once "Views/category/add.php";
@@ -75,6 +77,7 @@ class Category extends \Controller\Core\Base {
         try {
 
             $id = (int)$this->getRequest()->getRequest('id');
+            
             if(!$id)
                 throw new Exception("Invalid request.");
             
@@ -116,7 +119,9 @@ class Category extends \Controller\Core\Base {
                 throw new Exception("Invalid Request");
             
             if($id = (int)$this->getRequest()->getRequest('id')) {
-                $categoryModel->load($id);
+                if(!$categoryModel->load($id))
+                    throw new Exception("Record not found.");
+                    
             }
             
             $categoryModel->setData($this->getRequest()->getPost());

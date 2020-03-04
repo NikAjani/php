@@ -4,38 +4,70 @@
 
 {% block body %}
 
-<h3><a href="{{url}}/Admin/product/add-product">Add Product</a></h3>
+<div>
 
-<div style="margin-top: 20px;">
-
-    <table class="table table-striped">
-        
-        <tr>
-            <th>Product Name</th>
-            <th>Image</th>
-            <th>Url Key</th>
-            <th>Status</th>
-            <th>Short Description</th>
-            <th>Price</th>
-            <th>Stock</th>
-            <th>Action</th>
-        </tr>
-        
-        {% for data in productData %}
+    <div style="display: inline-flex;">
+        <h3><a href="{{url}}/Admin/product/add-product">Add Product</a></h3>
+    </div>
+    
+    <div style="float: right; margin-right: 15px;"><button onclick="multidelete()" class="btn btn-danger">Delete</button></div>
+    
+    <div style="margin-top: 20px;">
+    
+        <form>
+    
+        <table class="table table-striped">
+            
             <tr>
-                <td>{{data.productName}}</td>
-                <td><img class="tableImg" src="{{url}}/Images/{{data.image}}"></td>
-                <td>{{data.UrlKey}}</td>
-                <td>{{data.status}}</td>
-                <td>{{data.shortDescription}}</td>
-                <td>{{data.price}}</td>
-                <td>{{data.stock}}</td>
-                <td><a href="{{url}}/Admin/product/{{data.productId}}/edit"> Edit </a> | <a href="{{url}}/Admin/product/{{data.productId}}/delete"> Delete </a> </td>
+                <th></th>
+                <th>Product Name</th>
+                <th>Image</th>
+                <th>Url Key</th>
+                <th>Status</th>
+                <th>Short Description</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Action</th>
             </tr>
-        {% endfor %}
-
-    </table>
-
+            
+            {% for data in productData %}
+                <tr>
+                    <td><input class="deleteAll" name="del" type="checkbox" value="{{data.productId}}"></td>
+                    <td>{{data.productName}}</td>
+                    <td><img class="tableImg" src="{{url}}/Images/{{data.image}}"></td>
+                    <td>{{data.UrlKey}}</td>
+                    <td>{{data.status}}</td>
+                    <td>{{data.shortDescription}}</td>
+                    <td>{{data.price}}</td>
+                    <td>{{data.stock}}</td>
+                    <td><a href="{{url}}/Admin/product/{{data.productId}}/edit"> Edit </a> | <a href="{{url}}/Admin/product/{{data.productId}}/delete"> Delete </a> </td>
+                </tr>
+            {% endfor %}
+            
+        </table>
+    
+        </form>
+    
+    </div>
+    
 </div>
+
+
+<script>
+    function multidelete(){
+        var delIdArray = document.getElementsByName('del');
+        delArray = [];
+        var k = 0;
+        for(var i = 0; i < delIdArray.length; i++) {
+            if(delIdArray[i].checked == true){
+                delArray[k] = delIdArray[i].value;
+                k++;
+            }
+        }
+
+        console.log(delArray);
+
+    }
+</script>
 
 {% endblock %}

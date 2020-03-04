@@ -29,8 +29,17 @@
             <a class="navbar-brand" href="{{url}}/Admin/Product/"> Manage Product </a>
         
             <a class="navbar-brand" href="{{url}}/user/logout"> Log Out </a>
+
+            <a class="navbar-brand ml-auto" id="del" href=""> Delete All </a>
         </nav>
     </div>
+
+    <script>
+        (function() {
+            document.getElementById('del').style.display = 'none';
+        })();
+        
+    </script>
 
 {% block body %}
  

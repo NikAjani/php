@@ -1,10 +1,8 @@
 <?php
 
 namespace App\Model;
-
 use PDO;
-
-class Connection {
+abstract class Connection {
 
     public function __construct() {
 
@@ -31,7 +29,7 @@ class Connection {
 
         $where = $this->whereCondition($whereArray);
 
-        echo $sqlQuery = "SELECT $colName FROM `$tableName`".$where. $other;
+        $sqlQuery = "SELECT $colName FROM `$tableName`".$where. $other;
         $stmt = $this->connection->query($sqlQuery);
         
         if($tableData = $stmt->fetchAll(PDO::FETCH_ASSOC))
@@ -94,8 +92,6 @@ class Connection {
             return false;
     
     }
-
-    
 
     protected function whereCondition($whereArray) {
 

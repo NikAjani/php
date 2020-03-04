@@ -8,6 +8,8 @@ class AddToCart extends \Core\BaseControllers {
 
     public function indexAction() {
 
+        //session_set
+
         print_r($_POST);
 
         if(isset($_POST['action'])){
@@ -16,9 +18,10 @@ class AddToCart extends \Core\BaseControllers {
 
                 $cart_array = [ "productName" => $_POST['productName'], "productPrice" => $_POST['productPrice'], "qunt" => $_POST["qunt"], 'total' => $_POST['productPrice'] * $_POST['qunt']];
                 $is_exist = false;
+
                 if(isset($_SESSION['shoppingCart'])){
-                    
                     $quntity = 0;
+                    
                     foreach($_SESSION['shoppingCart'] as $cart => $val) {
                         if($_SESSION['shoppingCart'][$cart]['productName'] == $cart_array['productName']){
                             $quntity = $_SESSION['shoppingCart'][$cart]['qunt'] + $cart_array['qunt'];

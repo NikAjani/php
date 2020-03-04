@@ -6,12 +6,12 @@ abstract class Base {
 
     protected $request = null;
 
-    public function redirect($controller = null, $action = null) {
+    public function redirect($controller = null, $action = null, $param = null) {
         
         if($action == null)
             header("Location: ".\Ccc::getBaseUrl()."?c={$controller}");
 
-        header("Location: ".\Ccc::getBaseUrl()."?c={$controller}&a={$action}");
+        header("Location: ".\Ccc::getBaseUrl()."?c={$controller}&a={$action}&{$param}");
     }
 
     public function setRequest() {

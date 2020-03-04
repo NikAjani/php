@@ -15,8 +15,9 @@ abstract class BaseControllers {
 
     function before($methoName) {
 
+        $actionArray = ['getCategorysAction', 'loginAction', 'indexAction', 'viewAction', 'getCartAction','removeCartItemAction'];
         //echo $methoName;
-        if(\in_array($methoName, ['loginAction', 'indexAction', 'viewAction', 'getCartAction','removeCartItemAction'])){
+        if(\in_array($methoName, $actionArray)){
             return true;
         } else {
             if(isset($_SESSION['user'])){

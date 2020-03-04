@@ -30,5 +30,23 @@ class Product extends \Model\Core\Row {
         return $this->fetchRow($query);
     }
 
+    public function uploadImage($image) {
+        $uploadDir = \Ccc::getBaseDirectory('media\catalog\product\\');
+        //echo $uploadDir = str_replace('\\', '/', $uploadDir);
+
+        if(!move_uploaded_file($image['tmp_name'], $uploadDir.$image['name']))
+            throw new \Exception("Unable to upload image.");
+        
+        $productImage = new \Model\Product\Image();
+
+        $productImage->image = $image['name'];
+        $productImage->productId = $this->productId;
+
+        if(!$productImage->save())
+            return false;
+        
+        return true;
+    }
+
 
 }

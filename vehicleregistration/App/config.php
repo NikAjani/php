@@ -15,8 +15,6 @@ class config {
     const DBNAME = 'vehicleregistration';
 
     const URL = 'http://localhost/Cybercom/php/vehicleregistration/Public';
-
-    const IMAGEPATH = 'C:/xampp/htdocs/MVC_DB_Demo/Public';
     
 }
 

@@ -170,6 +170,9 @@ class Row {
         $this->unsetData();
         
         $row = $this->getAdapter()->fetchRow($query);
+        if(!$row)
+            return null;
+            
         $this->setData($row);
         $this->setRowChanged(false);
         
@@ -194,9 +197,7 @@ class Row {
 
     public function save() {
 
-        $request = new Request();
-
-        if($request->getRequest('id'))
+        if($this->getData($this->getPrimaryKey()))
             return $this->update();
 
         return $this->insert();

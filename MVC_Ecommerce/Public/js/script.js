@@ -1,14 +1,51 @@
 
-var url = "http://localhost/MVC_DB_Demo/Public/AddToCart";
+var url = "http://localhost/MVC_DB_Demo/Public";
+var categoryData = [];
 
+//load Category
+$(document).ready(function() {
+
+    $.ajax({
+        
+        url : url+"/Home/getCategorys",
+        success : function(category) {
+            
+            category = JSON.parse(category);
+            categoryData = category;
+            categoryNav = "";
+            for (const catName in category) {
+                
+                categoryNav += "<div class='dropdown'>";
+                categoryNav += '<a href="" class="navbar-brand dropdown-toggle" data-toggle="dropdown">'+category[catName]["parentCat"]+'</a>';
+                categoryNav += '<div class="dropdown-menu">';
+                childCategory = category[catName]["childCat"];
+                childCategory = childCategory.split(",");
+                childCategoryUrl = category[catName]["childUrl"];
+                childCategoryUrl = childCategoryUrl.split(",");
+
+                for(var i=0; i<childCategoryUrl.length; i++){
+                    categoryNav += '<a href="'+url+'/category/view/'+childCategoryUrl[i]+'" class="dropdown-item">'+childCategory[i]+'</a>';
+                }
+                categoryNav += "</div>";
+                categoryNav += "</div>";
+                
+            }
+
+            $("#categoryList").html(categoryNav);
+        }
+    });
+});
+
+console.log(categoryData);
+
+//Load Cart
 function loadCart(){
 
     $.ajax({
 
-        url : url+"/getCart",
+        url : url+"/AddToCart/getCart",
         success : function(data) {
             data = JSON.parse(data);
-            console.log(typeof(data));
             
             if(data != ""){
                 var table = "<table class='table table-striped'><tr><th>Product Name</th><th>Price</th><th>Qunt</th><th>Total</th><th>Action</th></tr>";
@@ -35,8 +72,7 @@ function loadCart(){
 
 loadCart();
 
-var productData;
-
+//Add To Cart
 function addToCart(productData){
 
     var productName = productData.productName;
@@ -45,7 +81,7 @@ function addToCart(productData){
     var action = "add";
     $.ajax({
 
-        url : url,
+        url : url+"/AddToCart",
         method : "POST",
         data : { productName : productName, productPrice : productPrice, qunt : qunt, action : action},
         success : function(data) {
@@ -54,6 +90,7 @@ function addToCart(productData){
     });
 }
 
+//qunt increment Decrement
 $(document).ready(function(){
 
     var quantitiy=0;
@@ -72,13 +109,14 @@ $(document).ready(function(){
     $('.quantity-left-minus').click(function(e){
         e.preventDefault();
         var quantity = parseInt($('#quantity').val());
-        if(quantity>0){
+        if(quantity>1){
         $('#quantity').val(quantity - 1);
         }
     });
     
 });
 
+// delte From Cart
 $(document).on('click', '.delete', function() {
     
     var deleteProduct = $(this).attr('id');
@@ -86,7 +124,7 @@ $(document).on('click', '.delete', function() {
     if(confirm("You Want To Delete ?")){
         $.ajax({
 
-            url : url+"/removeCartItem",
+            url : url+"/AddToCart/removeCartItem",
             method : "POST",
             data : {removeItem : deleteProduct},
             success : function(data) {
@@ -96,3 +134,14 @@ $(document).on('click', '.delete', function() {
     }
 });
 
+
+// search Product
+$(document).on('click', '.srch', function() { 
+    var srchName = "";
+    srchName = $('#srchName').val();
+    srchName = srchName.trim();
+    srchName = srchName.replace(/ /g, '-');
+    //alert(srchName);
+    if(srchName != "")
+        window.location.href = url+"/search/view/"+srchName;
+});

@@ -9,7 +9,7 @@ class Service extends \App\Model\Connection {
 
         $serviceData = $this->prepareData($insertData);
 
-        if(!$this->fetchRow('title', 'service_registrations', ['userId' => $serviceData['userId'], 'vehicleNumber' => $serviceData['vehicleNumber'], 'licenseNumber' => $serviceData['licenseNumber']])) {
+        if(!$this->fetchRow('title', 'service_registrations', [ 'vehicleNumber' => $serviceData['vehicleNumber'], 'licenseNumber' => $serviceData['licenseNumber']])) {
 
             if($this->getTimeSlot($serviceData['timeSlote'], $serviceData['date'])){
                 return $this->insertData('service_registrations', $serviceData);

@@ -9,19 +9,12 @@ session_start();
 
 class Home extends \Core\BaseControllers {
 
-    function __construct($param) {
-        parent::__construct($param);
+    public function getCategorysAction() {
+
         $getCategory = new CatModel();
         $this->category = $getCategory->getCategory('categoryName');
 
-    }
-
-    public static function getCategorys() {
-
-        $loader = new \Twig\Loader\FilesystemLoader('../App/Views');
-        $twig = new \Twig\Environment($loader);
-
-        return $twig->render("/category.html", ['category'=>'abc']);
+        echo json_encode($this->category);
     }
 
     function viewAction() {
@@ -33,7 +26,7 @@ class Home extends \Core\BaseControllers {
         else
             $content = $getCMS->getCMS('home');
         
-        View::renderTemplet('/User/Home/index.html', ['category' => $this->category, 'content' => $content[0]]);
+        View::renderTemplet('/User/Home/index.html', [ 'content' => $content[0]]);
     }
 }
 

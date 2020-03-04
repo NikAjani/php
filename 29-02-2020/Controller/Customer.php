@@ -35,81 +35,98 @@ class Customer extends \Controller\Core\Base {
     }
 
     public function indexAction() {
+        
         $customerModel = new CustomerModel();
 
-        $query = "SELECT * 
-        FROM `customer` C INNER JOIN `customer_address` CA 
-        ON CA.custId = C.custId;";
-
-        $collection = $customerModel->fetchAll($query);
-
-        $this->setCustomers($collection);
+        $this->setCustomers($customerModel->getCustomers());
         require_once "Views/customer/show.php";
     }
 
     public function addAction() {
-        $action = "?c=Customer&a=save";
+        $customerModel = new CustomerModel();
+        $this->setCustomer($customerModel);
         require_once "Views/customer/add.php";
     }
 
     public function editAction() {
         
-        $customerModel = new CustomerModel();
-        
-        $query = "SELECT * 
-        FROM `customer` C INNER JOIN `customer_address` CA 
-        ON CA.custId = C.custId 
-        WHERE C.custId = {$this->getRequest()->getRequest('id')};";
+        try {
 
-        $this->setCustomer($customerModel->fetchRow($query)->getData());
-        $action = "?c=customer&a=save&id=".$this->getRequest()->getRequest('id');
-        
-        require_once "Views/customer/add.php";
+            if(!$this->getRequest()->getRequest('id'))
+                throw new Exception("Id not found.");
+                
+            $customerModel = new CustomerModel();
+
+            $this->setCustomer($customerModel->getCustomer());
+            
+            require_once "Views/customer/add.php";
+
+        } catch (Exception $e) {
+
+            echo $e->getMessage();
+        }
     }
 
     public function deleteAction() {
-        $customerModel = new CustomerModel();
-        $customerModel->custId = $this->getRequest()->getRequest('id');
 
-        if($customerModel->delete())
-            $this->redirect('Customer');
-        throw new \Exception("Error Delete Customer");
+        try {
+
+            if(!$this->getRequest()->getRequest('id'))
+                throw new Exception("Id not Found.");
+                
+            $customerModel = new CustomerModel();
+            $customerModel->custId = $this->getRequest()->getRequest('id');
+            
+            if($customerModel->delete())
+                $this->redirect('Customer');
+            
+                throw new \Exception("Error Delete Customer");
+
+        } catch(Exception $e) {
+            echo $e->getMessage();
+        }
         
     }
 
     public function saveAction() {
 
-        $customerModel = new CustomerModel();
-        $customerAddress = new CustomerAddress();
+        try {
 
-        if($this->getRequest()->getRequest('id')) {
-            $customerModel->custId = $this->getRequest()->getRequest('id');
+            $customerModel = new CustomerModel();
+            $customerAddress = new CustomerAddress();
 
-            if($customerModel->setData($this->getRequest()->getPost('account'))->update()) {
+            if(!$this->getRequest()->isPost())
+                throw new Exception("Invalid request.");
+
+            if($id = (int)$this->getRequest()->getRequest('id')) {
+                $customerModel->load($id);
 
                 $query = "SELECT * 
                 FROM `{$customerAddress->getTableName()}` 
-                WHERE `custId` = {$this->getRequest()->getRequest('id')};";
+                WHERE `custId` = {$id};";
 
                 $customerAddress->fetchRow($query);
-                $customerAddress->setData($this->getRequest()->getPost('address'));
-                
-                if($customerAddress->update())
-                    $this->redirect('Customer');
             }
-        }
 
-        if($customerModel->setData($this->getRequest()->getPost('account'))->insert()){
+            $customerModel->setData($this->getRequest()->getPost('account'));
+            
+            if($customerModel->save()) {
+                
+                $customerAddress->setData($this->getRequest()->getPost('address'));
+                $customerAddress->custId = $customerModel->custId;
 
-            $customerAddress->setData($this->getRequest()->getPost('address'));
-            $customerAddress->custId = $customerModel->getData('custId');;
+                if($customerAddress->save())
+                    $this->redirect('Customer');
+                
+                throw new Exception("Error in sace customer address detail");
+                
+            }
+
+            throw new Exception("Error in save customer account detail.");
+
+        } catch (Exception $e) {
             
-            if($customerAddress->insert())
-                $this->redirect('Customer');
-            
-            throw new \Exception("Error Insert customer address");
-            
+            echo $e->getMessage();
         }
-        throw new \Exception("Error Insert customer");
     }
 }

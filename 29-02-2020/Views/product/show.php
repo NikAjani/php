@@ -10,6 +10,7 @@
                 <th>Price</th>
                 <th>Stock</th>
                 <th>Description</th>
+                <th>Media</th>
                 <th>Action</th>
             </tr>
 
@@ -19,16 +20,18 @@
                 $products = $this->getProducts();
                 if(!$products):
             ?>
-                <td colspan="6">No record found</td>
+                <td colspan="6">No record found</td></tr>
             <?php
                 else:
                 foreach($products as $row): 
             ?>
+            <tr style="text-align: center">
                 <td><input type="checkbox" name="delId[]" value="<?php echo $row->productId; ?>" id="delId"></td>
                 <td><?php echo $row->name; ?></td>
                 <td><?php echo $row->price; ?></td>
                 <td><?php echo $row->stock; ?></td>
                 <td><?php echo $row->description; ?></td>
+                <td><a href="<?php echo $this->getUrl('media', null, ['id' => $row->productId]); ?>">Media</a></td>
                 <td> <a href="<?php echo $this->getUrl('edit', null, ['id' => $row->productId]) ?>">Edit </a></td>
             </tr>
 

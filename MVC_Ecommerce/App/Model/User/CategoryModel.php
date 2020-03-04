@@ -21,7 +21,7 @@ class CategoryModel extends \App\Model\Connection {
         $on = ['P.productId = PC.productId', 'PC.catId = C.catId'];
         $where = ["C.catId = ".$catId[0]['catId']];
 
-        return $this->join('P.productName, P.image, P.UrlKey', $table, 'INNER JOIN', $on, $where, "");
+        return $this->join('P.productName, P.image,P.price, P.UrlKey', $table, 'INNER JOIN', $on, $where, "");
 
     }
 }

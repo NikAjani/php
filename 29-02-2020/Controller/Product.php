@@ -1,14 +1,16 @@
 <?php
 
 namespace Controller;
-use Model\Product as ProductModel;
+use Model\Product\Image;
 use Model\ProductCategory;
+use Model\Product as ProductModel;
 
 class Product extends \Controller\Core\Base {
 
     protected $products = null;
     protected $product = null;
     protected $categoryName = null;
+    protected $productImages = null;
 
     public function __construct() {
         $this->setRequest();
@@ -22,6 +24,15 @@ class Product extends \Controller\Core\Base {
 
     public function getProducts() {
         return $this->products;
+    }
+
+    public function setProductImages($productImages) {
+        $this->productImages = $productImages;
+        return $this;
+    }
+
+    public function getProductImages() {
+        return $this->productImages;
     }
 
     public function setProduct($product){
@@ -103,6 +114,60 @@ class Product extends \Controller\Core\Base {
         $this->redirect('Product');
 
 
+    }
+
+    public function mediaAction() {
+
+        try {
+
+            if(!$this->getRequest()->getRequest('id'))
+            throw new Exception("Invalid request.");
+
+            $product = new ProductModel();
+            $productImage = new Image();
+
+            if(!$product->load($this->getRequest()->getRequest('id')))
+                throw new Exception("No record found.");
+
+            $this->setProduct($product);
+            $query = "SELECT * FROM `{$productImage->getTableName()}` WHERE `productId` = {$product->productId}";
+            $this->setProductImages($productImage->fetchAll($query));
+
+            require_once "Views/product/media.php";
+
+        } catch (Exception $e) {
+
+            echo $e->getMessage();
+        }
+
+        
+    }
+
+    public function saveImageAction() {
+        try {
+
+            if(!$this->getRequest()->isPost())
+                throw new Exception("Invalid request.");
+                
+
+            if(!$this->getRequest()->getRequest('id'))
+                throw new Exception("Invalid request.");
+
+            $product = new ProductModel();
+
+            if(!$product->load($this->getRequest()->getRequest('id')))
+                throw new Exception("No record found.");
+
+            if(!key_exists('image', $_FILES))
+                throw new Exception("Images not set");
+                
+            if($product->uploadImage($_FILES['image']))
+                $this->redirect('Product', "media", "id={$product->productId}");
+
+        } catch (Exception $e) {
+
+            echo $e->getMessage();
+        }
     }
 
     public function saveAction() {

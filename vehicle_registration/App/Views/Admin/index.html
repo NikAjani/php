@@ -1,0 +1,44 @@
+{% extends "Base.html" %}
+
+{% block title %} Admin | Index {% endblock %}
+
+{% block body %}
+
+<div>
+    <table class="table table-striped">
+        <tr>
+            <th>Title</th>
+            <th>Vehicle Number</th>
+            <th>License Number</th>
+            <th>Date</th>
+            <th>Time Slote</th>
+            <th>Vehicle Issue</th>
+            <th>Change Status</th>
+            <th>Action</th>
+        </tr>
+        
+            {% for data in serviceData %}
+            <tr>
+                <td>{{data.title}}</td>
+                <td>{{data.vehicleNumber}}</td>
+                <td>{{data.licenseNumber}}</td>
+                <td>{{data.date}}</td>
+                <td>{{data.timeSlote}}</td>
+                <td>{{data.vehicleIssue}}</td>
+                <td style="text-align: left;">
+                    {% if data.Status == 0 %}
+                        <a href="{{url}}/Admin/Home/{{data.serviceId}}/editStatus"><button class="btn btn-success">&#10004;</button></a>
+                    {% else %}
+                        <a href="{{url}}/Admin/Home/{{data.serviceId}}/editStatus"><button class="btn btn-danger">&#10006;</button></a>
+                    {% endif %}
+                </td>
+                <th> <a href="{{url}}/Admin/Home/{{data.serviceId}}/edit">Edit </a>|
+                    <a href="{{url}}/Admin/Home/{{data.serviceId}}/delete"> Delete</a></th>
+            </tr>
+            {% endfor %}
+        </tr>
+    </table>
+</div>
+
+
+{% endblock %}

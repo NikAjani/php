@@ -29,7 +29,6 @@ class Category extends \Model\Core\Row {
             return $this->delete();
             
         $this->delete();
-
         foreach($ids as $value) {
             $this->catId = $value['catId'];
             if(!$this->delete()) 
