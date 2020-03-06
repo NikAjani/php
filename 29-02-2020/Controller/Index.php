@@ -9,7 +9,6 @@ class Index extends \Controller\Core\Base {
     }
 
     public function indexAction() {
-        
         require_once "Views/index.php";
    }
    

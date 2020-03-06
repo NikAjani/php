@@ -58,29 +58,38 @@ class Product extends \Controller\Core\Base {
     }
 
     public function indexAction() {
-        $productModel = new ProductModel();
-        $collection = $productModel->fetchAll();
+
+        $grid = new \Block\Product\Grid();
+        $grid->setController($this);
+        echo $grid->toHtml();
         
-        $this->setProducts($collection);
-        require_once 'Views/product/show.php';
     }
 
     public function addAction() {
-        $product = new ProductModel();
-        $this->setProduct($product);
-        require_once 'Views/product/add.php';
+
+        $add = new \Block\Product\Add();
+
+        $add->setController($this);
+
+        echo $add->toHtml();
+
     }
 
     public function editAction() {
-
-        $product = new ProductModel();
 
         try {
 
             if(!(int)$this->getRequest()->getRequest('id'))
                 throw new Exception("Id not found.");
 
-            $product = $this->setProduct($product->getProduct());
+            $product = new ProductModel();
+
+            $add = new \Block\Product\Add();
+
+            $add->setController($this);
+            $add->setProduct($product->getProduct());
+
+            echo $add->toHtml();
 
         } catch (Exception $e) {
 
@@ -127,11 +136,19 @@ class Product extends \Controller\Core\Base {
             if(!$product->load($this->getRequest()->getRequest('id')))
                 throw new Exception("No record found.");
 
-            $this->setProduct($product);
-            $query = "SELECT * FROM `{$productImage->getTableName()}` WHERE `productId` = {$product->productId}";
-            $this->setProductImages($productImage->fetchAll($query));
+            $productImages = new \Model\Product\Image();
 
-            require_once "Views/product/media.php";
+            echo $query = "SELECT * FROM `{$productImages->getTableName()}` WHERE `productId` = {$product->productId}";
+
+            $productImages = $productImages->fetchAll($query);
+
+            $media = new \Block\Product\Media();
+            
+            $media->setController($this);
+            $media->setProduct($product);
+            $media->setProductImages($productImages);
+
+            echo $media->toHtml();
 
         } catch (Exception $e) {
 

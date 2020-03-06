@@ -5,8 +5,8 @@ $productImages = $this->getProductImages();
 <div>
 
     <table>
-
-        <form action="<?php echo $this->getUrl('saveImage', null, ['id' => $product->productId]); ?>" method="post" enctype="multipart/form-data">
+        
+        <form action="<?php echo $this->getController()->getUrl('saveImage', null, ['id' => $product->productId]); ?>" method="post" enctype="multipart/form-data">
             <tr>
                 <td>Select Image </td>
                 <td><input type="file" name="image" id="image"></td>
@@ -19,7 +19,7 @@ $productImages = $this->getProductImages();
 
     <table border="1" width="100%" cellspacing='4'>
 
-        <form action="<?php echo $this->getUrl('updateMedia', null, ['id' => $product->productId]); ?>" method="post">
+        <form action="<?php echo $this->getController()->getUrl('updateMedia', null, ['id' => $product->productId]); ?>" method="post">
         <tr style="text-align: right">
             <td colspan="5"><input type="submit" value="Update" name="update"></td>
         </tr>
@@ -41,7 +41,7 @@ $productImages = $this->getProductImages();
             ?>
             <tr style="text-align: center;">
                 <td>
-                    <img style="height: 50px; width: 50px" src="<?php echo $this->getImage($row->image, "\media\catalog\product\\"); ?>">
+                    <img style="height: 50px; width: 50px" src="<?php echo $this->getController()->getImage($row->image, "\media\catalog\product\\"); ?>">
                 </td>
                 <td>
                     <input type="radio" name="thumnail" id="thumnail" value="<?php echo $row->imageId; ?>" <?php if($product->thumnail == $row->imageId) echo 'checked'; ?>>

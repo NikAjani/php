@@ -1,7 +1,7 @@
 
 <div>
     <?php $product = $this->getProduct(); ?>
-    <form action="<?php echo $this->getUrl('save', null, ['id' => $product->productId]); ?>" method="post">
+    <form action="<?php echo $this->getController()->getUrl('save', null, ['id' => $product->productId]); ?>" method="post">
         <table border="1" width="100%" cellspacing='4'>
             <tr>
                 <td>Product Name</td>
@@ -19,7 +19,7 @@
                 <td>Categpory </td>
                 <td>
                     <select name="product_category[category]" id="category">
-                        <?php foreach($this->getCategoryName() as $parentCat): ?>
+                        <?php foreach($this->getController()->getCategoryName() as $parentCat): ?>
                             <option value="<?php echo $parentCat->catId; ?>" <?php if($parentCat->catId == $product->catId) echo 'selected'; ?>><?php echo $parentCat->name; ?></option>
                         <?php endforeach; ?>
                     </select>

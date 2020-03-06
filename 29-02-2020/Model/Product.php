@@ -2,7 +2,6 @@
 
 namespace Model;
 
-
 class Product extends \Model\Core\Row {
 
     public function __construct() {
@@ -47,6 +46,5 @@ class Product extends \Model\Core\Row {
         
         return true;
     }
-
 
 }
