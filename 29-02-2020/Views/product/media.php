@@ -19,7 +19,7 @@ $productImages = $this->getProductImages();
 
     <table border="1" width="100%" cellspacing='4'>
 
-        <form action="<?php echo $this->getUrl(); ?>" method="post">
+        <form action="<?php echo $this->getUrl('updateMedia', null, ['id' => $product->productId]); ?>" method="post">
         <tr style="text-align: right">
             <td colspan="5"><input type="submit" value="Update" name="update"></td>
         </tr>
@@ -39,12 +39,22 @@ $productImages = $this->getProductImages();
                 else:
                 foreach($productImages as $row):
             ?>
-            <tr>
-                <td><?php echo $row->image; ?></td>
-                <td><input type="radio" name="thumnail" id="thumnail"></td>
-                <td><input type="radio" name="base" id="base"></td>
-                <td><input type="radio" name="small" id="small"></td>
-                <td><input type="checkbox" name="explode[]" id="explode" checked></td>
+            <tr style="text-align: center;">
+                <td>
+                    <img style="height: 50px; width: 50px" src="<?php echo $this->getImage($row->image, "\media\catalog\product\\"); ?>">
+                </td>
+                <td>
+                    <input type="radio" name="thumnail" id="thumnail" value="<?php echo $row->imageId; ?>" <?php if($product->thumnail == $row->imageId) echo 'checked'; ?>>
+                </td>
+                <td>
+                    <input type="radio" name="base" id="base" value="<?php echo $row->imageId; ?>" <?php if($product->base == $row->imageId) echo 'checked'; ?>>
+                </td>
+                <td>
+                    <input type="radio" name="small" id="small" value="<?php echo $row->imageId; ?>" <?php if($product->small == $row->imageId) echo 'checked'; ?>>
+                </td>
+                <td>
+                    <input type="checkbox" name="explode[]" id="explode" value="<?php echo $row->imageId; ?>" <?php if($row->explodeFromMedia == 1) echo 'checked'; ?>
+                ></td>
             </tr>
             <?php 
                 endforeach;

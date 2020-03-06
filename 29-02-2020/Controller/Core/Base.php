@@ -6,12 +6,12 @@ abstract class Base {
 
     protected $request = null;
 
-    public function redirect($controller = null, $action = null, $param = null) {
-        
-        if($action == null)
-            header("Location: ".\Ccc::getBaseUrl()."?c={$controller}");
+    public function redirect($controller = null, $action = null, $param = []) {
 
-        header("Location: ".\Ccc::getBaseUrl()."?c={$controller}&a={$action}&{$param}");
+        if($action == null)
+            $action = 'index';
+
+        header("Location: ".$this->getUrl($action, $controller, $param));
     }
 
     public function setRequest() {
@@ -25,6 +25,13 @@ abstract class Base {
 
     public function getBaseUrl() {
         return \Ccc::getBaseUrl();
+    }
+
+    public function getImage($imageName, $path = "") {
+
+        $baseImage = str_replace('index.php' , '',\Ccc::getBaseUrl());
+        
+        return $baseImage.$path.$imageName;
     }
 
     public function getUrl($action = null, $controller = null, $params = []) {

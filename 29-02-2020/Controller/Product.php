@@ -112,8 +112,6 @@ class Product extends \Controller\Core\Base {
         }
 
         $this->redirect('Product');
-
-
     }
 
     public function mediaAction() {
@@ -139,7 +137,6 @@ class Product extends \Controller\Core\Base {
 
             echo $e->getMessage();
         }
-
         
     }
 
@@ -148,7 +145,6 @@ class Product extends \Controller\Core\Base {
 
             if(!$this->getRequest()->isPost())
                 throw new Exception("Invalid request.");
-                
 
             if(!$this->getRequest()->getRequest('id'))
                 throw new Exception("Invalid request.");
@@ -162,7 +158,63 @@ class Product extends \Controller\Core\Base {
                 throw new Exception("Images not set");
                 
             if($product->uploadImage($_FILES['image']))
-                $this->redirect('Product', "media", "id={$product->productId}");
+                $this->redirect('Product', "media", ['id' => $product->productId]);
+
+        } catch (Exception $e) {
+
+            echo $e->getMessage();
+        }
+    }
+
+    public function updateMediaAction() {
+        
+        try {
+
+            if(!$this->getRequest()->getRequest('id'))
+                throw new Exception("Invalid request.");
+
+            $product = new ProductModel();
+            $productImage = new Image();
+
+            if(!$product->load($this->getRequest()->getRequest('id')))
+                throw new Exception("No record found.");
+
+            $this->setProduct($product);
+            
+            $query = "SELECT * FROM `{$productImage->getTableName()}` WHERE `productId` = {$product->productId}";
+            $productImages = $productImage->fetchAll($query);
+
+            if(!$productImages)
+                throw new Exception("No record found");
+            
+            $imageIds = $this->getRequest()->getPost('explode');
+
+            foreach($productImages as $row) {
+
+                if(in_array($row->imageId, $imageIds))
+                    $row->explodeFromMedia = 1;
+                else
+                    $row->explodeFromMedia = 0;
+
+                if(!$row->save())
+                    throw new Exception("Error in image record save");
+            }
+
+            if($thumnail = $this->getRequest()->getPost('thumnail')) {
+                $product->thumnail = $thumnail;
+            }
+
+            if($base = $this->getRequest()->getPost('base')) {
+                $product->base = $base;
+            }
+
+            if($small = $this->getRequest()->getPost('small')) {
+                $product->small = $small;
+            }
+
+            if($product->save())
+                $this->redirect('Product', "media", ['id' => $product->productId]);
+                
 
         } catch (Exception $e) {
 
@@ -182,7 +234,9 @@ class Product extends \Controller\Core\Base {
 
             if($id = (int)$this->getRequest()->getRequest('id')) {
                 
-                $productModel->load($id);
+                if(!$productModel->load($id))
+                    throw new Exception("No record Found");
+                    
                 echo $query = "SELECT * FROM `{$productCategory->getTableName()}` WHERE `productId` = {$id};";
                 $productCategory->fetchRow($query);
             }

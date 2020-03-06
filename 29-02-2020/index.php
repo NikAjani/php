@@ -21,7 +21,7 @@ class Ccc {
 
 spl_autoload_register(function ($class) {
     
-    $fileName = Ccc::getBaseDirectory($class).'.php';
+    $fileName = $class.'.php';
     require_once $fileName;
 });
 

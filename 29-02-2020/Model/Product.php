@@ -31,13 +31,13 @@ class Product extends \Model\Core\Row {
     }
 
     public function uploadImage($image) {
-        $uploadDir = \Ccc::getBaseDirectory('media\catalog\product\\');
-        //echo $uploadDir = str_replace('\\', '/', $uploadDir);
 
+        $productImage = new \Model\Product\Image();
+        
+        $uploadDir = $productImage->getImageDir();
+        
         if(!move_uploaded_file($image['tmp_name'], $uploadDir.$image['name']))
             throw new \Exception("Unable to upload image.");
-        
-        $productImage = new \Model\Product\Image();
 
         $productImage->image = $image['name'];
         $productImage->productId = $this->productId;
