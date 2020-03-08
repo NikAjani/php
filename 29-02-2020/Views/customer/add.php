@@ -1,7 +1,7 @@
 
 <div>
     <?php $customer = $this->getCustomer(); ?>
-    <form action="<?php echo $this->getUrl('save', null, ['id' => null]); ?>" method="post">
+    <form action="<?php echo $this->getController()->getUrl('save', null, ['id' => $customer->custId]); ?>" method="post">
         <table border="1" width="100%" cellspacing='4'>
             <tr>
                 <td>First Name</td>

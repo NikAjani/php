@@ -8,7 +8,18 @@ class Adapter {
     protected $connect;
     protected $query;    
 
-    public function setConfig($config) {
+    public function __construct() {
+        $this->setConfig();
+    }
+
+    public function setConfig($config = null) {
+
+        if($config == null){
+            $config = \Ccc::getRegistry('config');
+            
+            $config = $config['db']['system'];
+        }
+        
         if(!is_array($config))
             throw new \Exception("Config Variable Must be Array");
 

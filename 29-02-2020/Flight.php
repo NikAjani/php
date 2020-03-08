@@ -4,12 +4,14 @@ class Flight {
 
     protected $booking = null;
 
+    protected $demo = null;
+
     public function setBooking($booking)
     {
         $this->booking = $booking;
     }
 
-    public function getBooking()
+    public function getBooking() 
     {
         return $this->booking;
     }
@@ -53,6 +55,7 @@ class Customer {
     {
         return $this->seatNo;    
     }
+
 }
 
 echo '<pre>';

@@ -1,6 +1,7 @@
 <?php
 
 namespace Controller;
+use Model\Core\Message;
 use Model\Product\Image;
 use Model\ProductCategory;
 use Model\Product as ProductModel;
@@ -57,21 +58,27 @@ class Product extends \Controller\Core\Base {
         return $this->categoryName;
     }
 
-    public function indexAction() {
+    public function gridAction() {
 
-        $grid = new \Block\Product\Grid();
+        $this->renderTemplate("Product/Grid");
+        
+        /* $grid = new \Block\Product\Grid();
         $grid->setController($this);
-        echo $grid->toHtml();
+        echo $grid->toHtml(); */
         
     }
 
     public function addAction() {
 
-        $add = new \Block\Product\Add();
+        $product = new \Model\Product();
+
+        $this->renderTemplate("Product/Add", ['product' => $product]);
+
+        /* $add = new \Block\Product\Add();
 
         $add->setController($this);
 
-        echo $add->toHtml();
+        echo $add->toHtml(); */
 
     }
 
@@ -84,12 +91,14 @@ class Product extends \Controller\Core\Base {
 
             $product = new ProductModel();
 
-            $add = new \Block\Product\Add();
+            $this->renderTemplate("Product/Add", ['product' => $product->getProduct()]);
+
+            /* $add = new \Block\Product\Add();
 
             $add->setController($this);
             $add->setProduct($product->getProduct());
 
-            echo $add->toHtml();
+            echo $add->toHtml(); */
 
         } catch (Exception $e) {
 
@@ -119,7 +128,9 @@ class Product extends \Controller\Core\Base {
             if(!$productModel->delete())
                 throw new Exception("Error in delete record.");    
         }
-
+        $message = new Message();
+        $message->getSession()->setNameSpace('admin');
+        $message->setMessage('Product Deleted');
         $this->redirect('Product');
     }
 
@@ -138,17 +149,19 @@ class Product extends \Controller\Core\Base {
 
             $productImages = new \Model\Product\Image();
 
-            echo $query = "SELECT * FROM `{$productImages->getTableName()}` WHERE `productId` = {$product->productId}";
+            $query = "SELECT * FROM `{$productImages->getTableName()}` WHERE `productId` = {$product->productId}";
 
             $productImages = $productImages->fetchAll($query);
 
-            $media = new \Block\Product\Media();
+            $this->renderTemplate("Product/Media", ['product' => $product->getProduct(), 'productImages' => $productImages]);
+
+            /* $media = new \Block\Product\Media();
             
             $media->setController($this);
             $media->setProduct($product);
             $media->setProductImages($productImages);
 
-            echo $media->toHtml();
+            echo $media->toHtml(); */
 
         } catch (Exception $e) {
 
@@ -264,6 +277,10 @@ class Product extends \Controller\Core\Base {
 
                 $productCategory->productId = $productModel->productId;
                 $productCategory->catId = $this->getRequest()->getPost('product_category')['category'];
+
+                $message = new Message();
+                $message->getSession()->setNameSpace('admin');
+                $message->setMessage('Product Save');
 
                 if($productCategory->save())
                     $this->redirect('Product');

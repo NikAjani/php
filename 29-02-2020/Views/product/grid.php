@@ -1,3 +1,11 @@
+<?php
+
+use Block\Core\Message;
+
+$messge = new Message();
+echo $messge->toHtml();
+
+?>
 
 <h3><a href="?c=product&a=add">Add Product</a></h3>
 

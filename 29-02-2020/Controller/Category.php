@@ -33,22 +33,12 @@ class Category extends \Controller\Core\Base {
 
     public function getParentCategory() {
 
-        if($this->getCategories() == null)
-            return [];
         
-        $this->parentCategory = array_map(function ($row) {
-            if($row->parentId == 0)
-                return $row = [$row->catId, $row->name];
-            else
-                null;
-        }, $this->getCategories());
-
-        return array_filter($this->parentCategory);
     }
 
-    public function indexAction() {
+    public function gridAction() {
 
-        require_once "Views/category/show.php";
+        $this->renderTemplate('Category\Grid');
     }
 
     public function setCategory($category) {
@@ -62,14 +52,16 @@ class Category extends \Controller\Core\Base {
 
     public function addAction() {
 
-        $categories = $this->getParentCategory();
-
         $categoryModel = new CategoryModel();
-        $this->setCategory($categoryModel);
 
         $status = $categoryModel->getStatusName();
+        $this->renderTemplate('Category\Add', ['category' => $categoryModel]);
         
-        require_once "Views/category/add.php";
+        /* $add = new \Block\Category\Add();
+        $add->setController($this);
+        $add->setCategory($categoryModel);
+        echo $add->toHtml(); */
+
     }
 
     public function editAction() {
@@ -82,16 +74,18 @@ class Category extends \Controller\Core\Base {
                 throw new Exception("Invalid request.");
             
             $categoryModel = new CategoryModel();
-            $categories = $this->getParentCategory();
-            $status = $categoryModel->getStatusName();
 
             $category = $categoryModel->load($id);
             
             if($category == null)
                 throw new Exception("No record found.");
+
+            $this->renderTemplate('Category\Add', ['category' => $category]);
             
-            $this->setCategory($category);
-            require_once "Views/category/add.php";
+            /* $add = new \Block\Category\Add();
+            $add->setController($this);
+            $add->setCategory($category);
+            echo $add->toHtml(); */
                 
 
         } catch (Exception $e) {

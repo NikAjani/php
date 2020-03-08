@@ -34,18 +34,25 @@ class Customer extends \Controller\Core\Base {
         return $this->customer[$key];
     }
 
-    public function indexAction() {
-        
-        $customerModel = new CustomerModel();
+    public function gridAction() {
 
-        $this->setCustomers($customerModel->getCustomers());
-        require_once "Views/customer/show.php";
+        $this->renderTemplate("Customer\Grid");
+        /* 
+        $grid = new \Block\Customer\Grid();
+        $grid->setController($this);
+        echo $grid->toHtml(); */
     }
 
     public function addAction() {
-        $customerModel = new CustomerModel();
-        $this->setCustomer($customerModel);
-        require_once "Views/customer/add.php";
+        $customer = new CustomerModel();
+
+        $this->renderTemplate("Customer\Add", ['customer' => $customer]);
+
+        /* $add = new \Block\Customer\Add();
+        $add->setController($this);
+        $add->setCustomer($customer);
+
+        echo $add->toHtml(); */
     }
 
     public function editAction() {
@@ -55,11 +62,17 @@ class Customer extends \Controller\Core\Base {
             if(!$this->getRequest()->getRequest('id'))
                 throw new Exception("Id not found.");
                 
-            $customerModel = new CustomerModel();
+            $customer = new CustomerModel();
 
-            $this->setCustomer($customerModel->getCustomer());
+            $customer = $customer->getCustomer();
+
+            $this->renderTemplate("Customer\Add", ['customer' => $customer]);
+            /* 
+            $add = new \Block\Customer\Add();
+            $add->setController($this);
+            $add->setCustomer($customer);
             
-            require_once "Views/customer/add.php";
+            echo $add->toHtml(); */
 
         } catch (Exception $e) {
 

@@ -9,7 +9,7 @@ abstract class Base {
     public function redirect($controller = null, $action = null, $param = []) {
 
         if($action == null)
-            $action = 'index';
+            $action = 'grid';
 
         header("Location: ".$this->getUrl($action, $controller, $param));
     }
@@ -51,7 +51,22 @@ abstract class Base {
 
         $parameters = array_merge($parameters, array_filter($params));
 
-        return $this->getBaseUrl().'?'.http_build_query($parameters);
+        return $this->getBaseUrl().'?'.http_build_query($parameters);  
+    }
+
+    public function renderTemplate($block, $args = []) {
+
+        $block = '\Block\\'.str_replace('/', '\\', $block);
         
+        $block = new $block;
+        $block->setController($this);
+        $methodNames = array_keys($args); 
+
+        if($args != []){
+            foreach($methodNames as $method => $param)
+                $block->$param($args[$param]);
+        }
+
+        echo $block->toHtml();
     }
 }

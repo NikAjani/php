@@ -6,7 +6,23 @@ class Template
 {
 
 	protected $template = null;
-	protected $controller = null;
+    protected $controller = null;
+    
+    public function __call($name, $argument)
+    {
+
+        $methodName = 'set'.ucfirst($name);
+
+        if(method_exists($this, $methodName)) {
+            
+            if(!$argument)
+                return $this->$methodName($argument);
+            else
+                return $this->$methodName($argument[0]);
+        }else
+            throw new \Exception("Method not exist in block.");
+            
+    }
 
     public function getTemplate()
     {
@@ -20,18 +36,6 @@ class Template
         return $this;
     }
 
-    public function toHtml()
-    {
-    	ob_start();
-
-    	require "Views".DIRECTORY_SEPARATOR.$this->getTemplate();
-
-    	$content = ob_get_clean();
-
-    	return $content;
-    }
-
-    
     public function getController()
     {
         return $this->controller;
@@ -42,5 +46,16 @@ class Template
         $this->controller = $controller;
 
         return $this;
+    }
+
+    public function toHtml()
+    {
+    	ob_start();
+
+    	require "Views".DIRECTORY_SEPARATOR.$this->getTemplate();
+
+    	$content = ob_get_clean();
+
+    	return $content;
     }
 }

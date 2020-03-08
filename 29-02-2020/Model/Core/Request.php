@@ -27,6 +27,7 @@ class Request {
 
     public function getRequest($key = null, $value = null) {
 
+
         if($key == null){
             return $_REQUEST;
         }

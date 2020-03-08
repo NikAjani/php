@@ -12,7 +12,7 @@
 </head>
 <body>
     <header style="display: inline-flex">
-        <li><a href="?c=Category">Category</a></li>
-        <li><a href="?c=Product">Product</a></li>
-        <li><a href="?c=Customer">Customer</a></li>
+        <li><a href="?c=Category&a=grid">Category</a></li>
+        <li><a href="?c=Product&a=grid">Product</a></li>
+        <li><a href="?c=Customer&a=grid">Customer</a></li>
     </header>
